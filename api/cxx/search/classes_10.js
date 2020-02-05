@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['safe_5fenum_687',['safe_enum',['../a01074.html',1,'dds::core']]],
+  ['sample_688',['Sample',['../a01282.html',1,'dds::sub']]],
+  ['sampleinfo_689',['SampleInfo',['../a01286.html',1,'dds::sub']]],
+  ['sampleloststatus_690',['SampleLostStatus',['../a01090.html',1,'dds::core::status']]],
+  ['samplerejectedstate_691',['SampleRejectedState',['../a01078.html',1,'dds::core::status']]],
+  ['samplerejectedstatus_692',['SampleRejectedStatus',['../a01094.html',1,'dds::core::status']]],
+  ['samplestate_693',['SampleState',['../a01294.html',1,'dds::sub::status']]],
+  ['selector_694',['Selector',['../a01246.html',1,'dds::sub::DataReader']]],
+  ['sharedsamples_695',['SharedSamples',['../a01290.html',1,'dds::sub']]],
+  ['statuscondition_696',['StatusCondition',['../a00854.html',1,'dds::core::cond']]],
+  ['statusmask_697',['StatusMask',['../a01082.html',1,'dds::core::status']]],
+  ['subscriber_698',['Subscriber',['../a01310.html',1,'dds::sub']]],
+  ['subscriberlistener_699',['SubscriberListener',['../a01314.html',1,'dds::sub']]],
+  ['subscriberqos_700',['SubscriberQos',['../a01270.html',1,'dds::sub::qos']]],
+  ['subscriptionbuiltintopicdata_701',['SubscriptionBuiltinTopicData',['../a01346.html',1,'dds::topic']]],
+  ['subscriptionmatchedstatus_702',['SubscriptionMatchedStatus',['../a01126.html',1,'dds::core::status']]],
+  ['suspendedpublication_703',['SuspendedPublication',['../a01210.html',1,'dds::pub']]]
+];
