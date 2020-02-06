@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vortex Lite ISO C++ API Reference Guide: dds/sub/SampleInfo.hpp Source File</title>
+<title>Cyclone ISO C++ API Reference Guide: dds/sub/SharedSamples.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="PROJECT_LOGO_Lite.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vortex Lite ISO C++ API Reference Guide
+   <div id="projectname">Cyclone ISO C++ API Reference Guide
    </div>
   </td>
  </tr>
@@ -87,7 +86,7 @@ $(document).ready(function(){initNavTree('a00206_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">SampleInfo.hpp</div>  </div>
+<div class="title">SharedSamples.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="a00206.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright 2010, Object Management Group, Inc.</span></div>
@@ -107,74 +106,82 @@ $(document).ready(function(){initNavTree('a00206_source.html','');});
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">* See the License for the specific language governing permissions and</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">* limitations under the License.</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#ifndef OMG_DDS_SUB_TSAMPLE_INFO_HPP_</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define OMG_DDS_SUB_TSAMPLE_INFO_HPP_</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#ifndef OMG_DDS_SUB_SHARED_SAMPLES_HPP_</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define OMG_DDS_SUB_SHARED_SAMPLES_HPP_</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00095.html">dds/core/Time.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00101.html">dds/core/Value.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00053.html">dds/core/InstanceHandle.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00185.html">dds/sub/GenerationCount.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00200.html">dds/sub/Rank.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00212.html">dds/sub/status/DataState.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00264.html">dds</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00077.html">dds/core/Reference.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00200.html">dds/sub/Sample.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00185.html">dds/sub/LoanedSamples.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;dds/sub/detail/SharedSamples.hpp&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00261.html">dds</a></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">namespace </span>sub</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">class </span>SampleInfo;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;          <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Q&gt; <span class="keyword">class </span>DELEGATE = detail::SharedSamples&gt;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">class </span>SharedSamples;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="a01286.html">   61</a></span>&#160;<span class="keyword">class </span><a class="code" href="a01286.html">dds::sub::SampleInfo</a> : <span class="keyword">public</span> <a class="code" href="a01138.html">dds::core::Value</a></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="a01286.html">SampleInfo</a>();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">const</span> <a class="code" href="a01130.html">dds::core::Time</a> <a class="code" href="a01286.html#aed8fd7c09821f79203e55877a3b8d96f">timestamp</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="a01287.html">   49</a></span>&#160;<span class="keyword">class </span><a class="code" href="a01287.html">dds::sub::SharedSamples</a></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="a01287.html#a8ebeca5a53c4bdd1d5bfb69fd5f15b71">   52</a></span>&#160;    <span class="keyword">typedef</span> T                     <a class="code" href="a01287.html#a8ebeca5a53c4bdd1d5bfb69fd5f15b71">DataType</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="a01287.html#a8d029530a2581ce530e964c815aefec9">   53</a></span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> DELEGATE&lt;T&gt;::const_iterator        <a class="code" href="a01287.html#a8d029530a2581ce530e964c815aefec9">const_iterator</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="a01287.html#a807b2b1ac43cfa58a54e58666117c488">   55</a></span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> dds::core::smart_ptr_traits::ref_type <a class="code" href="a01287.html#a807b2b1ac43cfa58a54e58666117c488">DELEGATE_REF_T</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="a01287.html#a80f7a8e24c0c7abecfedbf5dd88cde9b">SharedSamples</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="a01287.html#a80f7a8e24c0c7abecfedbf5dd88cde9b">SharedSamples</a>(<a class="code" href="a01259.html">dds::sub::LoanedSamples&lt;T&gt;</a> ls);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="a01287.html#a80f7a8e24c0c7abecfedbf5dd88cde9b">SharedSamples</a>(<span class="keyword">const</span> <a class="code" href="a01287.html">SharedSamples</a>&amp; other);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="a01287.html#a0bcf43d40d5215301290c967e795d9c6">~SharedSamples</a>();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">const</span> <a class="code" href="a01306.html">dds::sub::status::DataState</a> <a class="code" href="a01286.html#acb5b40a8748219eaa8b34d43d1a18c7a">state</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="a01258.html">dds::sub::GenerationCount</a> <a class="code" href="a01286.html#a8bfdf708c4c994fc30070a050a13b9e3">generation_count</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <a class="code" href="a01278.html">dds::sub::Rank</a> <a class="code" href="a01286.html#a0cf5117ecb4b9f294cd724a52b4a12bd">rank</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="a01287.html#a8d029530a2581ce530e964c815aefec9">const_iterator</a> <a class="code" href="a01287.html#af1e6c67a356c20093554d383e334019e">begin</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="a01287.html#a8d029530a2581ce530e964c815aefec9">const_iterator</a>  <a class="code" href="a01287.html#a9dfc22f2298539f2a457542d6d573cb3">end</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keyword">const</span> <a class="code" href="a01287.html#a807b2b1ac43cfa58a54e58666117c488">DELEGATE_REF_T</a>&amp; <a class="code" href="a01287.html#a361915f0faefa23a6d240669139637b4">delegate</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <a class="code" href="a01287.html#a807b2b1ac43cfa58a54e58666117c488">DELEGATE_REF_T</a>&amp; <a class="code" href="a01287.html#a361915f0faefa23a6d240669139637b4">delegate</a>();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    uint32_t <a class="code" href="a01287.html#ad2d403b0b8c5f6ec1678610894fbc727">length</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a01286.html#ab905be1ed25164aefb59c727a0608c2a">valid</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <a class="code" href="a00934.html">dds::core::InstanceHandle</a> <a class="code" href="a01286.html#aaf3bbb6ee753c047a065b7a4f0bf9104">instance_handle</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <a class="code" href="a00934.html">dds::core::InstanceHandle</a> <a class="code" href="a01286.html#a2f113373fe7e8bc6b067833b06c3aef1">publication_handle</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;};</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* OMG_DDS_SUB_TSAMPLE_INFO_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <a class="code" href="a01287.html#a807b2b1ac43cfa58a54e58666117c488">DELEGATE_REF_T</a> delegate_;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;};</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#include &lt;dds/sub/detail/SharedSamplesImpl.hpp&gt;</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* OMG_DDS_SUB_SHARED_SAMPLES_HPP_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa00101_html"><div class="ttname"><a href="a00101.html">Value.hpp</a></div></div>
-<div class="ttc" id="aa01278_html"><div class="ttname"><a href="a01278.html">dds::sub::Rank</a></div><div class="ttdoc">Class to hold sample Rank information and is part of dds::sub::SampleInfo.</div><div class="ttdef"><b>Definition:</b> <a href="a00200_source.html#l00067">Rank.hpp:67</a></div></div>
-<div class="ttc" id="aa01286_html_ab905be1ed25164aefb59c727a0608c2a"><div class="ttname"><a href="a01286.html#ab905be1ed25164aefb59c727a0608c2a">dds::sub::SampleInfo::valid</a></div><div class="ttdeci">bool valid() const</div></div>
-<div class="ttc" id="aa01258_html"><div class="ttname"><a href="a01258.html">dds::sub::GenerationCount</a></div><div class="ttdoc">Class to hold sample GenerationCount information and is part of dds::sub::SampleInfo.</div><div class="ttdef"><b>Definition:</b> <a href="a00185_source.html#l00063">GenerationCount.hpp:63</a></div></div>
-<div class="ttc" id="aa01286_html_aaf3bbb6ee753c047a065b7a4f0bf9104"><div class="ttname"><a href="a01286.html#aaf3bbb6ee753c047a065b7a4f0bf9104">dds::sub::SampleInfo::instance_handle</a></div><div class="ttdeci">dds::core::InstanceHandle instance_handle() const</div></div>
-<div class="ttc" id="aa01286_html"><div class="ttname"><a href="a01286.html">dds::sub::SampleInfo</a></div><div class="ttdoc">The SampleInfo contains information pertaining to the associated Data value.</div><div class="ttdef"><b>Definition:</b> <a href="a00206_source.html#l00061">SampleInfo.hpp:61</a></div></div>
-<div class="ttc" id="aa00095_html"><div class="ttname"><a href="a00095.html">Time.hpp</a></div></div>
-<div class="ttc" id="aa01130_html"><div class="ttname"><a href="a01130.html">dds::core::Time</a></div><div class="ttdef"><b>Definition:</b> <a href="a00095_source.html#l00042">Time.hpp:42</a></div></div>
-<div class="ttc" id="aa01286_html_a2f113373fe7e8bc6b067833b06c3aef1"><div class="ttname"><a href="a01286.html#a2f113373fe7e8bc6b067833b06c3aef1">dds::sub::SampleInfo::publication_handle</a></div><div class="ttdeci">dds::core::InstanceHandle publication_handle() const</div></div>
-<div class="ttc" id="aa01286_html_aed8fd7c09821f79203e55877a3b8d96f"><div class="ttname"><a href="a01286.html#aed8fd7c09821f79203e55877a3b8d96f">dds::sub::SampleInfo::timestamp</a></div><div class="ttdeci">const dds::core::Time timestamp() const</div></div>
-<div class="ttc" id="aa01286_html_acb5b40a8748219eaa8b34d43d1a18c7a"><div class="ttname"><a href="a01286.html#acb5b40a8748219eaa8b34d43d1a18c7a">dds::sub::SampleInfo::state</a></div><div class="ttdeci">const dds::sub::status::DataState state() const</div></div>
-<div class="ttc" id="aa01138_html"><div class="ttname"><a href="a01138.html">dds::core::Value</a></div><div class="ttdoc">This class is the base for various value-type dds objects.</div><div class="ttdef"><b>Definition:</b> <a href="a00101_source.html#l00028">Value.hpp:28</a></div></div>
-<div class="ttc" id="aa00934_html"><div class="ttname"><a href="a00934.html">dds::core::InstanceHandle</a></div><div class="ttdoc">Class to hold the handle associated with in sample instance.</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00040">InstanceHandle.hpp:40</a></div></div>
-<div class="ttc" id="aa01286_html_a0cf5117ecb4b9f294cd724a52b4a12bd"><div class="ttname"><a href="a01286.html#a0cf5117ecb4b9f294cd724a52b4a12bd">dds::sub::SampleInfo::rank</a></div><div class="ttdeci">dds::sub::Rank rank() const</div></div>
-<div class="ttc" id="aa00212_html"><div class="ttname"><a href="a00212.html">DataState.hpp</a></div></div>
-<div class="ttc" id="aa00264_html"><div class="ttname"><a href="a00264.html">dds</a></div><div class="ttdef"><b>Definition:</b> <a href="a00017_source.html#l00030">array.hpp:30</a></div></div>
-<div class="ttc" id="aa01306_html"><div class="ttname"><a href="a01306.html">dds::sub::status::DataState</a></div><div class="ttdoc">Class to hold sample DataState information.</div><div class="ttdef"><b>Definition:</b> <a href="a00212_source.html#l00371">DataState.hpp:371</a></div></div>
-<div class="ttc" id="aa01286_html_a8bfdf708c4c994fc30070a050a13b9e3"><div class="ttname"><a href="a01286.html#a8bfdf708c4c994fc30070a050a13b9e3">dds::sub::SampleInfo::generation_count</a></div><div class="ttdeci">dds::sub::GenerationCount generation_count() const</div></div>
-<div class="ttc" id="aa00200_html"><div class="ttname"><a href="a00200.html">Rank.hpp</a></div></div>
-<div class="ttc" id="aa00185_html"><div class="ttname"><a href="a00185.html">GenerationCount.hpp</a></div></div>
-<div class="ttc" id="aa00053_html"><div class="ttname"><a href="a00053.html">InstanceHandle.hpp</a></div></div>
+<div class="ttc" id="aa01287_html_af1e6c67a356c20093554d383e334019e"><div class="ttname"><a href="a01287.html#af1e6c67a356c20093554d383e334019e">dds::sub::SharedSamples::begin</a></div><div class="ttdeci">const_iterator begin() const</div></div>
+<div class="ttc" id="aa01287_html_a8d029530a2581ce530e964c815aefec9"><div class="ttname"><a href="a01287.html#a8d029530a2581ce530e964c815aefec9">dds::sub::SharedSamples::const_iterator</a></div><div class="ttdeci">DELEGATE&lt; T &gt;::const_iterator const_iterator</div><div class="ttdef"><b>Definition:</b> <a href="a00206_source.html#l00053">SharedSamples.hpp:53</a></div></div>
+<div class="ttc" id="aa01259_html"><div class="ttname"><a href="a01259.html">dds::sub::LoanedSamples</a></div><div class="ttdoc">This class encapsulates and automates the management of loaned samples.</div><div class="ttdef"><b>Definition:</b> <a href="a00185_source.html#l00087">LoanedSamples.hpp:87</a></div></div>
+<div class="ttc" id="aa01287_html_a807b2b1ac43cfa58a54e58666117c488"><div class="ttname"><a href="a01287.html#a807b2b1ac43cfa58a54e58666117c488">dds::sub::SharedSamples::DELEGATE_REF_T</a></div><div class="ttdeci">dds::core::smart_ptr_traits::ref_type DELEGATE_REF_T</div><div class="ttdef"><b>Definition:</b> <a href="a00206_source.html#l00055">SharedSamples.hpp:55</a></div></div>
+<div class="ttc" id="aa01287_html"><div class="ttname"><a href="a01287.html">dds::sub::SharedSamples</a></div><div class="ttdoc">This class encapsulates and automates the management of loaned samples.</div><div class="ttdef"><b>Definition:</b> <a href="a00206_source.html#l00049">SharedSamples.hpp:49</a></div></div>
+<div class="ttc" id="aa01287_html_a0bcf43d40d5215301290c967e795d9c6"><div class="ttname"><a href="a01287.html#a0bcf43d40d5215301290c967e795d9c6">dds::sub::SharedSamples::~SharedSamples</a></div><div class="ttdeci">~SharedSamples()</div></div>
+<div class="ttc" id="aa01287_html_a361915f0faefa23a6d240669139637b4"><div class="ttname"><a href="a01287.html#a361915f0faefa23a6d240669139637b4">dds::sub::SharedSamples::delegate</a></div><div class="ttdeci">const DELEGATE_REF_T &amp; delegate() const</div></div>
+<div class="ttc" id="aa00261_html"><div class="ttname"><a href="a00261.html">dds</a></div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00030">array.hpp:30</a></div></div>
+<div class="ttc" id="aa01287_html_ad2d403b0b8c5f6ec1678610894fbc727"><div class="ttname"><a href="a01287.html#ad2d403b0b8c5f6ec1678610894fbc727">dds::sub::SharedSamples::length</a></div><div class="ttdeci">uint32_t length() const</div></div>
+<div class="ttc" id="aa01287_html_a8ebeca5a53c4bdd1d5bfb69fd5f15b71"><div class="ttname"><a href="a01287.html#a8ebeca5a53c4bdd1d5bfb69fd5f15b71">dds::sub::SharedSamples::DataType</a></div><div class="ttdeci">T DataType</div><div class="ttdef"><b>Definition:</b> <a href="a00206_source.html#l00052">SharedSamples.hpp:52</a></div></div>
+<div class="ttc" id="aa00077_html"><div class="ttname"><a href="a00077.html">Reference.hpp</a></div></div>
+<div class="ttc" id="aa01287_html_a80f7a8e24c0c7abecfedbf5dd88cde9b"><div class="ttname"><a href="a01287.html#a80f7a8e24c0c7abecfedbf5dd88cde9b">dds::sub::SharedSamples::SharedSamples</a></div><div class="ttdeci">SharedSamples()</div></div>
+<div class="ttc" id="aa00200_html"><div class="ttname"><a href="a00200.html">Sample.hpp</a></div></div>
+<div class="ttc" id="aa01287_html_a9dfc22f2298539f2a457542d6d573cb3"><div class="ttname"><a href="a01287.html#a9dfc22f2298539f2a457542d6d573cb3">dds::sub::SharedSamples::end</a></div><div class="ttdeci">const_iterator end() const</div></div>
+<div class="ttc" id="aa00185_html"><div class="ttname"><a href="a00185.html">LoanedSamples.hpp</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_4ed4fe74c0873b885d65b827f26fae2a.html">sub</a></li><li class="navelem"><a class="el" href="a00206.html">SampleInfo.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_4ed4fe74c0873b885d65b827f26fae2a.html">sub</a></li><li class="navelem"><a class="el" href="a00206.html">SharedSamples.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

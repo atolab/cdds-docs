@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vortex Lite ISO C++ API Reference Guide: dds/topic/AnyTopic.hpp Source File</title>
+<title>Cyclone ISO C++ API Reference Guide: dds/topic/AnyTopicListener.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="PROJECT_LOGO_Lite.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vortex Lite ISO C++ API Reference Guide
+   <div id="projectname">Cyclone ISO C++ API Reference Guide
    </div>
   </td>
  </tr>
@@ -87,11 +86,11 @@ $(document).ready(function(){initNavTree('a00221_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">AnyTopic.hpp</div>  </div>
+<div class="title">AnyTopicListener.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="a00221.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef OMG_DDS_TOPIC_TANYTOPIC_HPP_</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define OMG_DDS_TOPIC_TANYTOPIC_HPP_</span></div>
+<a href="a00221.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef OMG_DDS_TOPIC_ANY_TOPIC_LISTENER_HPP_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define OMG_DDS_TOPIC_ANY_TOPIC_LISTENER_HPP_</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/* Copyright 2010, Object Management Group, Inc.</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * Copyright 2010, PrismTech, Corp.</span></div>
@@ -111,77 +110,53 @@ $(document).ready(function(){initNavTree('a00221_source.html','');});
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * limitations under the License.</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00035.html">dds/core/conformance.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00098.html">dds/core/types.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00077.html">dds/core/ref_traits.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00116.html">dds/domain/DomainParticipant.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00245.html">dds/topic/qos/TopicQos.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00251.html">dds/topic/TopicDescription.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00218.html">dds/topic/AnyTopic.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00261.html">dds</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>topic</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00264.html">dds</a></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="a00274.html">   32</a></span>&#160;<span class="keyword">namespace </span>topic</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">class </span><a class="code" href="a01322.html">AnyTopic</a>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="a01322.html">   53</a></span>&#160;<span class="keyword">class </span><a class="code" href="a01322.html">dds::topic::AnyTopic</a> :</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">public</span> <a class="code" href="a00866.html">::dds::core::Entity</a>,</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">public</span> <a class="code" href="a01374.html">::dds::topic::TopicDescription</a></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="a00083.html#a2ca6278157c5f9f5d7d09ca213a559f6">OMG_DDS_REF_TYPE_PROTECTED_DC</a>(<a class="code" href="a01322.html">AnyTopic</a>, ::<a class="code" href="a01374.html">dds::topic::TopicDescription</a>)</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="a00083.html#a0d9a9706bab2b2d4f7babd5b7d0737df">OMG_DDS_IMPLICIT_REF_BASE</a>(<a class="code" href="a01322.html">AnyTopic</a>)</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="a01323.html">   46</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00056.html#a3921020c081a486ceeab75dccc8aad7a">OMG_DDS_API</a> <a class="code" href="a01323.html">AnyTopicListener</a></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="a01323.html">AnyTopicListener</a>() { }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> on_inconsistent_topic(</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="a01319.html">AnyTopic</a>&amp; topic,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keyword">const</span> <a class="code" href="a01083.html">dds::core::status::InconsistentTopicStatus</a>&amp; status) = 0;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;};</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="a01322.html">AnyTopic</a>();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">//==========================================================================</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">//== QoS Management</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="a01362.html">dds::topic::qos::TopicQos</a> <a class="code" href="a01322.html#ab393ce49c2bb8a6ab60bc9a9611c664a">qos</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a01322.html#ab393ce49c2bb8a6ab60bc9a9611c664a">qos</a>(<span class="keyword">const</span> <a class="code" href="a01362.html">dds::topic::qos::TopicQos</a>&amp; <a class="code" href="a01322.html#ab393ce49c2bb8a6ab60bc9a9611c664a">qos</a>);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <a class="code" href="a01322.html">AnyTopic</a>&amp; <a class="code" href="a01322.html#a352b1dc49bb71cc023786f9f19b1cbec">operator &lt;&lt; </a>(<span class="keyword">const</span> <a class="code" href="a01362.html">dds::topic::qos::TopicQos</a>&amp; <a class="code" href="a01322.html#ab393ce49c2bb8a6ab60bc9a9611c664a">qos</a>);</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keyword">const</span> <a class="code" href="a01322.html">AnyTopic</a>&amp; <a class="code" href="a01322.html#a33908e7b74281b4fcd46bfbc83adf02e">operator &gt;&gt; </a>(<a class="code" href="a01362.html">dds::topic::qos::TopicQos</a>&amp; <a class="code" href="a01322.html#ab393ce49c2bb8a6ab60bc9a9611c664a">qos</a>) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <a class="code" href="a01086.html">::dds::core::status::InconsistentTopicStatus</a></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <a class="code" href="a01322.html#a7320912ca4132b5b1a8af50d99941931">inconsistent_topic_status</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;};</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* OMG_DDS_TOPIC_TANYTOPIC_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="a01327.html">   73</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00056.html#a3921020c081a486ceeab75dccc8aad7a">OMG_DDS_API</a> <a class="code" href="a01327.html">NoOpAnyTopicListener</a> : <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code" href="a01323.html">AnyTopicListener</a></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="a01327.html">NoOpAnyTopicListener</a>() { }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> on_inconsistent_topic(</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <a class="code" href="a01319.html">AnyTopic</a>&amp;,</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keyword">const</span> <a class="code" href="a01083.html">dds::core::status::InconsistentTopicStatus</a>&amp;) { }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* OMG_DDS_TOPIC_ANY_TOPIC_LISTENER_HPP_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa00116_html"><div class="ttname"><a href="a00116.html">DomainParticipant.hpp</a></div></div>
-<div class="ttc" id="aa00866_html"><div class="ttname"><a href="a00866.html">dds::core::Entity</a></div><div class="ttdoc">This class is the abstract base class for all the DCPS objects.</div><div class="ttdef"><b>Definition:</b> <a href="a00044_source.html#l00055">Entity.hpp:55</a></div></div>
-<div class="ttc" id="aa01086_html"><div class="ttname"><a href="a01086.html">dds::core::status::InconsistentTopicStatus</a></div><div class="ttdef"><b>Definition:</b> <a href="a00092_source.html#l00039">Status.hpp:39</a></div></div>
-<div class="ttc" id="aa01374_html"><div class="ttname"><a href="a01374.html">dds::topic::TopicDescription</a></div><div class="ttdoc">This class is the base for Topic, ContentFilteredTopic and MultiTopic.</div><div class="ttdef"><b>Definition:</b> <a href="a00251_source.html#l00048">TopicDescription.hpp:48</a></div></div>
-<div class="ttc" id="aa00245_html"><div class="ttname"><a href="a00245.html">TopicQos.hpp</a></div></div>
-<div class="ttc" id="aa01322_html"><div class="ttname"><a href="a01322.html">dds::topic::AnyTopic</a></div><div class="ttdoc">Typeless base class for the typed Topic.</div><div class="ttdef"><b>Definition:</b> <a href="a00221_source.html#l00053">AnyTopic.hpp:53</a></div></div>
-<div class="ttc" id="aa00083_html_a0d9a9706bab2b2d4f7babd5b7d0737df"><div class="ttname"><a href="a00083.html#a0d9a9706bab2b2d4f7babd5b7d0737df">OMG_DDS_IMPLICIT_REF_BASE</a></div><div class="ttdeci">#define OMG_DDS_IMPLICIT_REF_BASE(TYPE)</div><div class="ttdef"><b>Definition:</b> <a href="a00083_source.html#l00075">refmacros.hpp:75</a></div></div>
-<div class="ttc" id="aa01322_html_ab393ce49c2bb8a6ab60bc9a9611c664a"><div class="ttname"><a href="a01322.html#ab393ce49c2bb8a6ab60bc9a9611c664a">dds::topic::AnyTopic::qos</a></div><div class="ttdeci">dds::topic::qos::TopicQos qos() const</div></div>
-<div class="ttc" id="aa01322_html_a33908e7b74281b4fcd46bfbc83adf02e"><div class="ttname"><a href="a01322.html#a33908e7b74281b4fcd46bfbc83adf02e">dds::topic::AnyTopic::operator&gt;&gt;</a></div><div class="ttdeci">const AnyTopic &amp; operator&gt;&gt;(dds::topic::qos::TopicQos &amp;qos) const</div></div>
-<div class="ttc" id="aa00083_html_a2ca6278157c5f9f5d7d09ca213a559f6"><div class="ttname"><a href="a00083.html#a2ca6278157c5f9f5d7d09ca213a559f6">OMG_DDS_REF_TYPE_PROTECTED_DC</a></div><div class="ttdeci">#define OMG_DDS_REF_TYPE_PROTECTED_DC(TYPE, BASE, DELEGATE)</div><div class="ttdef"><b>Definition:</b> <a href="a00083_source.html#l00164">refmacros.hpp:164</a></div></div>
-<div class="ttc" id="aa00035_html"><div class="ttname"><a href="a00035.html">conformance.hpp</a></div></div>
-<div class="ttc" id="aa00077_html"><div class="ttname"><a href="a00077.html">ref_traits.hpp</a></div></div>
-<div class="ttc" id="aa00264_html"><div class="ttname"><a href="a00264.html">dds</a></div><div class="ttdef"><b>Definition:</b> <a href="a00017_source.html#l00030">array.hpp:30</a></div></div>
-<div class="ttc" id="aa01322_html_a7320912ca4132b5b1a8af50d99941931"><div class="ttname"><a href="a01322.html#a7320912ca4132b5b1a8af50d99941931">dds::topic::AnyTopic::inconsistent_topic_status</a></div><div class="ttdeci">::dds::core::status::InconsistentTopicStatus inconsistent_topic_status() const</div></div>
-<div class="ttc" id="aa00098_html"><div class="ttname"><a href="a00098.html">types.hpp</a></div></div>
-<div class="ttc" id="aa01362_html"><div class="ttname"><a href="a01362.html">dds::topic::qos::TopicQos</a></div><div class="ttdoc">This struct provides the basic mechanism for an application to specify Quality of Service attributes ...</div><div class="ttdef"><b>Definition:</b> <a href="a00245_source.html#l00067">TopicQos.hpp:67</a></div></div>
-<div class="ttc" id="aa01322_html_a352b1dc49bb71cc023786f9f19b1cbec"><div class="ttname"><a href="a01322.html#a352b1dc49bb71cc023786f9f19b1cbec">dds::topic::AnyTopic::operator&lt;&lt;</a></div><div class="ttdeci">AnyTopic &amp; operator&lt;&lt;(const dds::topic::qos::TopicQos &amp;qos)</div></div>
-<div class="ttc" id="aa00251_html"><div class="ttname"><a href="a00251.html">TopicDescription.hpp</a></div></div>
+<div class="ttc" id="aa01323_html"><div class="ttname"><a href="a01323.html">dds::topic::AnyTopicListener</a></div><div class="ttdoc">AnyTopic events Listener.</div><div class="ttdef"><b>Definition:</b> <a href="a00221_source.html#l00046">AnyTopicListener.hpp:46</a></div></div>
+<div class="ttc" id="aa00056_html_a3921020c081a486ceeab75dccc8aad7a"><div class="ttname"><a href="a00056.html#a3921020c081a486ceeab75dccc8aad7a">OMG_DDS_API</a></div><div class="ttdeci">#define OMG_DDS_API</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00052">macros.hpp:52</a></div></div>
+<div class="ttc" id="aa00218_html"><div class="ttname"><a href="a00218.html">AnyTopic.hpp</a></div></div>
+<div class="ttc" id="aa00261_html"><div class="ttname"><a href="a00261.html">dds</a></div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00030">array.hpp:30</a></div></div>
+<div class="ttc" id="aa01083_html"><div class="ttname"><a href="a01083.html">dds::core::status::InconsistentTopicStatus</a></div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00039">Status.hpp:39</a></div></div>
+<div class="ttc" id="aa01319_html"><div class="ttname"><a href="a01319.html">dds::topic::AnyTopic</a></div><div class="ttdoc">Typeless base class for the typed Topic.</div><div class="ttdef"><b>Definition:</b> <a href="a00218_source.html#l00053">AnyTopic.hpp:53</a></div></div>
+<div class="ttc" id="aa01327_html"><div class="ttname"><a href="a01327.html">dds::topic::NoOpAnyTopicListener</a></div><div class="ttdoc">AnyTopic events Listener.</div><div class="ttdef"><b>Definition:</b> <a href="a00221_source.html#l00073">AnyTopicListener.hpp:73</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_f680b8f4508778ee53c71cb8dcb8d6eb.html">topic</a></li><li class="navelem"><a class="el" href="a00221.html">AnyTopic.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_f680b8f4508778ee53c71cb8dcb8d6eb.html">topic</a></li><li class="navelem"><a class="el" href="a00221.html">AnyTopicListener.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

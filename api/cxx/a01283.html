@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vortex Lite ISO C++ API Reference Guide: Member List</title>
+<title>Cyclone ISO C++ API Reference Guide: dds::sub::SampleInfo Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="PROJECT_LOGO_Lite.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vortex Lite ISO C++ API Reference Guide
+   <div id="projectname">Cyclone ISO C++ API Reference Guide
    </div>
   </td>
  </tr>
@@ -67,7 +66,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('a01286.html','');});
+$(document).ready(function(){initNavTree('a01283.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -86,30 +85,369 @@ $(document).ready(function(){initNavTree('a01286.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="a01280.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">dds::sub::SampleInfo Member List</div>  </div>
+<div class="title">dds::sub::SampleInfo Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="a01286.html">dds::sub::SampleInfo</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a01286.html#a8bfdf708c4c994fc30070a050a13b9e3">generation_count</a>() const</td><td class="entry"><a class="el" href="a01286.html">dds::sub::SampleInfo</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a01286.html#aaf3bbb6ee753c047a065b7a4f0bf9104">instance_handle</a>() const</td><td class="entry"><a class="el" href="a01286.html">dds::sub::SampleInfo</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01138.html#a9b22715713bc0bfc10af93eeaeda80f4">operator!=</a>(const Value &amp;other) const</td><td class="entry"><a class="el" href="a01138.html">dds::core::Value&lt; D &gt;</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a01138.html#a948a6f4576c26fe7e44c551a56f4d038">operator-&gt;</a>()</td><td class="entry"><a class="el" href="a01138.html">dds::core::Value&lt; D &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01138.html#a0147b1dea8bdb0987505033b7025470c">operator-&gt;</a>() const</td><td class="entry"><a class="el" href="a01138.html">dds::core::Value&lt; D &gt;</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a01138.html#ad78a562d097b30ce3dca30e0f1c6d66e">operator=</a>(const Value &amp;other)</td><td class="entry"><a class="el" href="a01138.html">dds::core::Value&lt; D &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01138.html#a34fd669d0051ad90b89d98a323d2d96a">operator==</a>(const Value &amp;other) const</td><td class="entry"><a class="el" href="a01138.html">dds::core::Value&lt; D &gt;</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a01286.html#a2f113373fe7e8bc6b067833b06c3aef1">publication_handle</a>() const</td><td class="entry"><a class="el" href="a01286.html">dds::sub::SampleInfo</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01286.html#a0cf5117ecb4b9f294cd724a52b4a12bd">rank</a>() const</td><td class="entry"><a class="el" href="a01286.html">dds::sub::SampleInfo</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a01286.html#acb5b40a8748219eaa8b34d43d1a18c7a">state</a>() const</td><td class="entry"><a class="el" href="a01286.html">dds::sub::SampleInfo</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01286.html#aed8fd7c09821f79203e55877a3b8d96f">timestamp</a>() const</td><td class="entry"><a class="el" href="a01286.html">dds::sub::SampleInfo</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a01286.html#ab905be1ed25164aefb59c727a0608c2a">valid</a>() const</td><td class="entry"><a class="el" href="a01286.html">dds::sub::SampleInfo</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<p>The <a class="el" href="a01283.html" title="The SampleInfo contains information pertaining to the associated Data value.">SampleInfo</a> contains information pertaining to the associated Data value.  
+ <a href="a01283.html#details">More...</a></p>
+
+<p><code>#include &quot;<a class="el" href="a00203_source.html">SampleInfo.hpp</a>&quot;</code></p>
+
+<p>Inherits <a class="el" href="a01135.html">dds::core::Value&lt; D &gt;</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a8bfdf708c4c994fc30070a050a13b9e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01255.html">dds::sub::GenerationCount</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01283.html#a8bfdf708c4c994fc30070a050a13b9e3">generation_count</a> () const</td></tr>
+<tr class="separator:a8bfdf708c4c994fc30070a050a13b9e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf3bbb6ee753c047a065b7a4f0bf9104"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00931.html">dds::core::InstanceHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01283.html#aaf3bbb6ee753c047a065b7a4f0bf9104">instance_handle</a> () const</td></tr>
+<tr class="separator:aaf3bbb6ee753c047a065b7a4f0bf9104"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b22715713bc0bfc10af93eeaeda80f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01135.html#a9b22715713bc0bfc10af93eeaeda80f4">operator!=</a> (const Value &amp;other) const</td></tr>
+<tr class="separator:a9b22715713bc0bfc10af93eeaeda80f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a948a6f4576c26fe7e44c551a56f4d038"><td class="memItemLeft" align="right" valign="top">D *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01135.html#a948a6f4576c26fe7e44c551a56f4d038">operator-&gt;</a> ()</td></tr>
+<tr class="separator:a948a6f4576c26fe7e44c551a56f4d038"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0147b1dea8bdb0987505033b7025470c"><td class="memItemLeft" align="right" valign="top">const D *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01135.html#a0147b1dea8bdb0987505033b7025470c">operator-&gt;</a> () const</td></tr>
+<tr class="separator:a0147b1dea8bdb0987505033b7025470c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34fd669d0051ad90b89d98a323d2d96a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01135.html#a34fd669d0051ad90b89d98a323d2d96a">operator==</a> (const Value &amp;other) const</td></tr>
+<tr class="separator:a34fd669d0051ad90b89d98a323d2d96a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f113373fe7e8bc6b067833b06c3aef1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00931.html">dds::core::InstanceHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01283.html#a2f113373fe7e8bc6b067833b06c3aef1">publication_handle</a> () const</td></tr>
+<tr class="separator:a2f113373fe7e8bc6b067833b06c3aef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cf5117ecb4b9f294cd724a52b4a12bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01275.html">dds::sub::Rank</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01283.html#a0cf5117ecb4b9f294cd724a52b4a12bd">rank</a> () const</td></tr>
+<tr class="separator:a0cf5117ecb4b9f294cd724a52b4a12bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb5b40a8748219eaa8b34d43d1a18c7a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="a01303.html">dds::sub::status::DataState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01283.html#acb5b40a8748219eaa8b34d43d1a18c7a">state</a> () const</td></tr>
+<tr class="separator:acb5b40a8748219eaa8b34d43d1a18c7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed8fd7c09821f79203e55877a3b8d96f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="a01127.html">dds::core::Time</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01283.html#aed8fd7c09821f79203e55877a3b8d96f">timestamp</a> () const</td></tr>
+<tr class="separator:aed8fd7c09821f79203e55877a3b8d96f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab905be1ed25164aefb59c727a0608c2a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01283.html#ab905be1ed25164aefb59c727a0608c2a">valid</a> () const</td></tr>
+<tr class="separator:ab905be1ed25164aefb59c727a0608c2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="a01283.html" title="The SampleInfo contains information pertaining to the associated Data value.">SampleInfo</a> contains information pertaining to the associated Data value. </p>
+<p>The <a class="el" href="a01283.html" title="The SampleInfo contains information pertaining to the associated Data value.">SampleInfo</a> contains information pertaining to the associated Data value:</p><ul>
+<li>The data state (<a class="el" href="a01303.html" title="Class to hold sample DataState information.">dds::sub::status::DataState</a>).<ul>
+<li>The sample_state of the Data value (i.e., if the sample has already been READ or NOT_READ by that same <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a>).</li>
+<li>The view_state of the related instance (i.e., if the instance is NEW, or NOT_NEW for that <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a>).</li>
+<li>The instance_state of the related instance (i.e., if the instance is ALIVE, NOT_ALIVE_DISPOSED, or NOT_ALIVE_NO_WRITERS).</li>
+</ul>
+</li>
+<li>The valid data flag. This flag indicates whether there is data associated with the sample. Some samples do not contain data indicating only a change on the instance_state of the corresponding instance.</li>
+<li>The generation counts (<a class="el" href="a01255.html" title="Class to hold sample GenerationCount information and is part of dds::sub::SampleInfo.">dds::sub::GenerationCount</a>) for the related instance at the time the sample was received. These counters indicate the number of times the instance had become ALIVE.<ul>
+<li>The disposed generation count</li>
+<li>The no_writer generation count</li>
+</ul>
+</li>
+<li>The rank information (<a class="el" href="a01275.html" title="Class to hold sample Rank information and is part of dds::sub::SampleInfo.">dds::sub::Rank</a>).<ul>
+<li>The sample rank. This rank provides a preview of the samples that follow within the sequence returned by the read or take operations.</li>
+<li>The generation rank. This rank provides a preview of the samples that follow within the sequence returned by the read or take operations.</li>
+<li>The absolute_generation rank. This is the timestamp provided by the DataWriter at the time the sample was produced.</li>
+</ul>
+</li>
+<li>The source timestamp of the sample. This is the timestamp provided by the DataWriter at the time the sample was produced.</li>
+<li>The InstanceHandle of the associated data <a class="el" href="a01279.html" title="This class encapsulates the data and info meta-data associated with DDS samples.">Sample</a>.</li>
+<li>The InstanceHandle of the associated publication.</li>
+</ul>
+<dl class="section see"><dt>See also</dt><dd>SampleInfo for more information </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="a00203_source.html#l00061">61</a> of file <a class="el" href="a00203_source.html">SampleInfo.hpp</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8bfdf708c4c994fc30070a050a13b9e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bfdf708c4c994fc30070a050a13b9e3">&#9670;&nbsp;</a></span>generation_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a01255.html">dds::sub::GenerationCount</a> dds::sub::SampleInfo::generation_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gets the <a class="el" href="a01255.html" title="Class to hold sample GenerationCount information and is part of dds::sub::SampleInfo.">GenerationCount</a> of the sample.</p>
+<p>The generation counts (<a class="el" href="a01255.html" title="Class to hold sample GenerationCount information and is part of dds::sub::SampleInfo.">dds::sub::GenerationCount</a>) for the related instance at the time the sample was received. These counters indicate the number of times the instance had become ALIVE.</p><ul>
+<li>The disposed generation count</li>
+<li>The no_writer generation count</li>
+</ul>
+<dl class="section return"><dt>Returns</dt><dd>the <a class="el" href="a01255.html" title="Class to hold sample GenerationCount information and is part of dds::sub::SampleInfo.">GenerationCount</a> </dd></dl>
+
+</div>
+</div>
+<a id="aaf3bbb6ee753c047a065b7a4f0bf9104"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf3bbb6ee753c047a065b7a4f0bf9104">&#9670;&nbsp;</a></span>instance_handle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00931.html">dds::core::InstanceHandle</a> dds::sub::SampleInfo::instance_handle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gets the InstanceHandle of the associated data <a class="el" href="a01279.html" title="This class encapsulates the data and info meta-data associated with DDS samples.">Sample</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>the InstanceHandle of the sample </dd></dl>
+
+</div>
+</div>
+<a id="a9b22715713bc0bfc10af93eeaeda80f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b22715713bc0bfc10af93eeaeda80f4">&#9670;&nbsp;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="a01135.html">dds::core::Value</a>&lt; D &gt;::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a01135.html">Value</a>&lt; D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compare this Value with another Value</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if not equal </dd></dl>
+
+</div>
+</div>
+<a id="a948a6f4576c26fe7e44c551a56f4d038"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a948a6f4576c26fe7e44c551a56f4d038">&#9670;&nbsp;</a></span>operator-&gt;() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">D* <a class="el" href="a01135.html">dds::core::Value</a>&lt; D &gt;::operator-&gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The <a class="el" href="a01135.html#a948a6f4576c26fe7e44c551a56f4d038">operator-&gt;()</a> is provided to be able to directly invoke functions on the delegate.</p>
+<p>The decision to provide direct access to the delegate was motivated by the need for providing a way that was not invasive with respect to the CXXDDS API and yet would allow for vendor-specific extension. Thus vendor-specific extensions can be invoked on the Value and on all its subclasses as follows: </p><div class="fragment"><div class="line">my_dds_value.standard_function();</div>
+<div class="line">my_dds_value-&gt;vendor_specific_extension();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>a reference to delegate. </dd></dl>
+
+</div>
+</div>
+<a id="a0147b1dea8bdb0987505033b7025470c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0147b1dea8bdb0987505033b7025470c">&#9670;&nbsp;</a></span>operator-&gt;() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const D* <a class="el" href="a01135.html">dds::core::Value</a>&lt; D &gt;::operator-&gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p></p>
+<p>The <a class="el" href="a01135.html#a948a6f4576c26fe7e44c551a56f4d038">operator-&gt;()</a> is provided to be able to directly invoke functions on the delegate.</p>
+<p>The decision to provide direct access to the delegate was motivated by the need for providing a way that was not invasive with respect to the CXXDDS API and yet would allow for vendor-specific extension. Thus vendor-specific extensions can be invoked on the Value and on all its subclasses as follows: </p><div class="fragment"><div class="line">my_dds_value.standard_function();</div>
+<div class="line">my_dds_value-&gt;vendor_specific_extension();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>a reference to delegate. </dd></dl>
+
+</div>
+</div>
+<a id="a34fd669d0051ad90b89d98a323d2d96a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34fd669d0051ad90b89d98a323d2d96a">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="a01135.html">dds::core::Value</a>&lt; D &gt;::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a01135.html">Value</a>&lt; D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compare this Value with another Value</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if equal </dd></dl>
+
+</div>
+</div>
+<a id="a2f113373fe7e8bc6b067833b06c3aef1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f113373fe7e8bc6b067833b06c3aef1">&#9670;&nbsp;</a></span>publication_handle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00931.html">dds::core::InstanceHandle</a> dds::sub::SampleInfo::publication_handle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gets the InstanceHandle of the associated publication.</p>
+<dl class="section return"><dt>Returns</dt><dd>the publication_handle </dd></dl>
+
+</div>
+</div>
+<a id="a0cf5117ecb4b9f294cd724a52b4a12bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cf5117ecb4b9f294cd724a52b4a12bd">&#9670;&nbsp;</a></span>rank()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a01275.html">dds::sub::Rank</a> dds::sub::SampleInfo::rank </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gets the <a class="el" href="a01275.html" title="Class to hold sample Rank information and is part of dds::sub::SampleInfo.">Rank</a> of the sample.</p>
+<p>The rank information (<a class="el" href="a01275.html" title="Class to hold sample Rank information and is part of dds::sub::SampleInfo.">dds::sub::Rank</a>).</p><ul>
+<li>The sample rank. This rank provides a preview of the samples that follow within the sequence returned by the read or take operations.</li>
+<li>The generation rank. This rank provides a preview of the samples that follow within the sequence returned by the read or take operations.</li>
+<li>The absolute_generation rank. This is the timestamp provided by the DataWriter at the time the sample was produced.</li>
+</ul>
+<dl class="section return"><dt>Returns</dt><dd>the <a class="el" href="a01275.html" title="Class to hold sample Rank information and is part of dds::sub::SampleInfo.">Rank</a> </dd></dl>
+
+</div>
+</div>
+<a id="acb5b40a8748219eaa8b34d43d1a18c7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb5b40a8748219eaa8b34d43d1a18c7a">&#9670;&nbsp;</a></span>state()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="a01303.html">dds::sub::status::DataState</a> dds::sub::SampleInfo::state </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gets the DataState of the sample.</p>
+<p>The data state (<a class="el" href="a01303.html" title="Class to hold sample DataState information.">dds::sub::status::DataState</a>).</p><ul>
+<li>The sample_state of the Data value (i.e., if the sample has already been READ or NOT_READ by that same <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a>).</li>
+<li>The view_state of the related instance (i.e., if the instance is NEW, or NOT_NEW for that <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a>).</li>
+<li>The instance_state of the related instance (i.e., if the instance is ALIVE, NOT_ALIVE_DISPOSED, or NOT_ALIVE_NO_WRITERS).</li>
+</ul>
+<dl class="section return"><dt>Returns</dt><dd>the DataState </dd></dl>
+
+</div>
+</div>
+<a id="aed8fd7c09821f79203e55877a3b8d96f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed8fd7c09821f79203e55877a3b8d96f">&#9670;&nbsp;</a></span>timestamp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="a01127.html">dds::core::Time</a> dds::sub::SampleInfo::timestamp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gets the timestamp of the sample.</p>
+<p>This is the timestamp provided by the DataWriter at the time the sample was produced.</p>
+<dl class="section return"><dt>Returns</dt><dd>the timestamp </dd></dl>
+
+</div>
+</div>
+<a id="ab905be1ed25164aefb59c727a0608c2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab905be1ed25164aefb59c727a0608c2a">&#9670;&nbsp;</a></span>valid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool dds::sub::SampleInfo::valid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gets the valid_data flag.</p>
+<p>This flag indicates whether there is data associated with the sample. Some samples do not contain data, indicating only a change on the instance_state of the corresponding instance.</p>
+<dl class="section return"><dt>Returns</dt><dd>the valid_data flag </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>dds/sub/<a class="el" href="a00203_source.html">SampleInfo.hpp</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="a00261.html">dds</a></li><li class="navelem"><a class="el" href="a00268.html">sub</a></li><li class="navelem"><a class="el" href="a01283.html">SampleInfo</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

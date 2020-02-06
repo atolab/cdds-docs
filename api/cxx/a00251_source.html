@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vortex Lite ISO C++ API Reference Guide: dds/topic/TopicDescription.hpp Source File</title>
+<title>Cyclone ISO C++ API Reference Guide: dds/topic/TopicInstance.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="PROJECT_LOGO_Lite.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vortex Lite ISO C++ API Reference Guide
+   <div id="projectname">Cyclone ISO C++ API Reference Guide
    </div>
   </td>
  </tr>
@@ -87,11 +86,11 @@ $(document).ready(function(){initNavTree('a00251_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">TopicDescription.hpp</div>  </div>
+<div class="title">TopicInstance.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="a00251.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef OMG_DDS_T_TOPIC_TOPIC_DESCRIPTION_HPP_</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define OMG_DDS_T_TOPIC_TOPIC_DESCRIPTION_HPP_</span></div>
+<a href="a00251.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef OMG_DDS_TOPIC_TOPIC_INSTANCE_HPP_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define OMG_DDS_TOPIC_TOPIC_INSTANCE_HPP_</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/* Copyright 2010, Object Management Group, Inc.</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * Copyright 2010, PrismTech, Corp.</span></div>
@@ -111,57 +110,62 @@ $(document).ready(function(){initNavTree('a00251_source.html','');});
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * limitations under the License.</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00044.html">dds/core/Entity.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00260.html">dds/topic/TopicTraits.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00116.html">dds/domain/DomainParticipant.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00264.html">dds</a></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span>topic</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">class </span>TopicDescription;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00092.html">dds/core/Time.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00050.html">dds/core/InstanceHandle.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00261.html">dds</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>topic</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="a01375.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="a01375.html">TopicInstance</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="a01374.html">   48</a></span>&#160;<span class="keyword">class </span><a class="code" href="a01374.html">dds::topic::TopicDescription</a> : <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code" href="a01070.html">dds::core::Reference</a></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="a00083.html#a2ca6278157c5f9f5d7d09ca213a559f6">OMG_DDS_REF_TYPE_PROTECTED_DC</a>(<a class="code" href="a01374.html">TopicDescription</a>, <a class="code" href="a01070.html">dds::core::Reference</a>)</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="a00083.html#a0d9a9706bab2b2d4f7babd5b7d0737df">OMG_DDS_IMPLICIT_REF_BASE</a>(<a class="code" href="a01374.html">TopicDescription</a>)</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="a01374.html">TopicDescription</a>();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="a01374.html#ab934ece0f7d1bddeaeaab48531639114">name</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">class </span><a class="code" href="a01375.html">dds::topic::TopicInstance</a></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="a01375.html#a3d5ac4ae8617647b7f481ad3f015aac4">TopicInstance</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="a01375.html#a3d5ac4ae8617647b7f481ad3f015aac4">TopicInstance</a>(const ::dds::core::InstanceHandle&amp; h);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="a01375.html#a3d5ac4ae8617647b7f481ad3f015aac4">TopicInstance</a>(const ::dds::core::InstanceHandle&amp; h, <span class="keyword">const</span> T&amp; <a class="code" href="a01375.html#a116eae2180b0235fa3a4755c8b17b584">sample</a>);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="a01374.html#aeefcc637041c6306c591212af79580e1">type_name</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">operator</span> const ::dds::core::InstanceHandle() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">const</span> <a class="code" href="a01146.html">dds::domain::DomainParticipant</a>&amp; <a class="code" href="a01374.html#a4a360efabbc8f5bb2c95309eb53a759c">domain_participant</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;};</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    const ::dds::core::InstanceHandle <a class="code" href="a01375.html#a2cdffc374f3dbe6f35d4f3fd50a3358b">handle</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a01375.html#a2cdffc374f3dbe6f35d4f3fd50a3358b">handle</a>(const ::dds::core::InstanceHandle&amp; h);</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* OMG_DDS_T_TOPIC_TOPIC_DESCRIPTION_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">const</span> T&amp; <a class="code" href="a01375.html#a116eae2180b0235fa3a4755c8b17b584">sample</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    T&amp; <a class="code" href="a01375.html#a116eae2180b0235fa3a4755c8b17b584">sample</a>();</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a01375.html#a116eae2180b0235fa3a4755c8b17b584">sample</a>(<span class="keyword">const</span> T&amp; <a class="code" href="a01375.html#a116eae2180b0235fa3a4755c8b17b584">sample</a>);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <a class="code" href="a00931.html">::dds::core::InstanceHandle</a> h_;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    T sample_;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;};</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* OMG_DDS_TOPIC_TOPIC_INSTANCE_HPP_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa00116_html"><div class="ttname"><a href="a00116.html">DomainParticipant.hpp</a></div></div>
-<div class="ttc" id="aa00044_html"><div class="ttname"><a href="a00044.html">Entity.hpp</a></div></div>
-<div class="ttc" id="aa01374_html"><div class="ttname"><a href="a01374.html">dds::topic::TopicDescription</a></div><div class="ttdoc">This class is the base for Topic, ContentFilteredTopic and MultiTopic.</div><div class="ttdef"><b>Definition:</b> <a href="a00251_source.html#l00048">TopicDescription.hpp:48</a></div></div>
-<div class="ttc" id="aa00260_html"><div class="ttname"><a href="a00260.html">TopicTraits.hpp</a></div></div>
-<div class="ttc" id="aa01374_html_aeefcc637041c6306c591212af79580e1"><div class="ttname"><a href="a01374.html#aeefcc637041c6306c591212af79580e1">dds::topic::TopicDescription::type_name</a></div><div class="ttdeci">const std::string &amp; type_name() const</div></div>
-<div class="ttc" id="aa00083_html_a0d9a9706bab2b2d4f7babd5b7d0737df"><div class="ttname"><a href="a00083.html#a0d9a9706bab2b2d4f7babd5b7d0737df">OMG_DDS_IMPLICIT_REF_BASE</a></div><div class="ttdeci">#define OMG_DDS_IMPLICIT_REF_BASE(TYPE)</div><div class="ttdef"><b>Definition:</b> <a href="a00083_source.html#l00075">refmacros.hpp:75</a></div></div>
-<div class="ttc" id="aa01146_html"><div class="ttname"><a href="a01146.html">dds::domain::DomainParticipant</a></div><div class="ttdoc">A DomainParticipant represents the local membership of the application in a Domain.</div><div class="ttdef"><b>Definition:</b> <a href="a00116_source.html#l00065">DomainParticipant.hpp:65</a></div></div>
-<div class="ttc" id="aa00083_html_a2ca6278157c5f9f5d7d09ca213a559f6"><div class="ttname"><a href="a00083.html#a2ca6278157c5f9f5d7d09ca213a559f6">OMG_DDS_REF_TYPE_PROTECTED_DC</a></div><div class="ttdeci">#define OMG_DDS_REF_TYPE_PROTECTED_DC(TYPE, BASE, DELEGATE)</div><div class="ttdef"><b>Definition:</b> <a href="a00083_source.html#l00164">refmacros.hpp:164</a></div></div>
-<div class="ttc" id="aa00264_html"><div class="ttname"><a href="a00264.html">dds</a></div><div class="ttdef"><b>Definition:</b> <a href="a00017_source.html#l00030">array.hpp:30</a></div></div>
-<div class="ttc" id="aa01374_html_a4a360efabbc8f5bb2c95309eb53a759c"><div class="ttname"><a href="a01374.html#a4a360efabbc8f5bb2c95309eb53a759c">dds::topic::TopicDescription::domain_participant</a></div><div class="ttdeci">const dds::domain::DomainParticipant &amp; domain_participant() const</div></div>
-<div class="ttc" id="aa01070_html"><div class="ttname"><a href="a01070.html">dds::core::Reference</a></div><div class="ttdoc">Base class for reference-counted objects.</div><div class="ttdef"><b>Definition:</b> <a href="a00080_source.html#l00094">Reference.hpp:94</a></div></div>
-<div class="ttc" id="aa01374_html_ab934ece0f7d1bddeaeaab48531639114"><div class="ttname"><a href="a01374.html#ab934ece0f7d1bddeaeaab48531639114">dds::topic::TopicDescription::name</a></div><div class="ttdeci">const std::string &amp; name() const</div></div>
+<div class="ttc" id="aa01375_html_a116eae2180b0235fa3a4755c8b17b584"><div class="ttname"><a href="a01375.html#a116eae2180b0235fa3a4755c8b17b584">dds::topic::TopicInstance::sample</a></div><div class="ttdeci">const T &amp; sample() const</div></div>
+<div class="ttc" id="aa01375_html_a3d5ac4ae8617647b7f481ad3f015aac4"><div class="ttname"><a href="a01375.html#a3d5ac4ae8617647b7f481ad3f015aac4">dds::topic::TopicInstance::TopicInstance</a></div><div class="ttdeci">TopicInstance()</div></div>
+<div class="ttc" id="aa01375_html_a2cdffc374f3dbe6f35d4f3fd50a3358b"><div class="ttname"><a href="a01375.html#a2cdffc374f3dbe6f35d4f3fd50a3358b">dds::topic::TopicInstance::handle</a></div><div class="ttdeci">const ::dds::core::InstanceHandle handle() const</div></div>
+<div class="ttc" id="aa00931_html"><div class="ttname"><a href="a00931.html">dds::core::InstanceHandle</a></div><div class="ttdoc">Class to hold the handle associated with in sample instance.</div><div class="ttdef"><b>Definition:</b> <a href="a00050_source.html#l00040">InstanceHandle.hpp:40</a></div></div>
+<div class="ttc" id="aa01375_html"><div class="ttname"><a href="a01375.html">dds::topic::TopicInstance</a></div><div class="ttdoc">A TopicInstance encapsulates a dds::sub::Sample and its associated dds::core::InstanceHandle.</div><div class="ttdef"><b>Definition:</b> <a href="a00251_source.html#l00030">TopicInstance.hpp:30</a></div></div>
+<div class="ttc" id="aa00261_html"><div class="ttname"><a href="a00261.html">dds</a></div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00030">array.hpp:30</a></div></div>
+<div class="ttc" id="aa00050_html"><div class="ttname"><a href="a00050.html">InstanceHandle.hpp</a></div></div>
+<div class="ttc" id="aa00092_html"><div class="ttname"><a href="a00092.html">Time.hpp</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_f680b8f4508778ee53c71cb8dcb8d6eb.html">topic</a></li><li class="navelem"><a class="el" href="a00251.html">TopicDescription.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_f680b8f4508778ee53c71cb8dcb8d6eb.html">topic</a></li><li class="navelem"><a class="el" href="a00251.html">TopicInstance.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

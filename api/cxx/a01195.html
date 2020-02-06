@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vortex Lite ISO C++ API Reference Guide: Member List</title>
+<title>Cyclone ISO C++ API Reference Guide: dds::pub::NoOpPublisherListener Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="PROJECT_LOGO_Lite.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vortex Lite ISO C++ API Reference Guide
+   <div id="projectname">Cyclone ISO C++ API Reference Guide
    </div>
   </td>
  </tr>
@@ -67,7 +66,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('a01198.html','');});
+$(document).ready(function(){initNavTree('a01195.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -86,22 +85,244 @@ $(document).ready(function(){initNavTree('a01198.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="a01192.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">dds::pub::NoOpPublisherListener Member List</div>  </div>
+<div class="title">dds::pub::NoOpPublisherListener Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="a01198.html">dds::pub::NoOpPublisherListener</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a01166.html#a9ded17ea2d509d1f4343507131c4fbf1">on_liveliness_lost</a>(dds::pub::AnyDataWriter &amp;writer, const ::dds::core::status::LivelinessLostStatus &amp;status)=0</td><td class="entry"><a class="el" href="a01166.html">dds::pub::AnyDataWriterListener</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a01166.html#aff9da9e252961cab49e48468ccc3a93f">on_offered_deadline_missed</a>(dds::pub::AnyDataWriter &amp;writer, const ::dds::core::status::OfferedDeadlineMissedStatus &amp;status)=0</td><td class="entry"><a class="el" href="a01166.html">dds::pub::AnyDataWriterListener</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01166.html#a4e40a8552786abf31747ab2bd3583d43">on_offered_incompatible_qos</a>(dds::pub::AnyDataWriter &amp;writer, const ::dds::core::status::OfferedIncompatibleQosStatus &amp;status)=0</td><td class="entry"><a class="el" href="a01166.html">dds::pub::AnyDataWriterListener</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a01166.html#aa14949723d46cbb6f704f4f33a88252a">on_publication_matched</a>(dds::pub::AnyDataWriter &amp;writer, const ::dds::core::status::PublicationMatchedStatus &amp;status)=0</td><td class="entry"><a class="el" href="a01166.html">dds::pub::AnyDataWriterListener</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-</table></div><!-- contents -->
+<p><a class="el" href="a01187.html" title="The Publisher acts on the behalf of one or several DataWriter objects that belong to it.">Publisher</a> events Listener.  
+ <a href="a01195.html#details">More...</a></p>
+
+<p><code>#include &quot;<a class="el" href="a00146_source.html">PublisherListener.hpp</a>&quot;</code></p>
+
+<p>Inherits <a class="el" href="a01191.html">dds::pub::PublisherListener</a>, and <a class="el" href="a01167.html">dds::pub::NoOpAnyDataWriterListener</a>.</p>
+
+<p>Inherited by <a class="el" href="a01151.html">dds::domain::NoOpDomainParticipantListener</a><code> [virtual]</code>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a9ded17ea2d509d1f4343507131c4fbf1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01163.html#a9ded17ea2d509d1f4343507131c4fbf1">on_liveliness_lost</a> (<a class="el" href="a01159.html">dds::pub::AnyDataWriter</a> &amp;writer, const ::<a class="el" href="a01095.html">dds::core::status::LivelinessLostStatus</a> &amp;status)=0</td></tr>
+<tr class="separator:a9ded17ea2d509d1f4343507131c4fbf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff9da9e252961cab49e48468ccc3a93f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01163.html#aff9da9e252961cab49e48468ccc3a93f">on_offered_deadline_missed</a> (<a class="el" href="a01159.html">dds::pub::AnyDataWriter</a> &amp;writer, const ::<a class="el" href="a01103.html">dds::core::status::OfferedDeadlineMissedStatus</a> &amp;status)=0</td></tr>
+<tr class="separator:aff9da9e252961cab49e48468ccc3a93f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e40a8552786abf31747ab2bd3583d43"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01163.html#a4e40a8552786abf31747ab2bd3583d43">on_offered_incompatible_qos</a> (<a class="el" href="a01159.html">dds::pub::AnyDataWriter</a> &amp;writer, const ::<a class="el" href="a01111.html">dds::core::status::OfferedIncompatibleQosStatus</a> &amp;status)=0</td></tr>
+<tr class="separator:a4e40a8552786abf31747ab2bd3583d43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa14949723d46cbb6f704f4f33a88252a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01163.html#aa14949723d46cbb6f704f4f33a88252a">on_publication_matched</a> (<a class="el" href="a01159.html">dds::pub::AnyDataWriter</a> &amp;writer, const ::<a class="el" href="a01119.html">dds::core::status::PublicationMatchedStatus</a> &amp;status)=0</td></tr>
+<tr class="separator:aa14949723d46cbb6f704f4f33a88252a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="a01187.html" title="The Publisher acts on the behalf of one or several DataWriter objects that belong to it.">Publisher</a> events Listener. </p>
+<p>This listener is just like <a class="el" href="a01191.html" title="Publisher events Listener.">PublisherListener</a>, except that the application doesn't have to implement all operations.</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>ExampleListener : <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code" href="a01195.html">dds::pub::NoOpPublisherListener</a></div>
+<div class="line">{</div>
+<div class="line">   <span class="comment">// Not necessary to implement any Listener operations.</span></div>
+<div class="line">};</div>
+</div><!-- fragment --><dl class="section see"><dt>See also</dt><dd><a class="el" href="a01191.html" title="Publisher events Listener.">dds::pub::PublisherListener</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="a00146_source.html#l00128">128</a> of file <a class="el" href="a00146_source.html">PublisherListener.hpp</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9ded17ea2d509d1f4343507131c4fbf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ded17ea2d509d1f4343507131c4fbf1">&#9670;&nbsp;</a></span>on_liveliness_lost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void dds::pub::AnyDataWriterListener::on_liveliness_lost </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a01159.html">dds::pub::AnyDataWriter</a> &amp;&#160;</td>
+          <td class="paramname"><em>writer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ::<a class="el" href="a01095.html">dds::core::status::LivelinessLostStatus</a> &amp;&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p></p>
+<p>This operation is called by the Data Distribution Service when the LivelinessLostStatus changes.</p>
+<p>This operation will only be called when the relevant <a class="el" href="a01179.html" title="DataWriter events Listener.">DataWriterListener</a> is installed and enabled for the liveliness lost status (StatusMask::liveliness_lost()). The liveliness lost status will change when the liveliness that the <a class="el" href="a01175.html" title="DataWriter allows the application to set the value of the sample to be published under a given Topic.">DataWriter</a> has committed through its LivelinessQosPolicy was not respected. In other words, the <a class="el" href="a01175.html" title="DataWriter allows the application to set the value of the sample to be published under a given Topic.">DataWriter</a> failed to actively signal its liveliness within the offered liveliness period. As a result, the DataReader objects will consider the <a class="el" href="a01175.html" title="DataWriter allows the application to set the value of the sample to be published under a given Topic.">DataWriter</a> as no longer “alive”.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">writer</td><td>contains a pointer to the <a class="el" href="a01175.html" title="DataWriter allows the application to set the value of the sample to be published under a given Topic.">DataWriter</a> on which the LivelinessLostStatus has changed (this is an input to the application). </td></tr>
+    <tr><td class="paramname">status</td><td>contains the LivelinessLostStatus object (this is an input to the application). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aff9da9e252961cab49e48468ccc3a93f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff9da9e252961cab49e48468ccc3a93f">&#9670;&nbsp;</a></span>on_offered_deadline_missed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void dds::pub::AnyDataWriterListener::on_offered_deadline_missed </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a01159.html">dds::pub::AnyDataWriter</a> &amp;&#160;</td>
+          <td class="paramname"><em>writer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ::<a class="el" href="a01103.html">dds::core::status::OfferedDeadlineMissedStatus</a> &amp;&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p></p>
+<p>This operation is called by the Data Distribution Service when the OfferedDeadlineMissedStatus changes.</p>
+<p>This operation will only be called when the relevant <a class="el" href="a01179.html" title="DataWriter events Listener.">DataWriterListener</a> is installed and enabled for the offered deadline missed status (StatusMask::offered_deadline_missed()). The offered deadline missed status will change when the deadline that the <a class="el" href="a01175.html" title="DataWriter allows the application to set the value of the sample to be published under a given Topic.">DataWriter</a> has committed through its DeadlineQosPolicy was not respected for a specific instance.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">writer</td><td>contain a pointer to the <a class="el" href="a01175.html" title="DataWriter allows the application to set the value of the sample to be published under a given Topic.">DataWriter</a> on which the OfferedDeadlineMissedStatus has changed (this is an input to the application) </td></tr>
+    <tr><td class="paramname">status</td><td>contain the OfferedDeadlineMissedStatus object (this is an input to the application). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4e40a8552786abf31747ab2bd3583d43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e40a8552786abf31747ab2bd3583d43">&#9670;&nbsp;</a></span>on_offered_incompatible_qos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void dds::pub::AnyDataWriterListener::on_offered_incompatible_qos </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a01159.html">dds::pub::AnyDataWriter</a> &amp;&#160;</td>
+          <td class="paramname"><em>writer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ::<a class="el" href="a01111.html">dds::core::status::OfferedIncompatibleQosStatus</a> &amp;&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p></p>
+<p>This operation called by the Data Distribution Service when the OfferedIncompatibleQosStatus changes.</p>
+<p>This operation will only be called when the relevant <a class="el" href="a01179.html" title="DataWriter events Listener.">DataWriterListener</a> is installed and enabled for the StatusMask::offered_incompatible_qos(). The incompatible Qos status will change when a DataReader object has been discovered by the <a class="el" href="a01175.html" title="DataWriter allows the application to set the value of the sample to be published under a given Topic.">DataWriter</a> with the same Topic and a requested DataReaderQos that was incompatible with the one offered by the <a class="el" href="a01175.html" title="DataWriter allows the application to set the value of the sample to be published under a given Topic.">DataWriter</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">writer</td><td>contain a pointer to the <a class="el" href="a01175.html" title="DataWriter allows the application to set the value of the sample to be published under a given Topic.">DataWriter</a> on which the OfferedIncompatibleQosStatus has changed (this is an input to the application). </td></tr>
+    <tr><td class="paramname">status</td><td>contain the OfferedIncompatibleQosStatus object (this is an input to the application). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa14949723d46cbb6f704f4f33a88252a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa14949723d46cbb6f704f4f33a88252a">&#9670;&nbsp;</a></span>on_publication_matched()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void dds::pub::AnyDataWriterListener::on_publication_matched </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a01159.html">dds::pub::AnyDataWriter</a> &amp;&#160;</td>
+          <td class="paramname"><em>writer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ::<a class="el" href="a01119.html">dds::core::status::PublicationMatchedStatus</a> &amp;&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p></p>
+<p>This operation is called by the Data Distribution Service when a new match has been discovered for the current publication, or when an existing match has ceased to exist.</p>
+<p>Usually this means that a new DataReader that matches the Topic and that has compatible Qos as the current <a class="el" href="a01175.html" title="DataWriter allows the application to set the value of the sample to be published under a given Topic.">DataWriter</a> has either been discovered, or that a previously discovered DataReader has ceased to be matched to the current <a class="el" href="a01175.html" title="DataWriter allows the application to set the value of the sample to be published under a given Topic.">DataWriter</a>. A DataReader may cease to match when it gets deleted, when it changes its Qos to a value that is incompatible with the current <a class="el" href="a01175.html" title="DataWriter allows the application to set the value of the sample to be published under a given Topic.">DataWriter</a> or when either the <a class="el" href="a01175.html" title="DataWriter allows the application to set the value of the sample to be published under a given Topic.">DataWriter</a> or the DataReader has chosen to put its matching counterpart on its ignore-list using the <a class="el" href="a00268.html#a23a3ef8f425ebdeb5a52541fa7e16f91">dds::sub::ignore</a> or <a class="el" href="a00267.html#aee1323e2f432791145523b64a615b9ef">dds::pub::ignore</a> operations.</p>
+<p>it will only be called when the relevant <a class="el" href="a01179.html" title="DataWriter events Listener.">DataWriterListener</a> is installed and enabled for the StatusMask::publication_matched().</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">writer</td><td>contains a pointer to the <a class="el" href="a01175.html" title="DataWriter allows the application to set the value of the sample to be published under a given Topic.">DataWriter</a> for which a match has been discovered (this is an input to the application provided by the Data Distribution Service). </td></tr>
+    <tr><td class="paramname">status</td><td>contains the PublicationMatchedStatus object (this is an input to the application provided by the Data Distribution Service). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>dds/pub/<a class="el" href="a00146_source.html">PublisherListener.hpp</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aa01195_html"><div class="ttname"><a href="a01195.html">dds::pub::NoOpPublisherListener</a></div><div class="ttdoc">Publisher events Listener.</div><div class="ttdef"><b>Definition:</b> <a href="a00146_source.html#l00128">PublisherListener.hpp:128</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="a00261.html">dds</a></li><li class="navelem"><a class="el" href="a00267.html">pub</a></li><li class="navelem"><a class="el" href="a01195.html">NoOpPublisherListener</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

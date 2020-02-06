@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vortex Lite ISO C++ API Reference Guide: ISO/IEC C++ DCPS API</title>
+<title>Cyclone ISO C++ API Reference Guide: ISO/IEC C++ DCPS API</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="PROJECT_LOGO_Lite.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vortex Lite ISO C++ API Reference Guide
+   <div id="projectname">Cyclone ISO C++ API Reference Guide
    </div>
   </td>
  </tr>
@@ -98,21 +97,20 @@ $(document).ready(function(){initNavTree('index.html','');});
 </ul>
 </div>
 <div class="textblock"><p>ISO C++ is the latest DDS DCPS API for the C++ Language. It is more user friendly and simpler to use.</p>
-<p>As of Vortex Lite version 2.0 the only supported ISO C++ version is v2. While most things haven't changed between ISOC++ V1 and V2 regarding the API, there are still some differences that should be considered when migrating from V1 to V2. These differences are addressed in the <a class="el" href="a01528.html">ISO C++ V2 Migration Guide</a>.</p>
 <p>This documentation serves to provide a reference guide and a basic introduction to the ISO C++ API. Due to the way that ISO C++ is implemented using delegates, the API reference is not a 1:1 representation of the implementation structure of the API, it is however a representation of the user accessible layer of the API.</p>
-<p>A number of classes and functions are not currently supported in the Lite ISO C++ API. Details of these can be found on the <a class="el" href="a01530.html">Unsupported Classes and Functions</a> page.</p>
+<p>A number of classes and functions are not currently supported in the ISO C++ API. Details of these can be found on the <a class="el" href="a01526.html">Unsupported Classes and Functions</a> page.</p>
 <h1><a class="anchor" id="mainpage_gettingstarted"></a>
 Getting started</h1>
-<p>If you are new to ISO C++ we would recommend that you start by looking at the example code provided in your Lite installation directory as well as the documentation in the sections below.</p>
-<p>A summary of each example, along with build instructions can be found on the <a class="el" href="a01527.html">Examples</a> page.</p>
+<p>If you are new to ISO C++ we would recommend that you start by looking at the example code provided in your CXX installation directory as well as the documentation in the sections below.</p>
+<p>A summary of each example, along with build instructions can be found on the <a class="el" href="a01524.html">Examples</a> page.</p>
 <p>The OMG ISO C++ specification also gives an overview of the general design of ISO C++ and can be found at the following link: <a href="http://www.omg.org/spec/DDS-PSM-Cxx/">http://www.omg.org/spec/DDS-PSM-Cxx/</a></p>
 <h2><a class="anchor" id="mainpage_howtouse"></a>
 How to use ISO C++ classes</h2>
 <p>ISO C++ was designed in such a way that all memory management is handled automatically for you. Class instances should be created on the stack rather than the heap and the API itself will handle the allocation and deletion of memory automatically.</p>
 <p>There are two main types of class within ISO C++, Value and Entity. All classes within ISO C++ inherit from one of these two classes.</p>
-<p>Value classes are the simplest type of class within ISO C++. These are simple classes which are created on the stack and are copied by value. Examples of this type of class include QoS policies such as <a class="el" href="a00998.html">dds::core::policy::Durability</a> and <a class="el" href="a01022.html">dds::core::policy::Liveliness</a> or status conditions such as <a class="el" href="a01102.html">dds::core::status::LivelinessChangedStatus</a>.</p>
+<p>Value classes are the simplest type of class within ISO C++. These are simple classes which are created on the stack and are copied by value. Examples of this type of class include QoS policies such as <a class="el" href="a00995.html">dds::core::policy::Durability</a> and <a class="el" href="a01019.html">dds::core::policy::Liveliness</a> or status conditions such as <a class="el" href="a01099.html">dds::core::status::LivelinessChangedStatus</a>.</p>
 <p>Entity classes on the other hand are more advanced but still easy to use. These contain an underlying smart pointer which keeps track of the number of references that exist to that particular instance of the class. Once there are no remaining references to the class instance, any memory used by it is then automatically deleted. This underlying smart pointer brings with it the advantage of low overhead copying of class instances as only the smart pointer needs to be copied. This means that any number of references may point to the same entity class instance.</p>
-<p>Below is an example of how a <a class="el" href="a01146.html" title="A DomainParticipant represents the local membership of the application in a Domain.">dds::domain::DomainParticipant</a> can be created and copied, other Entity classes work in the same way. </p><pre class="fragment">{
+<p>Below is an example of how a <a class="el" href="a01143.html" title="A DomainParticipant represents the local membership of the application in a Domain.">dds::domain::DomainParticipant</a> can be created and copied, other Entity classes work in the same way. </p><pre class="fragment">{
     dds::domain::DomainParticipant dp1(dds::core::null); //dds::core::null creates an uninitialised Entity
     {
         dds::domain::DomainParticipant dp2(0); //Creates a domain participant on domain 0
@@ -122,30 +120,30 @@ How to use ISO C++ classes</h2>
     //dp2 is now out of scope but the domain participant is not deleted as dp1 still has a reference to it
 }
 //dp1 is now out of scope and there are no further references to the domain participant so it is deleted automatically
-</pre><p>More ISO C++ code examples can be found on the <a class="el" href="a01529.html">ISO C++ example code snippets</a> page.</p>
+</pre><p>More ISO C++ code examples can be found on the <a class="el" href="a01525.html">ISO C++ example code snippets</a> page.</p>
 <h2><a class="anchor" id="mainpage_api"></a>
 API documentation</h2>
 <p>The namespaces below contain all of the major functionality of the ISO C++ API:</p>
 <ul>
-<li><a class="el" href="a00264.html">dds</a><ul>
-<li><a class="el" href="a00269.html">dds::domain</a><ul>
-<li>The <a class="el" href="a00269.html">dds::domain</a> namespace provides facilities for creating a DomainParticipant that establishes a virtual network in which an application and it's entities can operate.</li>
+<li><a class="el" href="a00261.html">dds</a><ul>
+<li><a class="el" href="a00266.html">dds::domain</a><ul>
+<li>The <a class="el" href="a00266.html">dds::domain</a> namespace provides facilities for creating a DomainParticipant that establishes a virtual network in which an application and it's entities can operate.</li>
 </ul>
 </li>
-<li><a class="el" href="a00274.html">dds::topic</a><ul>
-<li>The <a class="el" href="a00274.html">dds::topic</a> namespace provides facilities for the creation of Topics which can be published or subscribed to.</li>
+<li><a class="el" href="a00271.html">dds::topic</a><ul>
+<li>The <a class="el" href="a00271.html">dds::topic</a> namespace provides facilities for the creation of Topics which can be published or subscribed to.</li>
 </ul>
 </li>
-<li><a class="el" href="a00270.html">dds::pub</a><ul>
-<li>The <a class="el" href="a00270.html">dds::pub</a> namespace provides facilities for writing samples based on a Topic.</li>
+<li><a class="el" href="a00267.html">dds::pub</a><ul>
+<li>The <a class="el" href="a00267.html">dds::pub</a> namespace provides facilities for writing samples based on a Topic.</li>
 </ul>
 </li>
-<li><a class="el" href="a00271.html">dds::sub</a><ul>
-<li>The <a class="el" href="a00271.html">dds::sub</a> namespace provides facilities for reading samples based on a Topic.</li>
+<li><a class="el" href="a00268.html">dds::sub</a><ul>
+<li>The <a class="el" href="a00268.html">dds::sub</a> namespace provides facilities for reading samples based on a Topic.</li>
 </ul>
 </li>
-<li><a class="el" href="a00265.html">dds::core</a><ul>
-<li>The <a class="el" href="a00265.html">dds::core</a> namespace provides core facilities such as QoS policies and the ability to wait on particular conditions using a WaitSet. </li>
+<li><a class="el" href="a00262.html">dds::core</a><ul>
+<li>The <a class="el" href="a00262.html">dds::core</a> namespace provides core facilities such as QoS policies and the ability to wait on particular conditions using a WaitSet. </li>
 </ul>
 </li>
 </ul>

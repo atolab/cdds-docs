@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vortex Lite ISO C++ API Reference Guide: Member List</title>
+<title>Cyclone ISO C++ API Reference Guide: dds::core::policy::Liveliness Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="PROJECT_LOGO_Lite.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vortex Lite ISO C++ API Reference Guide
+   <div id="projectname">Cyclone ISO C++ API Reference Guide
    </div>
   </td>
  </tr>
@@ -67,7 +66,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('a01022.html','');});
+$(document).ready(function(){initNavTree('a01019.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -86,32 +85,428 @@ $(document).ready(function(){initNavTree('a01022.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="a01016.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">dds::core::policy::Liveliness Member List</div>  </div>
+<div class="title">dds::core::policy::Liveliness Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="a01022.html">dds::core::policy::Liveliness</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a01022.html#abae59868b77f500ed6467e95886cc9d7">Automatic</a>()</td><td class="entry"><a class="el" href="a01022.html">dds::core::policy::Liveliness</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a01022.html#ae761d01b8fb31feb83c3863f7d5277f6">kind</a>(dds::core::policy::LivelinessKind::Type kind)</td><td class="entry"><a class="el" href="a01022.html">dds::core::policy::Liveliness</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01022.html#a58874ffcada5876e36272827e2f923b4">kind</a>() const</td><td class="entry"><a class="el" href="a01022.html">dds::core::policy::Liveliness</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a01022.html#a206aae51fcc4a1ce14142d7c7d7b710f">lease_duration</a>(const dds::core::Duration &amp;lease_duration)</td><td class="entry"><a class="el" href="a01022.html">dds::core::policy::Liveliness</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01022.html#acd537363559d5bf81e214f0cc9f64a61">lease_duration</a>() const</td><td class="entry"><a class="el" href="a01022.html">dds::core::policy::Liveliness</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a01022.html#a45c9fb1b1adc5cb88a9462c2eaa7d31a">Liveliness</a>(dds::core::policy::LivelinessKind::Type kind=dds::core::policy::LivelinessKind::AUTOMATIC, const dds::core::Duration &amp;lease_duration=dds::core::Duration::infinite())</td><td class="entry"><a class="el" href="a01022.html">dds::core::policy::Liveliness</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01022.html#aceed00743df9f232a89d69f9af28c52d">Liveliness</a>(const Liveliness &amp;other)</td><td class="entry"><a class="el" href="a01022.html">dds::core::policy::Liveliness</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a01022.html#a2daa8caedbb0a646e8583019a68e32c1">ManualByParticipant</a>(const dds::core::Duration &amp;lease_duration=dds::core::Duration::infinite())</td><td class="entry"><a class="el" href="a01022.html">dds::core::policy::Liveliness</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01022.html#ab6550ac2d4c1df2b0615513d04104a3c">ManualByTopic</a>(const dds::core::Duration &amp;lease_duration=dds::core::Duration::infinite())</td><td class="entry"><a class="el" href="a01022.html">dds::core::policy::Liveliness</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a01138.html#a9b22715713bc0bfc10af93eeaeda80f4">operator!=</a>(const Value &amp;other) const</td><td class="entry"><a class="el" href="a01138.html">dds::core::Value&lt; D &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01138.html#a948a6f4576c26fe7e44c551a56f4d038">operator-&gt;</a>()</td><td class="entry"><a class="el" href="a01138.html">dds::core::Value&lt; D &gt;</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a01138.html#a0147b1dea8bdb0987505033b7025470c">operator-&gt;</a>() const</td><td class="entry"><a class="el" href="a01138.html">dds::core::Value&lt; D &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01138.html#ad78a562d097b30ce3dca30e0f1c6d66e">operator=</a>(const Value &amp;other)</td><td class="entry"><a class="el" href="a01138.html">dds::core::Value&lt; D &gt;</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a01138.html#a34fd669d0051ad90b89d98a323d2d96a">operator==</a>(const Value &amp;other) const</td><td class="entry"><a class="el" href="a01138.html">dds::core::Value&lt; D &gt;</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<p> 
+ <a href="a01019.html#details">More...</a></p>
+
+<p><code>#include &quot;<a class="el" href="a00062_source.html">CorePolicy.hpp</a>&quot;</code></p>
+
+<p>Inherits <a class="el" href="a01135.html">dds::core::Value&lt; D &gt;</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:aceed00743df9f232a89d69f9af28c52d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01019.html#aceed00743df9f232a89d69f9af28c52d">Liveliness</a> (const <a class="el" href="a01019.html">Liveliness</a> &amp;other)</td></tr>
+<tr class="separator:aceed00743df9f232a89d69f9af28c52d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45c9fb1b1adc5cb88a9462c2eaa7d31a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01019.html#a45c9fb1b1adc5cb88a9462c2eaa7d31a">Liveliness</a> (<a class="el" href="a01051.html#a4a31f0c0de0ec56706b74453aa41357f">dds::core::policy::LivelinessKind::Type</a> <a class="el" href="a01019.html#ae761d01b8fb31feb83c3863f7d5277f6">kind</a>=<a class="el" href="a01051.html#a4a31f0c0de0ec56706b74453aa41357fa038eb0386d0c4e902dfb29286e3c0799">dds::core::policy::LivelinessKind::AUTOMATIC</a>, const <a class="el" href="a00859.html">dds::core::Duration</a> &amp;<a class="el" href="a01019.html#a206aae51fcc4a1ce14142d7c7d7b710f">lease_duration</a>=<a class="el" href="a00859.html#a5a1d1924d04f70d5bc3bab5b1de521b2">dds::core::Duration::infinite</a>())</td></tr>
+<tr class="separator:a45c9fb1b1adc5cb88a9462c2eaa7d31a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58874ffcada5876e36272827e2f923b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01051.html#a4a31f0c0de0ec56706b74453aa41357f">dds::core::policy::LivelinessKind::Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01019.html#a58874ffcada5876e36272827e2f923b4">kind</a> () const</td></tr>
+<tr class="separator:a58874ffcada5876e36272827e2f923b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae761d01b8fb31feb83c3863f7d5277f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01019.html">Liveliness</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01019.html#ae761d01b8fb31feb83c3863f7d5277f6">kind</a> (<a class="el" href="a01051.html#a4a31f0c0de0ec56706b74453aa41357f">dds::core::policy::LivelinessKind::Type</a> kind)</td></tr>
+<tr class="separator:ae761d01b8fb31feb83c3863f7d5277f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd537363559d5bf81e214f0cc9f64a61"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="a00859.html">dds::core::Duration</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01019.html#acd537363559d5bf81e214f0cc9f64a61">lease_duration</a> () const</td></tr>
+<tr class="separator:acd537363559d5bf81e214f0cc9f64a61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a206aae51fcc4a1ce14142d7c7d7b710f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01019.html">Liveliness</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01019.html#a206aae51fcc4a1ce14142d7c7d7b710f">lease_duration</a> (const <a class="el" href="a00859.html">dds::core::Duration</a> &amp;lease_duration)</td></tr>
+<tr class="separator:a206aae51fcc4a1ce14142d7c7d7b710f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b22715713bc0bfc10af93eeaeda80f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01135.html#a9b22715713bc0bfc10af93eeaeda80f4">operator!=</a> (const <a class="el" href="a01135.html">Value</a> &amp;other) const</td></tr>
+<tr class="separator:a9b22715713bc0bfc10af93eeaeda80f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a948a6f4576c26fe7e44c551a56f4d038"><td class="memItemLeft" align="right" valign="top">D *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01135.html#a948a6f4576c26fe7e44c551a56f4d038">operator-&gt;</a> ()</td></tr>
+<tr class="separator:a948a6f4576c26fe7e44c551a56f4d038"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0147b1dea8bdb0987505033b7025470c"><td class="memItemLeft" align="right" valign="top">const D *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01135.html#a0147b1dea8bdb0987505033b7025470c">operator-&gt;</a> () const</td></tr>
+<tr class="separator:a0147b1dea8bdb0987505033b7025470c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34fd669d0051ad90b89d98a323d2d96a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01135.html#a34fd669d0051ad90b89d98a323d2d96a">operator==</a> (const <a class="el" href="a01135.html">Value</a> &amp;other) const</td></tr>
+<tr class="separator:a34fd669d0051ad90b89d98a323d2d96a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:abae59868b77f500ed6467e95886cc9d7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a01019.html">Liveliness</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01019.html#abae59868b77f500ed6467e95886cc9d7">Automatic</a> ()</td></tr>
+<tr class="separator:abae59868b77f500ed6467e95886cc9d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2daa8caedbb0a646e8583019a68e32c1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a01019.html">Liveliness</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01019.html#a2daa8caedbb0a646e8583019a68e32c1">ManualByParticipant</a> (const <a class="el" href="a00859.html">dds::core::Duration</a> &amp;<a class="el" href="a01019.html#a206aae51fcc4a1ce14142d7c7d7b710f">lease_duration</a>=<a class="el" href="a00859.html#a5a1d1924d04f70d5bc3bab5b1de521b2">dds::core::Duration::infinite</a>())</td></tr>
+<tr class="separator:a2daa8caedbb0a646e8583019a68e32c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6550ac2d4c1df2b0615513d04104a3c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a01019.html">Liveliness</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01019.html#ab6550ac2d4c1df2b0615513d04104a3c">ManualByTopic</a> (const <a class="el" href="a00859.html">dds::core::Duration</a> &amp;<a class="el" href="a01019.html#a206aae51fcc4a1ce14142d7c7d7b710f">lease_duration</a>=<a class="el" href="a00859.html#a5a1d1924d04f70d5bc3bab5b1de521b2">dds::core::Duration::infinite</a>())</td></tr>
+<tr class="separator:ab6550ac2d4c1df2b0615513d04104a3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="a00062_source.html#l01230">1230</a> of file <a class="el" href="a00062_source.html">CorePolicy.hpp</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a45c9fb1b1adc5cb88a9462c2eaa7d31a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45c9fb1b1adc5cb88a9462c2eaa7d31a">&#9670;&nbsp;</a></span>Liveliness() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dds::core::policy::Liveliness::Liveliness </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a01051.html#a4a31f0c0de0ec56706b74453aa41357f">dds::core::policy::LivelinessKind::Type</a>&#160;</td>
+          <td class="paramname"><em>kind</em> = <code><a class="el" href="a01051.html#a4a31f0c0de0ec56706b74453aa41357fa038eb0386d0c4e902dfb29286e3c0799">dds::core::policy::LivelinessKind::AUTOMATIC</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00859.html">dds::core::Duration</a> &amp;&#160;</td>
+          <td class="paramname"><em>lease_duration</em> = <code><a class="el" href="a00859.html#a5a1d1924d04f70d5bc3bab5b1de521b2">dds::core::Duration::infinite</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a <a class="el" href="a01019.html">Liveliness</a> QoS instance</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kind</td><td>the kind </td></tr>
+    <tr><td class="paramname">lease_duration</td><td>the lease_duration </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aceed00743df9f232a89d69f9af28c52d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aceed00743df9f232a89d69f9af28c52d">&#9670;&nbsp;</a></span>Liveliness() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dds::core::policy::Liveliness::Liveliness </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a01019.html">Liveliness</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Copies a <a class="el" href="a01019.html">Liveliness</a> QoS instance</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>the <a class="el" href="a01019.html">Liveliness</a> QoS instance to copy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="abae59868b77f500ed6467e95886cc9d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abae59868b77f500ed6467e95886cc9d7">&#9670;&nbsp;</a></span>Automatic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="a01019.html">Liveliness</a> dds::core::policy::Liveliness::Automatic </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="a01019.html">Liveliness</a> QoS instance with the kind set to AUTOMATIC </dd></dl>
+
+</div>
+</div>
+<a id="a58874ffcada5876e36272827e2f923b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58874ffcada5876e36272827e2f923b4">&#9670;&nbsp;</a></span>kind() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a01051.html#a4a31f0c0de0ec56706b74453aa41357f">dds::core::policy::LivelinessKind::Type</a> dds::core::policy::Liveliness::kind </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gets the kind</p>
+<dl class="section return"><dt>Returns</dt><dd>the kind </dd></dl>
+
+</div>
+</div>
+<a id="ae761d01b8fb31feb83c3863f7d5277f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae761d01b8fb31feb83c3863f7d5277f6">&#9670;&nbsp;</a></span>kind() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a01019.html">Liveliness</a>&amp; dds::core::policy::Liveliness::kind </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a01051.html#a4a31f0c0de0ec56706b74453aa41357f">dds::core::policy::LivelinessKind::Type</a>&#160;</td>
+          <td class="paramname"><em>kind</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets the kind</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kind</td><td>the kind </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acd537363559d5bf81e214f0cc9f64a61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd537363559d5bf81e214f0cc9f64a61">&#9670;&nbsp;</a></span>lease_duration() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="a00859.html">dds::core::Duration</a> dds::core::policy::Liveliness::lease_duration </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gets the lease_duration</p>
+<dl class="section return"><dt>Returns</dt><dd>the lease_duration </dd></dl>
+
+</div>
+</div>
+<a id="a206aae51fcc4a1ce14142d7c7d7b710f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a206aae51fcc4a1ce14142d7c7d7b710f">&#9670;&nbsp;</a></span>lease_duration() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a01019.html">Liveliness</a>&amp; dds::core::policy::Liveliness::lease_duration </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00859.html">dds::core::Duration</a> &amp;&#160;</td>
+          <td class="paramname"><em>lease_duration</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets the lease_duration</p>
+<dl class="section return"><dt>Returns</dt><dd>the lease_duration </dd></dl>
+
+</div>
+</div>
+<a id="a2daa8caedbb0a646e8583019a68e32c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2daa8caedbb0a646e8583019a68e32c1">&#9670;&nbsp;</a></span>ManualByParticipant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="a01019.html">Liveliness</a> dds::core::policy::Liveliness::ManualByParticipant </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00859.html">dds::core::Duration</a> &amp;&#160;</td>
+          <td class="paramname"><em>lease_duration</em> = <code><a class="el" href="a00859.html#a5a1d1924d04f70d5bc3bab5b1de521b2">dds::core::Duration::infinite</a>()</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="a01019.html">Liveliness</a> QoS instance with the kind set to MANUAL_BY_PARTICIPANT and the lease_duration set to the supplied value </dd></dl>
+
+</div>
+</div>
+<a id="ab6550ac2d4c1df2b0615513d04104a3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6550ac2d4c1df2b0615513d04104a3c">&#9670;&nbsp;</a></span>ManualByTopic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="a01019.html">Liveliness</a> dds::core::policy::Liveliness::ManualByTopic </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00859.html">dds::core::Duration</a> &amp;&#160;</td>
+          <td class="paramname"><em>lease_duration</em> = <code><a class="el" href="a00859.html#a5a1d1924d04f70d5bc3bab5b1de521b2">dds::core::Duration::infinite</a>()</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="a01019.html">Liveliness</a> QoS instance with the kind set to MANUAL_BY_TOPIC and the lease_duration set to the supplied value </dd></dl>
+
+</div>
+</div>
+<a id="a9b22715713bc0bfc10af93eeaeda80f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b22715713bc0bfc10af93eeaeda80f4">&#9670;&nbsp;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="a01135.html">dds::core::Value</a>&lt; D &gt;::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a01135.html">Value</a>&lt; D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compare this <a class="el" href="a01135.html" title="This class is the base for various value-type dds objects.">Value</a> with another <a class="el" href="a01135.html" title="This class is the base for various value-type dds objects.">Value</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td><a class="el" href="a01135.html" title="This class is the base for various value-type dds objects.">Value</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if not equal </dd></dl>
+
+</div>
+</div>
+<a id="a948a6f4576c26fe7e44c551a56f4d038"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a948a6f4576c26fe7e44c551a56f4d038">&#9670;&nbsp;</a></span>operator-&gt;() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">D* <a class="el" href="a01135.html">dds::core::Value</a>&lt; D &gt;::operator-&gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The <a class="el" href="a01135.html#a948a6f4576c26fe7e44c551a56f4d038">operator-&gt;()</a> is provided to be able to directly invoke functions on the delegate.</p>
+<p>The decision to provide direct access to the delegate was motivated by the need for providing a way that was not invasive with respect to the CXXDDS API and yet would allow for vendor-specific extension. Thus vendor-specific extensions can be invoked on the <a class="el" href="a01135.html" title="This class is the base for various value-type dds objects.">Value</a> and on all its subclasses as follows: </p><div class="fragment"><div class="line">my_dds_value.standard_function();</div>
+<div class="line">my_dds_value-&gt;vendor_specific_extension();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>a reference to delegate. </dd></dl>
+
+</div>
+</div>
+<a id="a0147b1dea8bdb0987505033b7025470c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0147b1dea8bdb0987505033b7025470c">&#9670;&nbsp;</a></span>operator-&gt;() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const D* <a class="el" href="a01135.html">dds::core::Value</a>&lt; D &gt;::operator-&gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p></p>
+<p>The <a class="el" href="a01135.html#a948a6f4576c26fe7e44c551a56f4d038">operator-&gt;()</a> is provided to be able to directly invoke functions on the delegate.</p>
+<p>The decision to provide direct access to the delegate was motivated by the need for providing a way that was not invasive with respect to the CXXDDS API and yet would allow for vendor-specific extension. Thus vendor-specific extensions can be invoked on the <a class="el" href="a01135.html" title="This class is the base for various value-type dds objects.">Value</a> and on all its subclasses as follows: </p><div class="fragment"><div class="line">my_dds_value.standard_function();</div>
+<div class="line">my_dds_value-&gt;vendor_specific_extension();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>a reference to delegate. </dd></dl>
+
+</div>
+</div>
+<a id="a34fd669d0051ad90b89d98a323d2d96a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34fd669d0051ad90b89d98a323d2d96a">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="a01135.html">dds::core::Value</a>&lt; D &gt;::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a01135.html">Value</a>&lt; D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compare this <a class="el" href="a01135.html" title="This class is the base for various value-type dds objects.">Value</a> with another <a class="el" href="a01135.html" title="This class is the base for various value-type dds objects.">Value</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td><a class="el" href="a01135.html" title="This class is the base for various value-type dds objects.">Value</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if equal </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>dds/core/policy/<a class="el" href="a00062_source.html">CorePolicy.hpp</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="a00261.html">dds</a></li><li class="navelem"><a class="el" href="a00262.html">core</a></li><li class="navelem"><a class="el" href="a00264.html">policy</a></li><li class="navelem"><a class="el" href="a01019.html">Liveliness</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vortex Lite ISO C++ API Reference Guide: Member List</title>
+<title>Cyclone ISO C++ API Reference Guide: dds::core::policy::TimeBasedFilter Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="PROJECT_LOGO_Lite.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vortex Lite ISO C++ API Reference Guide
+   <div id="projectname">Cyclone ISO C++ API Reference Guide
    </div>
   </td>
  </tr>
@@ -67,7 +66,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('a00974.html','');});
+$(document).ready(function(){initNavTree('a00971.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -86,27 +85,292 @@ $(document).ready(function(){initNavTree('a00974.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="a00968.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">dds::core::policy::TimeBasedFilter Member List</div>  </div>
+<div class="title">dds::core::policy::TimeBasedFilter Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="a00974.html">dds::core::policy::TimeBasedFilter</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a00974.html#a9f9595780008d9f31dbca318f050f9cd">minimum_separation</a>(const dds::core::Duration &amp;period)</td><td class="entry"><a class="el" href="a00974.html">dds::core::policy::TimeBasedFilter</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00974.html#a8205b9f63f1e30cde8b7b6882bdaf1fa">minimum_separation</a>() const</td><td class="entry"><a class="el" href="a00974.html">dds::core::policy::TimeBasedFilter</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01138.html#a9b22715713bc0bfc10af93eeaeda80f4">operator!=</a>(const Value &amp;other) const</td><td class="entry"><a class="el" href="a01138.html">dds::core::Value&lt; D &gt;</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a01138.html#a948a6f4576c26fe7e44c551a56f4d038">operator-&gt;</a>()</td><td class="entry"><a class="el" href="a01138.html">dds::core::Value&lt; D &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01138.html#a0147b1dea8bdb0987505033b7025470c">operator-&gt;</a>() const</td><td class="entry"><a class="el" href="a01138.html">dds::core::Value&lt; D &gt;</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a01138.html#ad78a562d097b30ce3dca30e0f1c6d66e">operator=</a>(const Value &amp;other)</td><td class="entry"><a class="el" href="a01138.html">dds::core::Value&lt; D &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01138.html#a34fd669d0051ad90b89d98a323d2d96a">operator==</a>(const Value &amp;other) const</td><td class="entry"><a class="el" href="a01138.html">dds::core::Value&lt; D &gt;</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00974.html#a785d585b6b8363839a71edb37577532c">TimeBasedFilter</a>(const dds::core::Duration &amp;period=dds::core::Duration::zero())</td><td class="entry"><a class="el" href="a00974.html">dds::core::policy::TimeBasedFilter</a></td><td class="entry"><span class="mlabel">explicit</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00974.html#ab313d1ceeba00e8a73dceaad4cb0b0bf">TimeBasedFilter</a>(const TimeBasedFilter &amp;other)</td><td class="entry"><a class="el" href="a00974.html">dds::core::policy::TimeBasedFilter</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<p> 
+ <a href="a00971.html#details">More...</a></p>
+
+<p><code>#include &quot;<a class="el" href="a00062_source.html">CorePolicy.hpp</a>&quot;</code></p>
+
+<p>Inherits <a class="el" href="a01135.html">dds::core::Value&lt; D &gt;</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a785d585b6b8363839a71edb37577532c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00971.html#a785d585b6b8363839a71edb37577532c">TimeBasedFilter</a> (const <a class="el" href="a00859.html">dds::core::Duration</a> &amp;period=<a class="el" href="a00859.html#a13e5a16bfd89582288f51b7487c2234d">dds::core::Duration::zero</a>())</td></tr>
+<tr class="separator:a785d585b6b8363839a71edb37577532c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab313d1ceeba00e8a73dceaad4cb0b0bf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00971.html#ab313d1ceeba00e8a73dceaad4cb0b0bf">TimeBasedFilter</a> (const <a class="el" href="a00971.html">TimeBasedFilter</a> &amp;other)</td></tr>
+<tr class="separator:ab313d1ceeba00e8a73dceaad4cb0b0bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8205b9f63f1e30cde8b7b6882bdaf1fa"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="a00859.html">dds::core::Duration</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00971.html#a8205b9f63f1e30cde8b7b6882bdaf1fa">minimum_separation</a> () const</td></tr>
+<tr class="separator:a8205b9f63f1e30cde8b7b6882bdaf1fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f9595780008d9f31dbca318f050f9cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00971.html">TimeBasedFilter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00971.html#a9f9595780008d9f31dbca318f050f9cd">minimum_separation</a> (const <a class="el" href="a00859.html">dds::core::Duration</a> &amp;period)</td></tr>
+<tr class="separator:a9f9595780008d9f31dbca318f050f9cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b22715713bc0bfc10af93eeaeda80f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01135.html#a9b22715713bc0bfc10af93eeaeda80f4">operator!=</a> (const <a class="el" href="a01135.html">Value</a> &amp;other) const</td></tr>
+<tr class="separator:a9b22715713bc0bfc10af93eeaeda80f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a948a6f4576c26fe7e44c551a56f4d038"><td class="memItemLeft" align="right" valign="top">D *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01135.html#a948a6f4576c26fe7e44c551a56f4d038">operator-&gt;</a> ()</td></tr>
+<tr class="separator:a948a6f4576c26fe7e44c551a56f4d038"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0147b1dea8bdb0987505033b7025470c"><td class="memItemLeft" align="right" valign="top">const D *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01135.html#a0147b1dea8bdb0987505033b7025470c">operator-&gt;</a> () const</td></tr>
+<tr class="separator:a0147b1dea8bdb0987505033b7025470c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34fd669d0051ad90b89d98a323d2d96a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01135.html#a34fd669d0051ad90b89d98a323d2d96a">operator==</a> (const <a class="el" href="a01135.html">Value</a> &amp;other) const</td></tr>
+<tr class="separator:a34fd669d0051ad90b89d98a323d2d96a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="a00062_source.html#l00488">488</a> of file <a class="el" href="a00062_source.html">CorePolicy.hpp</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a785d585b6b8363839a71edb37577532c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a785d585b6b8363839a71edb37577532c">&#9670;&nbsp;</a></span>TimeBasedFilter() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dds::core::policy::TimeBasedFilter::TimeBasedFilter </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00859.html">dds::core::Duration</a> &amp;&#160;</td>
+          <td class="paramname"><em>period</em> = <code><a class="el" href="a00859.html#a13e5a16bfd89582288f51b7487c2234d">dds::core::Duration::zero</a>()</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a <a class="el" href="a00971.html">TimeBasedFilter</a> QoS instance</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">period</td><td>minimum separation period </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab313d1ceeba00e8a73dceaad4cb0b0bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab313d1ceeba00e8a73dceaad4cb0b0bf">&#9670;&nbsp;</a></span>TimeBasedFilter() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dds::core::policy::TimeBasedFilter::TimeBasedFilter </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00971.html">TimeBasedFilter</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Copies a <a class="el" href="a00971.html">TimeBasedFilter</a> QoS instance</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>the <a class="el" href="a00971.html">TimeBasedFilter</a> QoS instance to copy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8205b9f63f1e30cde8b7b6882bdaf1fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8205b9f63f1e30cde8b7b6882bdaf1fa">&#9670;&nbsp;</a></span>minimum_separation() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="a00859.html">dds::core::Duration</a> dds::core::policy::TimeBasedFilter::minimum_separation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gets the minimum separation period</p>
+<dl class="section return"><dt>Returns</dt><dd>minimum separation period </dd></dl>
+
+</div>
+</div>
+<a id="a9f9595780008d9f31dbca318f050f9cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f9595780008d9f31dbca318f050f9cd">&#9670;&nbsp;</a></span>minimum_separation() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00971.html">TimeBasedFilter</a>&amp; dds::core::policy::TimeBasedFilter::minimum_separation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00859.html">dds::core::Duration</a> &amp;&#160;</td>
+          <td class="paramname"><em>period</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets the minimum separation period</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">period</td><td>minimum separation period </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9b22715713bc0bfc10af93eeaeda80f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b22715713bc0bfc10af93eeaeda80f4">&#9670;&nbsp;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="a01135.html">dds::core::Value</a>&lt; D &gt;::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a01135.html">Value</a>&lt; D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compare this <a class="el" href="a01135.html" title="This class is the base for various value-type dds objects.">Value</a> with another <a class="el" href="a01135.html" title="This class is the base for various value-type dds objects.">Value</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td><a class="el" href="a01135.html" title="This class is the base for various value-type dds objects.">Value</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if not equal </dd></dl>
+
+</div>
+</div>
+<a id="a948a6f4576c26fe7e44c551a56f4d038"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a948a6f4576c26fe7e44c551a56f4d038">&#9670;&nbsp;</a></span>operator-&gt;() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">D* <a class="el" href="a01135.html">dds::core::Value</a>&lt; D &gt;::operator-&gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The <a class="el" href="a01135.html#a948a6f4576c26fe7e44c551a56f4d038">operator-&gt;()</a> is provided to be able to directly invoke functions on the delegate.</p>
+<p>The decision to provide direct access to the delegate was motivated by the need for providing a way that was not invasive with respect to the CXXDDS API and yet would allow for vendor-specific extension. Thus vendor-specific extensions can be invoked on the <a class="el" href="a01135.html" title="This class is the base for various value-type dds objects.">Value</a> and on all its subclasses as follows: </p><div class="fragment"><div class="line">my_dds_value.standard_function();</div>
+<div class="line">my_dds_value-&gt;vendor_specific_extension();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>a reference to delegate. </dd></dl>
+
+</div>
+</div>
+<a id="a0147b1dea8bdb0987505033b7025470c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0147b1dea8bdb0987505033b7025470c">&#9670;&nbsp;</a></span>operator-&gt;() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const D* <a class="el" href="a01135.html">dds::core::Value</a>&lt; D &gt;::operator-&gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p></p>
+<p>The <a class="el" href="a01135.html#a948a6f4576c26fe7e44c551a56f4d038">operator-&gt;()</a> is provided to be able to directly invoke functions on the delegate.</p>
+<p>The decision to provide direct access to the delegate was motivated by the need for providing a way that was not invasive with respect to the CXXDDS API and yet would allow for vendor-specific extension. Thus vendor-specific extensions can be invoked on the <a class="el" href="a01135.html" title="This class is the base for various value-type dds objects.">Value</a> and on all its subclasses as follows: </p><div class="fragment"><div class="line">my_dds_value.standard_function();</div>
+<div class="line">my_dds_value-&gt;vendor_specific_extension();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>a reference to delegate. </dd></dl>
+
+</div>
+</div>
+<a id="a34fd669d0051ad90b89d98a323d2d96a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34fd669d0051ad90b89d98a323d2d96a">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="a01135.html">dds::core::Value</a>&lt; D &gt;::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a01135.html">Value</a>&lt; D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compare this <a class="el" href="a01135.html" title="This class is the base for various value-type dds objects.">Value</a> with another <a class="el" href="a01135.html" title="This class is the base for various value-type dds objects.">Value</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td><a class="el" href="a01135.html" title="This class is the base for various value-type dds objects.">Value</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if equal </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>dds/core/policy/<a class="el" href="a00062_source.html">CorePolicy.hpp</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="a00261.html">dds</a></li><li class="navelem"><a class="el" href="a00262.html">core</a></li><li class="navelem"><a class="el" href="a00264.html">policy</a></li><li class="navelem"><a class="el" href="a00971.html">TimeBasedFilter</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

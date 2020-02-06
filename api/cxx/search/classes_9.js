@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['latencybudget_637',['LatencyBudget',['../a00970.html',1,'dds::core::policy']]],
-  ['lifespan_638',['Lifespan',['../a00962.html',1,'dds::core::policy']]],
-  ['liveliness_639',['Liveliness',['../a01022.html',1,'dds::core::policy']]],
-  ['livelinesschangedstatus_640',['LivelinessChangedStatus',['../a01102.html',1,'dds::core::status']]],
-  ['livelinesskind_641',['LivelinessKind',['../a01054.html',1,'dds::core::policy']]],
-  ['livelinessloststatus_642',['LivelinessLostStatus',['../a01098.html',1,'dds::core::status']]],
-  ['loanedsamples_643',['LoanedSamples',['../a01262.html',1,'dds::sub']]]
+  ['latencybudget_635',['LatencyBudget',['../a00967.html',1,'dds::core::policy']]],
+  ['lifespan_636',['Lifespan',['../a00959.html',1,'dds::core::policy']]],
+  ['liveliness_637',['Liveliness',['../a01019.html',1,'dds::core::policy']]],
+  ['livelinesschangedstatus_638',['LivelinessChangedStatus',['../a01099.html',1,'dds::core::status']]],
+  ['livelinesskind_639',['LivelinessKind',['../a01051.html',1,'dds::core::policy']]],
+  ['livelinessloststatus_640',['LivelinessLostStatus',['../a01095.html',1,'dds::core::status']]],
+  ['loanedsamples_641',['LoanedSamples',['../a01259.html',1,'dds::sub']]]
 ];

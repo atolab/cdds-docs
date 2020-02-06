@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vortex Lite ISO C++ API Reference Guide: dds/sub/ddssub.hpp Source File</title>
+<title>Cyclone ISO C++ API Reference Guide: dds/sub/GenerationCount.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="PROJECT_LOGO_Lite.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vortex Lite ISO C++ API Reference Guide
+   <div id="projectname">Cyclone ISO C++ API Reference Guide
    </div>
   </td>
  </tr>
@@ -87,164 +86,66 @@ $(document).ready(function(){initNavTree('a00182_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">ddssub.hpp</div>  </div>
+<div class="title">GenerationCount.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="a00182.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef OMG_DDS_SUB_PACKAGE_INCLUDE_HPP_</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define OMG_DDS_SUB_PACKAGE_INCLUDE_HPP_</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/* Copyright 2010, Object Management Group, Inc.</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * Copyright 2010, PrismTech, Corp.</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * Copyright 2010, Real-Time Innovations, Inc.</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * All rights reserved.</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * you may not use this file except in compliance with the License.</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * You may obtain a copy of the License at</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *     http://www.apache.org/licenses/LICENSE-2.0</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * Unless required by applicable law or agreed to in writing, software</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * See the License for the specific language governing permissions and</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * limitations under the License.</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;dds/core/detail/conformance.hpp&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">/* Depends on:</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> *   &lt;dds/sub/Subscriber.hpp&gt;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> *   &lt;dds/sub/status/DataStatus.hpp&gt;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> *   &lt;dds/sub/Sample.hpp&gt;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> *   &lt;dds/sub/LoanedSamples.hpp&gt;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00176.html">dds/sub/DataReader.hpp</a>&gt;</span></div>
+<a href="a00182.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright 2010, Object Management Group, Inc.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">* Copyright 2010, PrismTech, Corp.</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">* Copyright 2010, Real-Time Innovations, Inc.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">* All rights reserved.</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">* you may not use this file except in compliance with the License.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">* You may obtain a copy of the License at</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">*     http://www.apache.org/licenses/LICENSE-2.0</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">* Unless required by applicable law or agreed to in writing, software</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">* See the License for the specific language governing permissions and</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">* limitations under the License.</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#ifndef OMG_DDS_SUB_T_GENERATION_COUNT_HPP_</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define OMG_DDS_SUB_T_GENERATION_COUNT_HPP_</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00098.html">dds/core/Value.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00261.html">dds</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>sub</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">class </span>GenerationCount;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">// -- Status Includes</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00212.html">dds/sub/status/DataState.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// -- QoS Includes</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00191.html">dds/sub/qos/DataReaderQos.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00194.html">dds/sub/qos/SubscriberQos.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">// -- Sub Includes</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00200.html">dds/sub/Rank.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00185.html">dds/sub/GenerationCount.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">/* Depends on:</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment"> *   Forward declaration of AnyDataReader</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00164.html">dds/sub/AnyDataReaderListener.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment"> * Depends on:</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"> *  &lt;dds/sub/GenerationCount.hpp&gt;</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment"> *  &lt;dds/sub/Rank.hpp&gt;</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00206.html">dds/sub/SampleInfo.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00188.html">dds/sub/LoanedSamples.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00209.html">dds/sub/SharedSamples.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">/* Depends on:</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment"> *  &lt;dds/sub/qos/SubscriberQos.hpp&gt;</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment"> *  &lt;dds/sub/qos/DataReaderQos.hpp&gt;</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00215.html">dds/sub/Subscriber.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">/* Depends on:</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment"> *    &lt;dds/sub/Subscriber.hpp&gt;</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00167.html">dds/sub/CoherentAccess.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">/* Depends on:</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment"> * &lt;dds/sub/AnyDataReaderListener.hpp&gt;</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment"> * &lt;dds/sub/Subscriber.hpp&gt;</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00218.html">dds/sub/SubscriberListener.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">/* Depends on:</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment"> *    &lt;dds/sub/AnyDataReaderListener.hpp&gt;</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00179.html">dds/sub/DataReaderListener.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">/* Depends on:</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment"> *  &lt;dds/sub/Subscriber.hpp&gt;</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment"> *  &lt;dds/sub/DataReader.hpp&gt;</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00161.html">dds/sub/AnyDataReader.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">// -- Condition Includes</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">/* Depends on:</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment"> *   &lt;dds/sub/DataReader.hpp&gt;</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00173.html">dds/sub/cond/ReadCondition.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00197.html">dds/sub/Query.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">/* Depends on:</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment"> *    &lt;dds/sub/status/DataState.hpp&gt;</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment"> *    &lt;dds/sub/cond/ReadCondition.hpp&gt;</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment"> *    &lt;dds/sub/Query.hpp&gt;</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00170.html">dds/sub/cond/QueryCondition.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">/* Depends on:</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment"> *   &lt;dds/sub/Subscriber.hpp&gt;</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment"> *   &lt;dds/sub/status/ReaderState.hpp&gt;</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a01550.html">dds/sub/find.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a01538.html">dds/sub/discovery.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">// Pretty Print Utilities</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment">// #if (OMG_DDS_HAS_PRETTY_PRINT_COUT == 1)</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;std::ostream&amp; <a class="code" href="a00182.html#a75edfa52c671f8d3730fc573e6c377fb">operator &lt;&lt; </a>(std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="a01306.html">dds::sub::status::DataState</a>&amp; s);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;std::ostream&amp; <a class="code" href="a00182.html#a75edfa52c671f8d3730fc573e6c377fb">operator &lt;&lt; </a>(std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="a01278.html">dds::sub::Rank</a>&amp; r);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;std::ostream&amp; <a class="code" href="a00182.html#a75edfa52c671f8d3730fc573e6c377fb">operator &lt;&lt; </a>(std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="a01286.html">dds::sub::SampleInfo</a>&amp; si);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="preprocessor">#include &lt;dds/sub/detail/ddssub.hpp&gt;</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">// #endif</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* OMG_DDS_SUB_PACKAGE_INCLUDE_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="a01255.html">   63</a></span>&#160;<span class="keyword">class </span><a class="code" href="a01255.html">dds::sub::GenerationCount</a> : <span class="keyword">public</span> <a class="code" href="a01135.html">dds::core::Value</a></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="a01255.html">GenerationCount</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="a01255.html">GenerationCount</a>(int32_t disposed_generation_count, int32_t no_writers_generation_count);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    int32_t <a class="code" href="a01255.html#a535ea8af5fa589f6204c6356853e8e60">disposed</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">inline</span> int32_t <a class="code" href="a01255.html#aadd89d1cff2827459855faea721175c1">no_writers</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;};</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/*  OMG_DDS_SUB_T_GENERATION_COUNT_HPP_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa01278_html"><div class="ttname"><a href="a01278.html">dds::sub::Rank</a></div><div class="ttdoc">Class to hold sample Rank information and is part of dds::sub::SampleInfo.</div><div class="ttdef"><b>Definition:</b> <a href="a00200_source.html#l00067">Rank.hpp:67</a></div></div>
-<div class="ttc" id="aa00182_html_a75edfa52c671f8d3730fc573e6c377fb"><div class="ttname"><a href="a00182.html#a75edfa52c671f8d3730fc573e6c377fb">operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const dds::sub::status::DataState &amp;s)</div></div>
-<div class="ttc" id="aa00179_html"><div class="ttname"><a href="a00179.html">DataReaderListener.hpp</a></div></div>
-<div class="ttc" id="aa01286_html"><div class="ttname"><a href="a01286.html">dds::sub::SampleInfo</a></div><div class="ttdoc">The SampleInfo contains information pertaining to the associated Data value.</div><div class="ttdef"><b>Definition:</b> <a href="a00206_source.html#l00061">SampleInfo.hpp:61</a></div></div>
-<div class="ttc" id="aa00209_html"><div class="ttname"><a href="a00209.html">SharedSamples.hpp</a></div></div>
-<div class="ttc" id="aa00167_html"><div class="ttname"><a href="a00167.html">CoherentAccess.hpp</a></div></div>
-<div class="ttc" id="aa00218_html"><div class="ttname"><a href="a00218.html">SubscriberListener.hpp</a></div></div>
-<div class="ttc" id="aa00188_html"><div class="ttname"><a href="a00188.html">LoanedSamples.hpp</a></div></div>
-<div class="ttc" id="aa01538_html"><div class="ttname"><a href="a01538.html">discovery.hpp</a></div></div>
-<div class="ttc" id="aa00176_html"><div class="ttname"><a href="a00176.html">DataReader.hpp</a></div></div>
-<div class="ttc" id="aa00161_html"><div class="ttname"><a href="a00161.html">AnyDataReader.hpp</a></div></div>
-<div class="ttc" id="aa00212_html"><div class="ttname"><a href="a00212.html">DataState.hpp</a></div></div>
-<div class="ttc" id="aa00197_html"><div class="ttname"><a href="a00197.html">Query.hpp</a></div></div>
-<div class="ttc" id="aa00170_html"><div class="ttname"><a href="a00170.html">QueryCondition.hpp</a></div></div>
-<div class="ttc" id="aa00206_html"><div class="ttname"><a href="a00206.html">SampleInfo.hpp</a></div></div>
-<div class="ttc" id="aa00164_html"><div class="ttname"><a href="a00164.html">AnyDataReaderListener.hpp</a></div></div>
-<div class="ttc" id="aa00191_html"><div class="ttname"><a href="a00191.html">DataReaderQos.hpp</a></div></div>
-<div class="ttc" id="aa01306_html"><div class="ttname"><a href="a01306.html">dds::sub::status::DataState</a></div><div class="ttdoc">Class to hold sample DataState information.</div><div class="ttdef"><b>Definition:</b> <a href="a00212_source.html#l00371">DataState.hpp:371</a></div></div>
-<div class="ttc" id="aa00215_html"><div class="ttname"><a href="a00215.html">Subscriber.hpp</a></div></div>
-<div class="ttc" id="aa00200_html"><div class="ttname"><a href="a00200.html">Rank.hpp</a></div></div>
-<div class="ttc" id="aa00185_html"><div class="ttname"><a href="a00185.html">GenerationCount.hpp</a></div></div>
-<div class="ttc" id="aa00173_html"><div class="ttname"><a href="a00173.html">ReadCondition.hpp</a></div></div>
-<div class="ttc" id="aa01550_html"><div class="ttname"><a href="a01550.html">find.hpp</a></div></div>
-<div class="ttc" id="aa00194_html"><div class="ttname"><a href="a00194.html">SubscriberQos.hpp</a></div></div>
+<div class="ttc" id="aa01255_html_aadd89d1cff2827459855faea721175c1"><div class="ttname"><a href="a01255.html#aadd89d1cff2827459855faea721175c1">dds::sub::GenerationCount::no_writers</a></div><div class="ttdeci">int32_t no_writers() const</div></div>
+<div class="ttc" id="aa01255_html"><div class="ttname"><a href="a01255.html">dds::sub::GenerationCount</a></div><div class="ttdoc">Class to hold sample GenerationCount information and is part of dds::sub::SampleInfo.</div><div class="ttdef"><b>Definition:</b> <a href="a00182_source.html#l00063">GenerationCount.hpp:63</a></div></div>
+<div class="ttc" id="aa00261_html"><div class="ttname"><a href="a00261.html">dds</a></div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00030">array.hpp:30</a></div></div>
+<div class="ttc" id="aa01255_html_a535ea8af5fa589f6204c6356853e8e60"><div class="ttname"><a href="a01255.html#a535ea8af5fa589f6204c6356853e8e60">dds::sub::GenerationCount::disposed</a></div><div class="ttdeci">int32_t disposed() const</div></div>
+<div class="ttc" id="aa00098_html"><div class="ttname"><a href="a00098.html">Value.hpp</a></div></div>
+<div class="ttc" id="aa01135_html"><div class="ttname"><a href="a01135.html">dds::core::Value</a></div><div class="ttdoc">This class is the base for various value-type dds objects.</div><div class="ttdef"><b>Definition:</b> <a href="a00098_source.html#l00028">Value.hpp:28</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_4ed4fe74c0873b885d65b827f26fae2a.html">sub</a></li><li class="navelem"><a class="el" href="a00182.html">ddssub.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_4ed4fe74c0873b885d65b827f26fae2a.html">sub</a></li><li class="navelem"><a class="el" href="a00182.html">GenerationCount.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

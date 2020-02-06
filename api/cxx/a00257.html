@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vortex Lite ISO C++ API Reference Guide: dds/topic/TopicListener.hpp File Reference</title>
+<title>Cyclone ISO C++ API Reference Guide: dds/topic/TopicTraits.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="PROJECT_LOGO_Lite.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vortex Lite ISO C++ API Reference Guide
+   <div id="projectname">Cyclone ISO C++ API Reference Guide
    </div>
   </td>
  </tr>
@@ -88,37 +87,73 @@ $(document).ready(function(){initNavTree('a00257.html','');});
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
-<div class="title">TopicListener.hpp File Reference</div>  </div>
+<div class="title">TopicTraits.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00248_source.html">dds/topic/Topic.hpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
 </div>
 <p><a href="a00257_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01382.html">dds::topic::NoOpTopicListener&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a01366.html" title="Topic is the most basic description of the data to be published and subscribed.">Topic</a> events Listener.  <a href="a01382.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01383.html">dds::topic::is_topic_type&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Support functionality to check if a given object type is a <a class="el" href="a01363.html" title="Topic is the most basic description of the data to be published and subscribed.">Topic</a>.  <a href="a01383.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01370.html">dds::topic::TopicListener&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a01366.html" title="Topic is the most basic description of the data to be published and subscribed.">Topic</a> events Listener.  <a href="a01370.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01383.html">dds::topic::is_topic_type&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Support functionality to check if a given object type is a <a class="el" href="a01363.html" title="Topic is the most basic description of the data to be published and subscribed.">Topic</a>.  <a href="a01383.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01387.html">dds::topic::topic_type_name&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Support functionality to get the default type_name of a <a class="el" href="a01363.html" title="Topic is the most basic description of the data to be published and subscribed.">Topic</a> type.  <a href="a01387.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:a00264"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00264.html">dds</a></td></tr>
+<tr class="memitem:a00261"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00261.html">dds</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00274"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00274.html">dds::topic</a></td></tr>
+<tr class="memitem:a00271"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00271.html">dds::topic</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a07d9690f6be56c6306f07e2af826590d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00257.html#a07d9690f6be56c6306f07e2af826590d">REGISTER_TOPIC_TYPE</a>(TOPIC_TYPE)</td></tr>
+<tr class="separator:a07d9690f6be56c6306f07e2af826590d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a07d9690f6be56c6306f07e2af826590d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07d9690f6be56c6306f07e2af826590d">&#9670;&nbsp;</a></span>REGISTER_TOPIC_TYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define REGISTER_TOPIC_TYPE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">TOPIC_TYPE</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">namespace </span><a class="code" href="a00261.html">dds</a> { <span class="keyword">namespace </span>topic { \</div>
+<div class="line">    template&lt;&gt; <span class="keyword">struct </span>is_topic_type&lt;TOPIC_TYPE&gt; { \</div>
+<div class="line">        enum { <a class="code" href="a01383.html#aec647ec284c66bcd99a5e0b9bffd1b05a9a46b77d3f735cf58366c8b081d7214a">value</a> = 1 }; \</div>
+<div class="line">    }; } }</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="a00257_source.html#l00086">86</a> of file <a class="el" href="a00257_source.html">TopicTraits.hpp</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aa01383_html_aec647ec284c66bcd99a5e0b9bffd1b05a9a46b77d3f735cf58366c8b081d7214a"><div class="ttname"><a href="a01383.html#aec647ec284c66bcd99a5e0b9bffd1b05a9a46b77d3f735cf58366c8b081d7214a">dds::topic::is_topic_type::value</a></div><div class="ttdef"><b>Definition:</b> <a href="a00257_source.html#l00073">TopicTraits.hpp:73</a></div></div>
+<div class="ttc" id="aa00261_html"><div class="ttname"><a href="a00261.html">dds</a></div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00030">array.hpp:30</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_f680b8f4508778ee53c71cb8dcb8d6eb.html">topic</a></li><li class="navelem"><a class="el" href="a00257.html">TopicListener.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_f680b8f4508778ee53c71cb8dcb8d6eb.html">topic</a></li><li class="navelem"><a class="el" href="a00257.html">TopicTraits.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

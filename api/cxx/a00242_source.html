@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vortex Lite ISO C++ API Reference Guide: dds/topic/MultiTopic.hpp Source File</title>
+<title>Cyclone ISO C++ API Reference Guide: dds/topic/qos/TopicQos.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="PROJECT_LOGO_Lite.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vortex Lite ISO C++ API Reference Guide
+   <div id="projectname">Cyclone ISO C++ API Reference Guide
    </div>
   </td>
  </tr>
@@ -87,14 +86,14 @@ $(document).ready(function(){initNavTree('a00242_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">MultiTopic.hpp</div>  </div>
+<div class="title">TopicQos.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="a00242.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef OMG_DDS_T_TOPIC_MULTI_TOPIC_HPP_</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define OMG_DDS_T_TOPIC_MULTI_TOPIC_HPP_</span></div>
+<a href="a00242.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef OMG_DDS_TOPIC_QOS_DETAIL_TOPIC_QOS_HPP_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define OMG_DDS_TOPIC_QOS_DETAIL_TOPIC_QOS_HPP_</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/* Copyright 2010, Object Management Group, Inc.</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * Copyright 2010, PrismTech, Inc.</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * Copyright 2010, PrismTech, Corp.</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * Copyright 2010, Real-Time Innovations, Inc.</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * All rights reserved.</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *</span></div>
@@ -111,68 +110,42 @@ $(document).ready(function(){initNavTree('a00242_source.html','');});
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * limitations under the License.</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;dds/core/detail/conformance.hpp&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00098.html">dds/core/types.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00251.html">dds/topic/TopicDescription.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00264.html">dds</a></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">namespace </span>topic</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#ifdef OMG_DDS_MULTI_TOPIC_SUPPORT</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">class </span>MultiTopic : <span class="keyword">public</span> TopicDescription</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="a00083.html#a744c888a8b6773eb73e67a89c369c816">OMG_DDS_REF_TYPE_PROTECTED_DC_T</a>(MultiTopic, <a class="code" href="a01374.html">dds::topic::TopicDescription</a>, T)</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="a00083.html#a0d9a9706bab2b2d4f7babd5b7d0737df">OMG_DDS_IMPLICIT_REF_BASE</a>(MultiTopic)</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> FWDIterator&gt;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    MultiTopic(<span class="keyword">const</span> <a class="code" href="a01146.html">dds::domain::DomainParticipant</a>&amp; dp,</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;               <span class="keyword">const</span> std::string&amp; name,</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;               <span class="keyword">const</span> std::string expression,</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;               <span class="keyword">const</span> FWDIterator&amp; params_begin,</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;               <span class="keyword">const</span> FWDIterator&amp; params_end);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">virtual</span> ~MultiTopic();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">const</span> std::string expression() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> FWDIterator&gt;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> expression_parameters(<span class="keyword">const</span> FWDIterator&amp; params_begin,</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                               <span class="keyword">const</span> FWDIterator&amp; params_end);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="a00265.html#af41924828eff7595b676d2196b993482">dds::core::StringSeq</a> <span class="keywordtype">void</span> expression_parameters() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif  // OMG_DDS_MULTI_TOPIC_SUPPORT</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* OMG_DDS_T_TOPIC_CONTENT_FILTERED_TOPIC_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;dds/core/detail/TEntityQosImpl.hpp&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;org/eclipse/cyclonedds/topic/qos/TopicQosDelegate.hpp&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_FOR_ISOCPP</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">/* The above macro is never (and must never) be defined in normal compilation.</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> * The class below is just used to create informative API documentation.</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> * The predoxygen.py script will copy this over the QoS API header file.</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="a01359.html">   67</a></span>&#160;<span class="keyword">class </span><a class="code" href="a01359.html">dds::topic::qos::TopicQos</a> : <span class="keyword">public</span> <a class="code" href="a00867.html">::dds::core::EntityQos</a>&lt;org::eclipse::cyclonedds::topic::qos::TopicQosDelegate&gt;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="a01359.html#ad1f5e28b14b64c8c886de0b5b92f7106">   73</a></span>&#160;    <a class="code" href="a01359.html#ad1f5e28b14b64c8c886de0b5b92f7106">TopicQos</a>() {}</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="a01359.html#ad1f5e28b14b64c8c886de0b5b92f7106">TopicQos</a>(<span class="keyword">const</span> <a class="code" href="a01359.html">TopicQos</a>&amp; qos);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;};</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#else </span><span class="comment">/* DOXYGEN_FOR_ISOCPP */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00261.html">dds</a> { <span class="keyword">namespace </span>topic { <span class="keyword">namespace </span>qos { <span class="keyword">namespace </span>detail {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        typedef ::dds::core::TEntityQos&lt; ::org::eclipse::cyclonedds::topic::qos::TopicQosDelegate &gt; TopicQos;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;} } } }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_FOR_ISOCPP */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* OMG_DDS_TOPIC_QOS_DETAIL_TOPIC_QOS_HPP_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa01374_html"><div class="ttname"><a href="a01374.html">dds::topic::TopicDescription</a></div><div class="ttdoc">This class is the base for Topic, ContentFilteredTopic and MultiTopic.</div><div class="ttdef"><b>Definition:</b> <a href="a00251_source.html#l00048">TopicDescription.hpp:48</a></div></div>
-<div class="ttc" id="aa00083_html_a0d9a9706bab2b2d4f7babd5b7d0737df"><div class="ttname"><a href="a00083.html#a0d9a9706bab2b2d4f7babd5b7d0737df">OMG_DDS_IMPLICIT_REF_BASE</a></div><div class="ttdeci">#define OMG_DDS_IMPLICIT_REF_BASE(TYPE)</div><div class="ttdef"><b>Definition:</b> <a href="a00083_source.html#l00075">refmacros.hpp:75</a></div></div>
-<div class="ttc" id="aa00265_html_af41924828eff7595b676d2196b993482"><div class="ttname"><a href="a00265.html#af41924828eff7595b676d2196b993482">dds::core::StringSeq</a></div><div class="ttdeci">std::vector&lt; std::string &gt; StringSeq</div><div class="ttdef"><b>Definition:</b> <a href="a00098_source.html#l00043">types.hpp:43</a></div></div>
-<div class="ttc" id="aa01146_html"><div class="ttname"><a href="a01146.html">dds::domain::DomainParticipant</a></div><div class="ttdoc">A DomainParticipant represents the local membership of the application in a Domain.</div><div class="ttdef"><b>Definition:</b> <a href="a00116_source.html#l00065">DomainParticipant.hpp:65</a></div></div>
-<div class="ttc" id="aa00083_html_a744c888a8b6773eb73e67a89c369c816"><div class="ttname"><a href="a00083.html#a744c888a8b6773eb73e67a89c369c816">OMG_DDS_REF_TYPE_PROTECTED_DC_T</a></div><div class="ttdeci">#define OMG_DDS_REF_TYPE_PROTECTED_DC_T(TYPE, BASE, T_PARAM, DELEGATE)</div><div class="ttdef"><b>Definition:</b> <a href="a00083_source.html#l00171">refmacros.hpp:171</a></div></div>
-<div class="ttc" id="aa00264_html"><div class="ttname"><a href="a00264.html">dds</a></div><div class="ttdef"><b>Definition:</b> <a href="a00017_source.html#l00030">array.hpp:30</a></div></div>
-<div class="ttc" id="aa00098_html"><div class="ttname"><a href="a00098.html">types.hpp</a></div></div>
-<div class="ttc" id="aa00251_html"><div class="ttname"><a href="a00251.html">TopicDescription.hpp</a></div></div>
+<div class="ttc" id="aa00867_html"><div class="ttname"><a href="a00867.html">dds::core::EntityQos</a></div><div class="ttdoc">QoS Container.</div><div class="ttdef"><b>Definition:</b> <a href="a00044_source.html#l00045">EntityQos.hpp:45</a></div></div>
+<div class="ttc" id="aa01359_html"><div class="ttname"><a href="a01359.html">dds::topic::qos::TopicQos</a></div><div class="ttdoc">This struct provides the basic mechanism for an application to specify Quality of Service attributes ...</div><div class="ttdef"><b>Definition:</b> <a href="a00242_source.html#l00067">TopicQos.hpp:67</a></div></div>
+<div class="ttc" id="aa01359_html_ad1f5e28b14b64c8c886de0b5b92f7106"><div class="ttname"><a href="a01359.html#ad1f5e28b14b64c8c886de0b5b92f7106">dds::topic::qos::TopicQos::TopicQos</a></div><div class="ttdeci">TopicQos()</div><div class="ttdef"><b>Definition:</b> <a href="a00242_source.html#l00073">TopicQos.hpp:73</a></div></div>
+<div class="ttc" id="aa00261_html"><div class="ttname"><a href="a00261.html">dds</a></div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00030">array.hpp:30</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_f680b8f4508778ee53c71cb8dcb8d6eb.html">topic</a></li><li class="navelem"><a class="el" href="a00242.html">MultiTopic.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_f680b8f4508778ee53c71cb8dcb8d6eb.html">topic</a></li><li class="navelem"><a class="el" href="dir_3cebf9e31937ccd357d661f3f79cf58e.html">qos</a></li><li class="navelem"><a class="el" href="a00242.html">TopicQos.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

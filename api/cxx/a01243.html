@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vortex Lite ISO C++ API Reference Guide: Member List</title>
+<title>Cyclone ISO C++ API Reference Guide: dds::sub::DataReader&lt; T &gt;::Selector Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="PROJECT_LOGO_Lite.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vortex Lite ISO C++ API Reference Guide
+   <div id="projectname">Cyclone ISO C++ API Reference Guide
    </div>
   </td>
  </tr>
@@ -67,7 +66,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('a01246.html','');});
+$(document).ready(function(){initNavTree('a01243.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -86,30 +85,592 @@ $(document).ready(function(){initNavTree('a01246.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="a01240.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">dds::sub::DataReader&lt; T &gt;::Selector Member List</div>  </div>
+<div class="title">dds::sub::DataReader&lt; T &gt;::Selector Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="a01246.html">dds::sub::DataReader&lt; T &gt;::Selector</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a01246.html#a78931d4f81853904e4b2f7b297839716">content</a>(const dds::sub::Query &amp;query)</td><td class="entry"><a class="el" href="a01246.html">dds::sub::DataReader&lt; T &gt;::Selector</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a01246.html#a8dfd2d2a3e1bc192275b77cb820c1265">instance</a>(const dds::core::InstanceHandle &amp;handle)</td><td class="entry"><a class="el" href="a01246.html">dds::sub::DataReader&lt; T &gt;::Selector</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01246.html#a37c85f59ad5fbb1940c188c39dbffb11">max_samples</a>(uint32_t maxsamples)</td><td class="entry"><a class="el" href="a01246.html">dds::sub::DataReader&lt; T &gt;::Selector</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a01246.html#a941cda96b0384d6fdef2260a10651fc4">next_instance</a>(const dds::core::InstanceHandle &amp;handle)</td><td class="entry"><a class="el" href="a01246.html">dds::sub::DataReader&lt; T &gt;::Selector</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01246.html#acf328113d3517da39cd46adeb9ed8ad0">read</a>()</td><td class="entry"><a class="el" href="a01246.html">dds::sub::DataReader&lt; T &gt;::Selector</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a01246.html#a9d0d35907c88621d07f9d9b4e6b4b1ed">read</a>(SamplesFWIterator sfit, uint32_t max_samples)</td><td class="entry"><a class="el" href="a01246.html">dds::sub::DataReader&lt; T &gt;::Selector</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01246.html#a8b61df4a4b81f027ef3f24cc5f5ef8e7">read</a>(SamplesBIIterator sbit)</td><td class="entry"><a class="el" href="a01246.html">dds::sub::DataReader&lt; T &gt;::Selector</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a01246.html#a554f94a7cd3f8c49f9e04d88bcfc45d7">Selector</a>(DataReader &amp;dr)</td><td class="entry"><a class="el" href="a01246.html">dds::sub::DataReader&lt; T &gt;::Selector</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01246.html#a0e4b51e53f1ce4ab3cd9720407d5751a">state</a>(const dds::sub::status::DataState &amp;state)</td><td class="entry"><a class="el" href="a01246.html">dds::sub::DataReader&lt; T &gt;::Selector</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a01246.html#a9c1eb84ae2ed9ccfc8ec5f5b04592a4a">take</a>()</td><td class="entry"><a class="el" href="a01246.html">dds::sub::DataReader&lt; T &gt;::Selector</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01246.html#a15f991cba138a6881af34fc300bd050e">take</a>(SamplesFWIterator sfit, uint32_t max_samples)</td><td class="entry"><a class="el" href="a01246.html">dds::sub::DataReader&lt; T &gt;::Selector</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a01246.html#a8b953af9fe203cc1394ccc825512660f">take</a>(SamplesBIIterator sbit)</td><td class="entry"><a class="el" href="a01246.html">dds::sub::DataReader&lt; T &gt;::Selector</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<p><code>#include &quot;<a class="el" href="a00173_source.html">DataReader.hpp</a>&quot;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a554f94a7cd3f8c49f9e04d88bcfc45d7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01243.html#a554f94a7cd3f8c49f9e04d88bcfc45d7">Selector</a> (<a class="el" href="a01235.html">DataReader</a> &amp;dr)</td></tr>
+<tr class="separator:a554f94a7cd3f8c49f9e04d88bcfc45d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78931d4f81853904e4b2f7b297839716"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01243.html">Selector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01243.html#a78931d4f81853904e4b2f7b297839716">content</a> (const <a class="el" href="a01271.html">dds::sub::Query</a> &amp;query)</td></tr>
+<tr class="separator:a78931d4f81853904e4b2f7b297839716"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dfd2d2a3e1bc192275b77cb820c1265"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01243.html">Selector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01243.html#a8dfd2d2a3e1bc192275b77cb820c1265">instance</a> (const <a class="el" href="a00931.html">dds::core::InstanceHandle</a> &amp;handle)</td></tr>
+<tr class="separator:a8dfd2d2a3e1bc192275b77cb820c1265"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37c85f59ad5fbb1940c188c39dbffb11"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01243.html">Selector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01243.html#a37c85f59ad5fbb1940c188c39dbffb11">max_samples</a> (uint32_t maxsamples)</td></tr>
+<tr class="separator:a37c85f59ad5fbb1940c188c39dbffb11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a941cda96b0384d6fdef2260a10651fc4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01243.html">Selector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01243.html#a941cda96b0384d6fdef2260a10651fc4">next_instance</a> (const <a class="el" href="a00931.html">dds::core::InstanceHandle</a> &amp;handle)</td></tr>
+<tr class="separator:a941cda96b0384d6fdef2260a10651fc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf328113d3517da39cd46adeb9ed8ad0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01259.html">dds::sub::LoanedSamples</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01243.html#acf328113d3517da39cd46adeb9ed8ad0">read</a> ()</td></tr>
+<tr class="separator:acf328113d3517da39cd46adeb9ed8ad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b61df4a4b81f027ef3f24cc5f5ef8e7"><td class="memTemplParams" colspan="2">template&lt;typename SamplesBIIterator &gt; </td></tr>
+<tr class="memitem:a8b61df4a4b81f027ef3f24cc5f5ef8e7"><td class="memTemplItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01243.html#a8b61df4a4b81f027ef3f24cc5f5ef8e7">read</a> (SamplesBIIterator sbit)</td></tr>
+<tr class="separator:a8b61df4a4b81f027ef3f24cc5f5ef8e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d0d35907c88621d07f9d9b4e6b4b1ed"><td class="memTemplParams" colspan="2">template&lt;typename SamplesFWIterator &gt; </td></tr>
+<tr class="memitem:a9d0d35907c88621d07f9d9b4e6b4b1ed"><td class="memTemplItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01243.html#a9d0d35907c88621d07f9d9b4e6b4b1ed">read</a> (SamplesFWIterator sfit, uint32_t <a class="el" href="a01243.html#a37c85f59ad5fbb1940c188c39dbffb11">max_samples</a>)</td></tr>
+<tr class="separator:a9d0d35907c88621d07f9d9b4e6b4b1ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e4b51e53f1ce4ab3cd9720407d5751a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01243.html">Selector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01243.html#a0e4b51e53f1ce4ab3cd9720407d5751a">state</a> (const <a class="el" href="a01303.html">dds::sub::status::DataState</a> &amp;state)</td></tr>
+<tr class="separator:a0e4b51e53f1ce4ab3cd9720407d5751a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c1eb84ae2ed9ccfc8ec5f5b04592a4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01259.html">dds::sub::LoanedSamples</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01243.html#a9c1eb84ae2ed9ccfc8ec5f5b04592a4a">take</a> ()</td></tr>
+<tr class="separator:a9c1eb84ae2ed9ccfc8ec5f5b04592a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b953af9fe203cc1394ccc825512660f"><td class="memTemplParams" colspan="2">template&lt;typename SamplesBIIterator &gt; </td></tr>
+<tr class="memitem:a8b953af9fe203cc1394ccc825512660f"><td class="memTemplItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01243.html#a8b953af9fe203cc1394ccc825512660f">take</a> (SamplesBIIterator sbit)</td></tr>
+<tr class="separator:a8b953af9fe203cc1394ccc825512660f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15f991cba138a6881af34fc300bd050e"><td class="memTemplParams" colspan="2">template&lt;typename SamplesFWIterator &gt; </td></tr>
+<tr class="memitem:a15f991cba138a6881af34fc300bd050e"><td class="memTemplItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01243.html#a15f991cba138a6881af34fc300bd050e">take</a> (SamplesFWIterator sfit, uint32_t <a class="el" href="a01243.html#a37c85f59ad5fbb1940c188c39dbffb11">max_samples</a>)</td></tr>
+<tr class="separator:a15f991cba138a6881af34fc300bd050e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br />
+class dds::sub::DataReader&lt; T &gt;::Selector</h3>
+
+<p>The <a class="el" href="a01243.html">Selector</a> class is used by the <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> to compose read operations.</p>
+<p>A <a class="el" href="a01243.html">Selector</a> can perform complex data selections, such as per-instance selection, content and status filtering, etc, when reading or taking samples. These settings on a <a class="el" href="a01243.html">Selector</a> can be concatenated.</p>
+<p>The <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> has the <a class="el" href="a01235.html#a2226c4f7146d1a4bcd79947e9a12738d">select()</a> operation, which can be used to aqcuire the <a class="el" href="a01243.html">Selector</a> functionality on the reader implicitly. </p><div class="fragment"><div class="line"><span class="comment">// Take a maximum of 3 new samples of a certain instance.</span></div>
+<div class="line">samples = reader.select()</div>
+<div class="line">                    .max_samples(3)</div>
+<div class="line">                    .state(<a class="code" href="a01303.html#ab7de639659d8c924c237211c6bb36fd3">dds::sub::status::DataState::new_data</a>())</div>
+<div class="line">                    .instance(someValidInstanceHandle)</div>
+<div class="line">                    .take();</div>
+</div><!-- fragment --><p> However, this will create and destroy a <a class="el" href="a01243.html">Selector</a> for every read, which is not very performance friendly.</p>
+<p>The performance can be increase by creating a <a class="el" href="a01243.html">Selector</a> up front and doing the reading on that <a class="el" href="a01243.html">Selector</a> directly and re-using it. </p><div class="fragment"><div class="line"><span class="comment">// Create a Selector as selective reader up front.</span></div>
+<div class="line"><a class="code" href="a01243.html">dds::sub::DataReader&lt;Foo::Bar&gt;::Selector</a> selectiveReader(reader);</div>
+<div class="line"><span class="comment">// Configure it to take a maximum of 3 new samples of a certain instance</span></div>
+<div class="line">selectiveReader.max_samples(3);</div>
+<div class="line">selectiveReader.state(<a class="code" href="a01303.html#ab7de639659d8c924c237211c6bb36fd3">dds::sub::status::DataState::new_data</a>());</div>
+<div class="line">selectiveReader.instance(someValidInstanceHandle);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Use the configured Selector to -take- a maximum of 3 new samples of a</span></div>
+<div class="line"><span class="comment">// certain instance (which it was configured to do).</span></div>
+<div class="line"><span class="comment">// This can be used in loops for example, reducing the need for creating</span></div>
+<div class="line"><span class="comment">// implicit Selectors for every take.</span></div>
+<div class="line">samples = selectiveReader.take();</div>
+</div><!-- fragment --><p><em>Defaults</em> </p><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Element  </th><th class="markdownTableHeadNone">Default Value   </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">state  </td><td class="markdownTableBodyNone"><a class="el" href="a01303.html#a02dd70ef45d53be6ccf28429a8480af4">dds::sub::status::DataState::any</a>   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">content  </td><td class="markdownTableBodyNone">Empty <a class="el" href="a01271.html" title="Query objects contain expressions that allow the application to specify a filter on the locally avail...">dds::sub::Query</a>   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">max_samples  </td><td class="markdownTableBodyNone"><a class="el" href="a00262.html#a7f73c3110972d4a0180c20434664f661">dds::core::LENGTH_UNLIMITED</a>   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">instance  </td><td class="markdownTableBodyNone"><a class="el" href="a00931.html" title="Class to hold the handle associated with in sample instance.">dds::core::InstanceHandle</a> nil   </td></tr>
+</table>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="a01235.html#a2226c4f7146d1a4bcd79947e9a12738d">DataReader select() </a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="a00173_source.html#l00163">163</a> of file <a class="el" href="a00173_source.html">DataReader.hpp</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a554f94a7cd3f8c49f9e04d88bcfc45d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a554f94a7cd3f8c49f9e04d88bcfc45d7">&#9670;&nbsp;</a></span>Selector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a01235.html">dds::sub::DataReader</a>&lt; T &gt;::Selector::Selector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a01235.html">DataReader</a> &amp;&#160;</td>
+          <td class="paramname"><em>dr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Construct a <a class="el" href="a01243.html">Selector</a> for a <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a78931d4f81853904e4b2f7b297839716"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78931d4f81853904e4b2f7b297839716">&#9670;&nbsp;</a></span>content()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a01243.html">Selector</a>&amp; <a class="el" href="a01235.html">dds::sub::DataReader</a>&lt; T &gt;::Selector::content </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a01271.html">dds::sub::Query</a> &amp;&#160;</td>
+          <td class="paramname"><em>query</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the <a class="el" href="a01271.html" title="Query objects contain expressions that allow the application to specify a filter on the locally avail...">Query</a> to filter with during the read or take.</p>
+<p><em>Example</em><br  />
+ Read only samples that will be filtered according to the given <a class="el" href="a01271.html" title="Query objects contain expressions that allow the application to specify a filter on the locally avail...">dds::sub::Query</a>. </p><div class="fragment"><div class="line"><span class="comment">// Assume data type has an element called long_1</span></div>
+<div class="line"><a class="code" href="a01271.html">dds::sub::Query</a> query(reader, <span class="stringliteral">&quot;long_1 &gt; 1 and long_1 &lt; 7&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Implicit use of Selector</span></div>
+<div class="line">samples = reader.select().content(query).read();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Explicit use of Selector</span></div>
+<div class="line"><a class="code" href="a01243.html">dds::sub::DataReader&lt;Foo::Bar&gt;::Selector</a> selectiveReader(reader);</div>
+<div class="line">selectiveReader.content(query);</div>
+<div class="line">samples = selectiveReader.read();</div>
+</div><!-- fragment --><p> See also <a class="el" href="a01235.html#a2226c4f7146d1a4bcd79947e9a12738d">DataReader select() </a> operation.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">query</td><td>the <a class="el" href="a01271.html" title="Query objects contain expressions that allow the application to specify a filter on the locally avail...">Query</a> to apply to the selector </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="a01243.html">Selector</a> to be able to concatenate <a class="el" href="a01243.html">Selector</a> settings. </dd></dl>
+
+</div>
+</div>
+<a id="a8dfd2d2a3e1bc192275b77cb820c1265"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dfd2d2a3e1bc192275b77cb820c1265">&#9670;&nbsp;</a></span>instance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a01243.html">Selector</a>&amp; <a class="el" href="a01235.html">dds::sub::DataReader</a>&lt; T &gt;::Selector::instance </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00931.html">dds::core::InstanceHandle</a> &amp;&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set InstanceHandle to filter with during the read or take.</p>
+<p><em>Example</em><br  />
+ Read only samples of the given instance. </p><div class="fragment"><div class="line"><a class="code" href="a00931.html">dds::core::InstanceHandle</a> hdl = someValidInstanceHandle;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Implicit use of Selector</span></div>
+<div class="line">samples = reader.select().instance(hdl).read();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Explicit use of Selector</span></div>
+<div class="line"><a class="code" href="a01243.html">dds::sub::DataReader&lt;Foo::Bar&gt;::Selector</a> selectiveReader(reader);</div>
+<div class="line">selectiveReader.instance(hdl);</div>
+<div class="line">samples = selectiveReader.read();</div>
+</div><!-- fragment --><p> See also <a class="el" href="a01235.html#a2226c4f7146d1a4bcd79947e9a12738d">DataReader select() </a> operation.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>the InstanceHandle to read/take for </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="a01243.html">Selector</a> to be able to concatenate <a class="el" href="a01243.html">Selector</a> settings. </dd></dl>
+
+</div>
+</div>
+<a id="a37c85f59ad5fbb1940c188c39dbffb11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37c85f59ad5fbb1940c188c39dbffb11">&#9670;&nbsp;</a></span>max_samples()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a01243.html">Selector</a>&amp; <a class="el" href="a01235.html">dds::sub::DataReader</a>&lt; T &gt;::Selector::max_samples </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>maxsamples</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set max_samples to limit the number of sample to get during the read or take.</p>
+<p><em>Example</em><br  />
+ Read a maximum of three samples. </p><div class="fragment"><div class="line"><span class="comment">// Implicit use of Selector</span></div>
+<div class="line">samples = reader.select().max_samples(3).read();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Explicit use of Selector</span></div>
+<div class="line"><a class="code" href="a01243.html">dds::sub::DataReader&lt;Foo::Bar&gt;::Selector</a> selectiveReader(reader);</div>
+<div class="line">selectiveReader.max_samples(3);</div>
+<div class="line">samples = selectiveReader.read();</div>
+</div><!-- fragment --><p> See also <a class="el" href="a01235.html#a2226c4f7146d1a4bcd79947e9a12738d">DataReader select() </a> operation.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">maxsamples</td><td>maximum number of samples to read/take </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="a01243.html">Selector</a> to be able to concatenate <a class="el" href="a01243.html">Selector</a> settings. </dd></dl>
+
+</div>
+</div>
+<a id="a941cda96b0384d6fdef2260a10651fc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a941cda96b0384d6fdef2260a10651fc4">&#9670;&nbsp;</a></span>next_instance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a01243.html">Selector</a>&amp; <a class="el" href="a01235.html">dds::sub::DataReader</a>&lt; T &gt;::Selector::next_instance </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00931.html">dds::core::InstanceHandle</a> &amp;&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set next InstanceHandle to filter with during the read or take.</p>
+<p><em>Example</em><br  />
+ Read all samples, instance by instance. </p><div class="fragment"><div class="line"><span class="comment">// Implicit use of Selector</span></div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Get sample(s) of first instance</span></div>
+<div class="line">    <a class="code" href="a00931.html">dds::core::InstanceHandle</a> hdl; <span class="comment">//nil</span></div>
+<div class="line">    samples = reader.select().next_instance(hdl).read();</div>
+<div class="line">    <span class="keywordflow">while</span> (samples.length() &gt; 0) {</div>
+<div class="line">        <span class="comment">// Handle the sample(s) of this instance (just the first one in this case)</span></div>
+<div class="line">        <span class="keyword">const</span> <a class="code" href="a01279.html">dds::sub::Sample&lt;Foo::Bar&gt;</a>&amp; sample = *(samples.begin());</div>
+<div class="line">        <span class="comment">// Get sample(s) of the next instance</span></div>
+<div class="line">        hdl = sample.<a class="code" href="a01279.html#a28928eb2d97bf083aa1e21d000ce8325">info</a>().instance_handle();</div>
+<div class="line">        samples = reader.select().next_instance(hdl).read();</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Explicit use of Selector</span></div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Get sample(s) of first instance</span></div>
+<div class="line">    <a class="code" href="a01243.html">dds::sub::DataReader&lt;Foo::Bar&gt;::Selector</a> selectiveReader(reader);</div>
+<div class="line">    <a class="code" href="a00931.html">dds::core::InstanceHandle</a> hdl; <span class="comment">//nil</span></div>
+<div class="line">    selectiveReader.next_instance(hdl);</div>
+<div class="line">    samples = selectiveReader.read();</div>
+<div class="line">    <span class="keywordflow">while</span> (samples.length() &gt; 0) {</div>
+<div class="line">        <span class="comment">// Handle the sample(s) of this instance (just the first one in this case)</span></div>
+<div class="line">        <span class="keyword">const</span> <a class="code" href="a01279.html">dds::sub::Sample&lt;Foo::Bar&gt;</a>&amp; sample = *(samples.begin());</div>
+<div class="line">        <span class="comment">// Get sample(s) of the next instance</span></div>
+<div class="line">        hdl = sample.<a class="code" href="a01279.html#a28928eb2d97bf083aa1e21d000ce8325">info</a>().instance_handle();</div>
+<div class="line">        selectiveReader.next_instance(hdl);</div>
+<div class="line">        samples = selectiveReader.read();</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> See also <a class="el" href="a01235.html#a2226c4f7146d1a4bcd79947e9a12738d">DataReader select() </a> operation.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>the 'previous' InstanceHandle associated with new the read/take </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="a01243.html">Selector</a> to be able to concatenate <a class="el" href="a01243.html">Selector</a> settings. </dd></dl>
+
+</div>
+</div>
+<a id="acf328113d3517da39cd46adeb9ed8ad0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf328113d3517da39cd46adeb9ed8ad0">&#9670;&nbsp;</a></span>read() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a01259.html">dds::sub::LoanedSamples</a>&lt;T&gt; <a class="el" href="a01235.html">dds::sub::DataReader</a>&lt; T &gt;::Selector::read </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This operation works the same as the <a class="el" href="a01235.html#a864f65d2246d2f854cf0b892ff6b8631">default DataReader read() </a>, except that it is performed on this <a class="el" href="a01243.html">Selector</a> with possible filters set.</p>
+<dl class="section return"><dt>Returns</dt><dd>The samples in the <a class="el" href="a01259.html" title="This class encapsulates and automates the management of loaned samples.">LoanedSamples</a> container </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="a00875.html" title="Exception: Generic, unspecified error.">dds::core::Error</a></td><td>An internal error has occurred. </td></tr>
+    <tr><td class="paramname"><a class="el" href="a00923.html" title="Exception: Application used a null reference.">dds::core::NullReferenceError</a></td><td>The entity was not properly created and references to dds::core::null. </td></tr>
+    <tr><td class="paramname"><a class="el" href="a00879.html" title="Exception: The object target of this operation has already been closed.">dds::core::AlreadyClosedError</a></td><td>The entity has already been closed. </td></tr>
+    <tr><td class="paramname"><a class="el" href="a00903.html" title="Exception: Service ran out of the resources needed to complete the operation.">dds::core::OutOfResourcesError</a></td><td>The Data Distribution Service ran out of resources to complete this operation. </td></tr>
+    <tr><td class="paramname"><a class="el" href="a00899.html" title="Exception: Operation invoked on an Entity that is not yet enabled.">dds::core::NotEnabledError</a></td><td>The <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> has not yet been enabled. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8b61df4a4b81f027ef3f24cc5f5ef8e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b61df4a4b81f027ef3f24cc5f5ef8e7">&#9670;&nbsp;</a></span>read() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;typename SamplesBIIterator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t <a class="el" href="a01235.html">dds::sub::DataReader</a>&lt; T &gt;::Selector::read </td>
+          <td>(</td>
+          <td class="paramtype">SamplesBIIterator&#160;</td>
+          <td class="paramname"><em>sbit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This operation works the same as the <a class="el" href="a01235.html#a7f02ad93f27d7907931b3bbec02f0b97">backward iterator DataReader read() </a>, except that it is performed on this <a class="el" href="a01243.html">Selector</a> with possible filters set.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sbit</td><td>Back-inserting container iterator </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of samples in the <a class="el" href="a01259.html" title="This class encapsulates and automates the management of loaned samples.">LoanedSamples</a> container </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="a00875.html" title="Exception: Generic, unspecified error.">dds::core::Error</a></td><td>An internal error has occurred. </td></tr>
+    <tr><td class="paramname"><a class="el" href="a00923.html" title="Exception: Application used a null reference.">dds::core::NullReferenceError</a></td><td>The entity was not properly created and references to dds::core::null. </td></tr>
+    <tr><td class="paramname"><a class="el" href="a00879.html" title="Exception: The object target of this operation has already been closed.">dds::core::AlreadyClosedError</a></td><td>The entity has already been closed. </td></tr>
+    <tr><td class="paramname"><a class="el" href="a00903.html" title="Exception: Service ran out of the resources needed to complete the operation.">dds::core::OutOfResourcesError</a></td><td>The Data Distribution Service ran out of resources to complete this operation. </td></tr>
+    <tr><td class="paramname"><a class="el" href="a00899.html" title="Exception: Operation invoked on an Entity that is not yet enabled.">dds::core::NotEnabledError</a></td><td>The <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> has not yet been enabled. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9d0d35907c88621d07f9d9b4e6b4b1ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d0d35907c88621d07f9d9b4e6b4b1ed">&#9670;&nbsp;</a></span>read() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;typename SamplesFWIterator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t <a class="el" href="a01235.html">dds::sub::DataReader</a>&lt; T &gt;::Selector::read </td>
+          <td>(</td>
+          <td class="paramtype">SamplesFWIterator&#160;</td>
+          <td class="paramname"><em>sfit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>max_samples</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This operation works the same as the <a class="el" href="a01235.html#a661792a0f5bfc487a9eb321384ec30bf">forward iterator DataReader read() </a>, except that it is performed on this <a class="el" href="a01243.html">Selector</a> with possible filters set.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sfit</td><td>Forward-inserting container iterator </td></tr>
+    <tr><td class="paramname">max_samples</td><td>Maximum samples to read and copy into the given container </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of samples in the <a class="el" href="a01259.html" title="This class encapsulates and automates the management of loaned samples.">LoanedSamples</a> container </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="a00875.html" title="Exception: Generic, unspecified error.">dds::core::Error</a></td><td>An internal error has occurred. </td></tr>
+    <tr><td class="paramname"><a class="el" href="a00923.html" title="Exception: Application used a null reference.">dds::core::NullReferenceError</a></td><td>The entity was not properly created and references to dds::core::null. </td></tr>
+    <tr><td class="paramname"><a class="el" href="a00879.html" title="Exception: The object target of this operation has already been closed.">dds::core::AlreadyClosedError</a></td><td>The entity has already been closed. </td></tr>
+    <tr><td class="paramname"><a class="el" href="a00903.html" title="Exception: Service ran out of the resources needed to complete the operation.">dds::core::OutOfResourcesError</a></td><td>The Data Distribution Service ran out of resources to complete this operation. </td></tr>
+    <tr><td class="paramname"><a class="el" href="a00899.html" title="Exception: Operation invoked on an Entity that is not yet enabled.">dds::core::NotEnabledError</a></td><td>The <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> has not yet been enabled. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0e4b51e53f1ce4ab3cd9720407d5751a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e4b51e53f1ce4ab3cd9720407d5751a">&#9670;&nbsp;</a></span>state()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a01243.html">Selector</a>&amp; <a class="el" href="a01235.html">dds::sub::DataReader</a>&lt; T &gt;::Selector::state </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a01303.html">dds::sub::status::DataState</a> &amp;&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set DataState to filter with during the read or take.</p>
+<p><em>Example</em><br  />
+ Read only new data. </p><div class="fragment"><div class="line"><span class="comment">// DataState to filter only new data</span></div>
+<div class="line"><a class="code" href="a01303.html">dds::sub::status::DataState</a> newData = <a class="code" href="a01303.html#ab7de639659d8c924c237211c6bb36fd3">dds::sub::status::DataState::new_data</a>();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Implicit use of Selector</span></div>
+<div class="line">samples = reader.select().state(newData).read();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Explicit use of Selector</span></div>
+<div class="line"><a class="code" href="a01243.html">dds::sub::DataReader&lt;Foo::Bar&gt;::Selector</a> selectiveReader(reader);</div>
+<div class="line">selectiveReader.state(newData);</div>
+<div class="line">samples = selectiveReader.read();</div>
+</div><!-- fragment --><p> See also <a class="el" href="a01235.html#a2226c4f7146d1a4bcd79947e9a12738d">DataReader select() </a> operation.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>the requested DataState of the samples </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="a01243.html">Selector</a> to be able to concatenate <a class="el" href="a01243.html">Selector</a> settings. </dd></dl>
+
+</div>
+</div>
+<a id="a9c1eb84ae2ed9ccfc8ec5f5b04592a4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c1eb84ae2ed9ccfc8ec5f5b04592a4a">&#9670;&nbsp;</a></span>take() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a01259.html">dds::sub::LoanedSamples</a>&lt;T&gt; <a class="el" href="a01235.html">dds::sub::DataReader</a>&lt; T &gt;::Selector::take </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This operation works the same as the <a class="el" href="a01235.html#aa63c8e102e4abd5446198bcfe71ebfe1">default DataReader take() </a>, except that it is performed on this <a class="el" href="a01243.html">Selector</a> with possible filters set.</p>
+<dl class="section return"><dt>Returns</dt><dd>The samples in the <a class="el" href="a01259.html" title="This class encapsulates and automates the management of loaned samples.">LoanedSamples</a> container </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="a00875.html" title="Exception: Generic, unspecified error.">dds::core::Error</a></td><td>An internal error has occurred. </td></tr>
+    <tr><td class="paramname"><a class="el" href="a00923.html" title="Exception: Application used a null reference.">dds::core::NullReferenceError</a></td><td>The entity was not properly created and references to dds::core::null. </td></tr>
+    <tr><td class="paramname"><a class="el" href="a00879.html" title="Exception: The object target of this operation has already been closed.">dds::core::AlreadyClosedError</a></td><td>The entity has already been closed. </td></tr>
+    <tr><td class="paramname"><a class="el" href="a00903.html" title="Exception: Service ran out of the resources needed to complete the operation.">dds::core::OutOfResourcesError</a></td><td>The Data Distribution Service ran out of resources to complete this operation. </td></tr>
+    <tr><td class="paramname"><a class="el" href="a00899.html" title="Exception: Operation invoked on an Entity that is not yet enabled.">dds::core::NotEnabledError</a></td><td>The <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> has not yet been enabled. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8b953af9fe203cc1394ccc825512660f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b953af9fe203cc1394ccc825512660f">&#9670;&nbsp;</a></span>take() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;typename SamplesBIIterator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t <a class="el" href="a01235.html">dds::sub::DataReader</a>&lt; T &gt;::Selector::take </td>
+          <td>(</td>
+          <td class="paramtype">SamplesBIIterator&#160;</td>
+          <td class="paramname"><em>sbit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This operation works the same as the <a class="el" href="a01235.html#acd2cb28278f964972cf23cedbc75a4e7">backward iterator DataReader take() </a>, except that it is performed on this <a class="el" href="a01243.html">Selector</a> with possible filters set.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sbit</td><td>Back-inserting container iterator </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of samples in the <a class="el" href="a01259.html" title="This class encapsulates and automates the management of loaned samples.">LoanedSamples</a> container </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="a00875.html" title="Exception: Generic, unspecified error.">dds::core::Error</a></td><td>An internal error has occurred. </td></tr>
+    <tr><td class="paramname"><a class="el" href="a00923.html" title="Exception: Application used a null reference.">dds::core::NullReferenceError</a></td><td>The entity was not properly created and references to dds::core::null. </td></tr>
+    <tr><td class="paramname"><a class="el" href="a00879.html" title="Exception: The object target of this operation has already been closed.">dds::core::AlreadyClosedError</a></td><td>The entity has already been closed. </td></tr>
+    <tr><td class="paramname"><a class="el" href="a00903.html" title="Exception: Service ran out of the resources needed to complete the operation.">dds::core::OutOfResourcesError</a></td><td>The Data Distribution Service ran out of resources to complete this operation. </td></tr>
+    <tr><td class="paramname"><a class="el" href="a00899.html" title="Exception: Operation invoked on an Entity that is not yet enabled.">dds::core::NotEnabledError</a></td><td>The <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> has not yet been enabled. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a15f991cba138a6881af34fc300bd050e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15f991cba138a6881af34fc300bd050e">&#9670;&nbsp;</a></span>take() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;typename SamplesFWIterator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t <a class="el" href="a01235.html">dds::sub::DataReader</a>&lt; T &gt;::Selector::take </td>
+          <td>(</td>
+          <td class="paramtype">SamplesFWIterator&#160;</td>
+          <td class="paramname"><em>sfit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>max_samples</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This operation works the same as the <a class="el" href="a01235.html#a8793275d831f50d7ef72fc2d58b771bb">forward iterator DataReader take() </a>, except that it is performed on this <a class="el" href="a01243.html">Selector</a> with possible filters set.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sfit</td><td>Forward-inserting container iterator </td></tr>
+    <tr><td class="paramname">max_samples</td><td>Maximum samples to read and copy into the given container </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of samples in the <a class="el" href="a01259.html" title="This class encapsulates and automates the management of loaned samples.">LoanedSamples</a> container </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="a00875.html" title="Exception: Generic, unspecified error.">dds::core::Error</a></td><td>An internal error has occurred. </td></tr>
+    <tr><td class="paramname"><a class="el" href="a00923.html" title="Exception: Application used a null reference.">dds::core::NullReferenceError</a></td><td>The entity was not properly created and references to dds::core::null. </td></tr>
+    <tr><td class="paramname"><a class="el" href="a00879.html" title="Exception: The object target of this operation has already been closed.">dds::core::AlreadyClosedError</a></td><td>The entity has already been closed. </td></tr>
+    <tr><td class="paramname"><a class="el" href="a00903.html" title="Exception: Service ran out of the resources needed to complete the operation.">dds::core::OutOfResourcesError</a></td><td>The Data Distribution Service ran out of resources to complete this operation. </td></tr>
+    <tr><td class="paramname"><a class="el" href="a00899.html" title="Exception: Operation invoked on an Entity that is not yet enabled.">dds::core::NotEnabledError</a></td><td>The <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> has not yet been enabled. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>dds/sub/<a class="el" href="a00173_source.html">DataReader.hpp</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aa01271_html"><div class="ttname"><a href="a01271.html">dds::sub::Query</a></div><div class="ttdoc">Query objects contain expressions that allow the application to specify a filter on the locally avail...</div><div class="ttdef"><b>Definition:</b> <a href="a00194_source.html#l00061">Query.hpp:61</a></div></div>
+<div class="ttc" id="aa01303_html"><div class="ttname"><a href="a01303.html">dds::sub::status::DataState</a></div><div class="ttdoc">Class to hold sample DataState information.</div><div class="ttdef"><b>Definition:</b> <a href="a00209_source.html#l00371">DataState.hpp:371</a></div></div>
+<div class="ttc" id="aa01279_html"><div class="ttname"><a href="a01279.html">dds::sub::Sample</a></div><div class="ttdoc">This class encapsulates the data and info meta-data associated with DDS samples.</div><div class="ttdef"><b>Definition:</b> <a href="a00200_source.html#l00030">Sample.hpp:30</a></div></div>
+<div class="ttc" id="aa00931_html"><div class="ttname"><a href="a00931.html">dds::core::InstanceHandle</a></div><div class="ttdoc">Class to hold the handle associated with in sample instance.</div><div class="ttdef"><b>Definition:</b> <a href="a00050_source.html#l00040">InstanceHandle.hpp:40</a></div></div>
+<div class="ttc" id="aa01279_html_a28928eb2d97bf083aa1e21d000ce8325"><div class="ttname"><a href="a01279.html#a28928eb2d97bf083aa1e21d000ce8325">dds::sub::Sample::info</a></div><div class="ttdeci">const SampleInfo &amp; info() const</div></div>
+<div class="ttc" id="aa01303_html_ab7de639659d8c924c237211c6bb36fd3"><div class="ttname"><a href="a01303.html#ab7de639659d8c924c237211c6bb36fd3">dds::sub::status::DataState::new_data</a></div><div class="ttdeci">static DataState new_data()</div><div class="ttdef"><b>Definition:</b> <a href="a00209_source.html#l00631">DataState.hpp:631</a></div></div>
+<div class="ttc" id="aa01243_html"><div class="ttname"><a href="a01243.html">dds::sub::DataReader::Selector</a></div><div class="ttdef"><b>Definition:</b> <a href="a00173_source.html#l00163">DataReader.hpp:163</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="a00261.html">dds</a></li><li class="navelem"><a class="el" href="a00268.html">sub</a></li><li class="navelem"><a class="el" href="a01235.html">DataReader</a></li><li class="navelem"><a class="el" href="a01243.html">Selector</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

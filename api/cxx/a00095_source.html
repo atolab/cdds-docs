@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vortex Lite ISO C++ API Reference Guide: dds/core/Time.hpp Source File</title>
+<title>Cyclone ISO C++ API Reference Guide: dds/core/types.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="PROJECT_LOGO_Lite.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vortex Lite ISO C++ API Reference Guide
+   <div id="projectname">Cyclone ISO C++ API Reference Guide
    </div>
   </td>
  </tr>
@@ -87,11 +86,11 @@ $(document).ready(function(){initNavTree('a00095_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Time.hpp</div>  </div>
+<div class="title">types.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="a00095.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef OMG_DDS_CORE_TIME_HPP_</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define OMG_DDS_CORE_TIME_HPP_</span></div>
+<a href="a00095.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef OMG_DDS_CORE_TYPES_HPP_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define OMG_DDS_CORE_TYPES_HPP_</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/* Copyright 2010, Object Management Group, Inc.</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * Copyright 2010, PrismTech, Corp.</span></div>
@@ -111,110 +110,47 @@ $(document).ready(function(){initNavTree('a00095_source.html','');});
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * limitations under the License.</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00098.html">dds/core/types.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00264.html">dds</a></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>core</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">class </span>Duration;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">class </span>Time;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="a01130.html">   42</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00059.html#a3921020c081a486ceeab75dccc8aad7a">OMG_DDS_API</a> <a class="code" href="a00264.html">dds</a>::<a class="code" href="a01130.html">core::Time</a></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="a01130.html">Time</a> <a class="code" href="a01130.html#ac7e4e12e5ea870921c3ff6a346db2689">invalid</a>();       <span class="comment">// {-1, 0xffffffff}</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="a01130.html">Time</a> <a class="code" href="a01130.html#a8061c34c5ca4c5f8cc221b35a0f2fc04">from_microsecs</a>(int64_t microseconds);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="a01130.html">Time</a> <a class="code" href="a01130.html#a0ef12bc07de049fba4d6ae576617d9c5">from_millisecs</a>(int64_t milliseconds);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="a01130.html">Time</a> <a class="code" href="a01130.html#a84868bf0749743214e114a7ba1fcc770">from_secs</a>(<span class="keywordtype">double</span> seconds);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="a01130.html#a3e7edeb7e88553ab1303036da0555f02">Time</a>();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="a01130.html#a3e7edeb7e88553ab1303036da0555f02">Time</a>(int64_t sec, uint32_t nanosec = 0);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    int64_t <a class="code" href="a01130.html#a00d1279cc90c35bae0c76b789a86b55e">sec</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="a01130.html#a00d1279cc90c35bae0c76b789a86b55e">sec</a>(int64_t s);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    uint32_t <a class="code" href="a01130.html#a188415f8cfc8b0fec21a310364721b33">nanosec</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="a01130.html#a188415f8cfc8b0fec21a310364721b33">nanosec</a>(uint32_t ns);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="a01130.html#a8c8bc68e6da67170b06f8119e3028f91">compare</a>(<span class="keyword">const</span> <a class="code" href="a01130.html">Time</a>&amp; that) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a01130.html#a4039f1b8a7f4cd33af12d4bd956ea602">operator &gt;</a>(<span class="keyword">const</span> <a class="code" href="a01130.html">Time</a>&amp; that) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a01130.html#aa4edfb5573f12fc21e20ea534f55aebe">operator &gt;=</a>(<span class="keyword">const</span> <a class="code" href="a01130.html">Time</a>&amp; that) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a01130.html#a54a2822ea267d1cab8bdc60edb1b2fc5">operator !=</a>(<span class="keyword">const</span> <a class="code" href="a01130.html">Time</a>&amp; that) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a01130.html#a1ebd0745b6c65c7ab5f4898eb71ec437">operator ==</a>(<span class="keyword">const</span> <a class="code" href="a01130.html">Time</a>&amp; that) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a01130.html#adb1d01c75b6a0b2cbda5c8e49e2b254f">operator &lt;=</a>(<span class="keyword">const</span> <a class="code" href="a01130.html">Time</a>&amp; that) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a01130.html#abd7a8d97dffa5df8bce23ad7eacc6f99">operator &lt;</a>(<span class="keyword">const</span> <a class="code" href="a01130.html">Time</a>&amp; that) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <a class="code" href="a01130.html">Time</a>&amp; <a class="code" href="a01130.html#ae74adabf10869c09d61193d20e67c7c8">operator+=</a>(<span class="keyword">const</span> <a class="code" href="a00862.html">Duration</a>&amp; a_ti);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <a class="code" href="a01130.html">Time</a>&amp; <a class="code" href="a01130.html#a573069c8553d0e9d9c317c8b5c66882e">operator-=</a>(<span class="keyword">const</span> <a class="code" href="a00862.html">Duration</a>&amp; a_ti);</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    int64_t <a class="code" href="a01130.html#a974090214e3d33a16be288dd8207be08">to_millisecs</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    int64_t <a class="code" href="a01130.html#ab26e5d932a173d695b85fc072be17cac">to_microsecs</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="a01130.html#a1fbeb3a74cdc26480a4458f4f3503221">to_secs</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    int64_t sec_;</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    uint32_t nsec_;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;};</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="comment">// Time arithmetic operators.</span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="comment"></span><span class="keyword">const</span> <a class="code" href="a01130.html">dds::core::Time</a> <a class="code" href="a00059.html#a3921020c081a486ceeab75dccc8aad7a">OMG_DDS_API</a> <a class="code" href="a00095.html#ac71ed8afa092791cb66235ea8fc2e349">operator +</a>(<span class="keyword">const</span> <a class="code" href="a01130.html">dds::core::Time</a>&amp; lhs,      <span class="keyword">const</span> <a class="code" href="a00862.html">dds::core::Duration</a>&amp; rhs);</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="keyword">const</span> <a class="code" href="a01130.html">dds::core::Time</a> <a class="code" href="a00059.html#a3921020c081a486ceeab75dccc8aad7a">OMG_DDS_API</a> <a class="code" href="a00095.html#ac71ed8afa092791cb66235ea8fc2e349">operator +</a>(<span class="keyword">const</span> <a class="code" href="a00862.html">dds::core::Duration</a>&amp; lhs,  <span class="keyword">const</span> <a class="code" href="a01130.html">dds::core::Time</a>&amp; rhs);</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="keyword">const</span> <a class="code" href="a01130.html">dds::core::Time</a> <a class="code" href="a00059.html#a3921020c081a486ceeab75dccc8aad7a">OMG_DDS_API</a> <a class="code" href="a00095.html#ac8a8e680fb610dba3199e3169b3e5c7f">operator -</a>(<span class="keyword">const</span> <a class="code" href="a01130.html">dds::core::Time</a>&amp; lhs,      <span class="keyword">const</span> <a class="code" href="a00862.html">dds::core::Duration</a>&amp; rhs);</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* OMG_DDS_CORE_TIME_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// ISO C++ Includes</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">// DDS Includes</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;dds/core/detail/inttypes.hpp&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00056.html">dds/core/macros.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;dds/core/detail/conformance.hpp&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00261.html">dds</a></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">namespace </span>core</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="a00262.html#af64219b65f7ff337e91052779680aef9">   38</a></span>&#160;<span class="keyword">typedef</span> std::vector&lt;uint8_t&gt; <a class="code" href="a00262.html#af64219b65f7ff337e91052779680aef9">ByteSeq</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="a00262.html#af41924828eff7595b676d2196b993482">   43</a></span>&#160;<span class="keyword">typedef</span> std::vector&lt;std::string&gt; <a class="code" href="a00262.html#af41924828eff7595b676d2196b993482">StringSeq</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">// DDS Null-Reference</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="a01131.html">   49</a></span>&#160;<span class="comment"></span><span class="keyword">class </span><a class="code" href="a00056.html#a3921020c081a486ceeab75dccc8aad7a">OMG_DDS_API</a> <a class="code" href="a01131.html">null_type</a> { };</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> <a class="code" href="a01131.html">null_type</a> <a class="code" href="a00056.html#a3921020c081a486ceeab75dccc8aad7a">OMG_DDS_API</a> <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">namespace </span>policy</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">typedef</span> uint32_t QosPolicyId;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* OMG_DDS_CORE_TYPES_HPP_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa01130_html_a1ebd0745b6c65c7ab5f4898eb71ec437"><div class="ttname"><a href="a01130.html#a1ebd0745b6c65c7ab5f4898eb71ec437">dds::core::Time::operator==</a></div><div class="ttdeci">bool operator==(const Time &amp;that) const</div></div>
-<div class="ttc" id="aa01130_html_a1fbeb3a74cdc26480a4458f4f3503221"><div class="ttname"><a href="a01130.html#a1fbeb3a74cdc26480a4458f4f3503221">dds::core::Time::to_secs</a></div><div class="ttdeci">double to_secs() const</div></div>
-<div class="ttc" id="aa01130_html_ae74adabf10869c09d61193d20e67c7c8"><div class="ttname"><a href="a01130.html#ae74adabf10869c09d61193d20e67c7c8">dds::core::Time::operator+=</a></div><div class="ttdeci">Time &amp; operator+=(const Duration &amp;a_ti)</div></div>
-<div class="ttc" id="aa01130_html_a8c8bc68e6da67170b06f8119e3028f91"><div class="ttname"><a href="a01130.html#a8c8bc68e6da67170b06f8119e3028f91">dds::core::Time::compare</a></div><div class="ttdeci">int compare(const Time &amp;that) const</div></div>
-<div class="ttc" id="aa00095_html_ac71ed8afa092791cb66235ea8fc2e349"><div class="ttname"><a href="a00095.html#ac71ed8afa092791cb66235ea8fc2e349">operator+</a></div><div class="ttdeci">const dds::core::Time operator+(const dds::core::Time &amp;lhs, const dds::core::Duration &amp;rhs)</div></div>
-<div class="ttc" id="aa01130_html"><div class="ttname"><a href="a01130.html">dds::core::Time</a></div><div class="ttdef"><b>Definition:</b> <a href="a00095_source.html#l00042">Time.hpp:42</a></div></div>
-<div class="ttc" id="aa01130_html_ac7e4e12e5ea870921c3ff6a346db2689"><div class="ttname"><a href="a01130.html#ac7e4e12e5ea870921c3ff6a346db2689">dds::core::Time::invalid</a></div><div class="ttdeci">static const Time invalid()</div></div>
-<div class="ttc" id="aa01130_html_a188415f8cfc8b0fec21a310364721b33"><div class="ttname"><a href="a01130.html#a188415f8cfc8b0fec21a310364721b33">dds::core::Time::nanosec</a></div><div class="ttdeci">uint32_t nanosec() const</div></div>
-<div class="ttc" id="aa01130_html_a4039f1b8a7f4cd33af12d4bd956ea602"><div class="ttname"><a href="a01130.html#a4039f1b8a7f4cd33af12d4bd956ea602">dds::core::Time::operator&gt;</a></div><div class="ttdeci">bool operator&gt;(const Time &amp;that) const</div></div>
-<div class="ttc" id="aa01130_html_a0ef12bc07de049fba4d6ae576617d9c5"><div class="ttname"><a href="a01130.html#a0ef12bc07de049fba4d6ae576617d9c5">dds::core::Time::from_millisecs</a></div><div class="ttdeci">static const Time from_millisecs(int64_t milliseconds)</div></div>
-<div class="ttc" id="aa01130_html_ab26e5d932a173d695b85fc072be17cac"><div class="ttname"><a href="a01130.html#ab26e5d932a173d695b85fc072be17cac">dds::core::Time::to_microsecs</a></div><div class="ttdeci">int64_t to_microsecs() const</div></div>
-<div class="ttc" id="aa01130_html_a8061c34c5ca4c5f8cc221b35a0f2fc04"><div class="ttname"><a href="a01130.html#a8061c34c5ca4c5f8cc221b35a0f2fc04">dds::core::Time::from_microsecs</a></div><div class="ttdeci">static const Time from_microsecs(int64_t microseconds)</div></div>
-<div class="ttc" id="aa00095_html_ac8a8e680fb610dba3199e3169b3e5c7f"><div class="ttname"><a href="a00095.html#ac8a8e680fb610dba3199e3169b3e5c7f">operator-</a></div><div class="ttdeci">const dds::core::Time operator-(const dds::core::Time &amp;lhs, const dds::core::Duration &amp;rhs)</div></div>
-<div class="ttc" id="aa01130_html_a54a2822ea267d1cab8bdc60edb1b2fc5"><div class="ttname"><a href="a01130.html#a54a2822ea267d1cab8bdc60edb1b2fc5">dds::core::Time::operator!=</a></div><div class="ttdeci">bool operator!=(const Time &amp;that) const</div></div>
-<div class="ttc" id="aa01130_html_a974090214e3d33a16be288dd8207be08"><div class="ttname"><a href="a01130.html#a974090214e3d33a16be288dd8207be08">dds::core::Time::to_millisecs</a></div><div class="ttdeci">int64_t to_millisecs() const</div></div>
-<div class="ttc" id="aa01130_html_a84868bf0749743214e114a7ba1fcc770"><div class="ttname"><a href="a01130.html#a84868bf0749743214e114a7ba1fcc770">dds::core::Time::from_secs</a></div><div class="ttdeci">static const Time from_secs(double seconds)</div></div>
-<div class="ttc" id="aa00059_html_a3921020c081a486ceeab75dccc8aad7a"><div class="ttname"><a href="a00059.html#a3921020c081a486ceeab75dccc8aad7a">OMG_DDS_API</a></div><div class="ttdeci">#define OMG_DDS_API</div><div class="ttdef"><b>Definition:</b> <a href="a00059_source.html#l00052">macros.hpp:52</a></div></div>
-<div class="ttc" id="aa01130_html_abd7a8d97dffa5df8bce23ad7eacc6f99"><div class="ttname"><a href="a01130.html#abd7a8d97dffa5df8bce23ad7eacc6f99">dds::core::Time::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const Time &amp;that) const</div></div>
-<div class="ttc" id="aa01130_html_aa4edfb5573f12fc21e20ea534f55aebe"><div class="ttname"><a href="a01130.html#aa4edfb5573f12fc21e20ea534f55aebe">dds::core::Time::operator&gt;=</a></div><div class="ttdeci">bool operator&gt;=(const Time &amp;that) const</div></div>
-<div class="ttc" id="aa00264_html"><div class="ttname"><a href="a00264.html">dds</a></div><div class="ttdef"><b>Definition:</b> <a href="a00017_source.html#l00030">array.hpp:30</a></div></div>
-<div class="ttc" id="aa00862_html"><div class="ttname"><a href="a00862.html">dds::core::Duration</a></div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00042">Duration.hpp:42</a></div></div>
-<div class="ttc" id="aa01130_html_a3e7edeb7e88553ab1303036da0555f02"><div class="ttname"><a href="a01130.html#a3e7edeb7e88553ab1303036da0555f02">dds::core::Time::Time</a></div><div class="ttdeci">Time()</div></div>
-<div class="ttc" id="aa01130_html_a00d1279cc90c35bae0c76b789a86b55e"><div class="ttname"><a href="a01130.html#a00d1279cc90c35bae0c76b789a86b55e">dds::core::Time::sec</a></div><div class="ttdeci">int64_t sec() const</div></div>
-<div class="ttc" id="aa00098_html"><div class="ttname"><a href="a00098.html">types.hpp</a></div></div>
-<div class="ttc" id="aa01130_html_adb1d01c75b6a0b2cbda5c8e49e2b254f"><div class="ttname"><a href="a01130.html#adb1d01c75b6a0b2cbda5c8e49e2b254f">dds::core::Time::operator&lt;=</a></div><div class="ttdeci">bool operator&lt;=(const Time &amp;that) const</div></div>
-<div class="ttc" id="aa01130_html_a573069c8553d0e9d9c317c8b5c66882e"><div class="ttname"><a href="a01130.html#a573069c8553d0e9d9c317c8b5c66882e">dds::core::Time::operator-=</a></div><div class="ttdeci">Time &amp; operator-=(const Duration &amp;a_ti)</div></div>
+<div class="ttc" id="aa00056_html_a3921020c081a486ceeab75dccc8aad7a"><div class="ttname"><a href="a00056.html#a3921020c081a486ceeab75dccc8aad7a">OMG_DDS_API</a></div><div class="ttdeci">#define OMG_DDS_API</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00052">macros.hpp:52</a></div></div>
+<div class="ttc" id="aa01131_html"><div class="ttname"><a href="a01131.html">dds::core::null_type</a></div><div class="ttdoc">This class is used to create dds::core::null objects.</div><div class="ttdef"><b>Definition:</b> <a href="a00095_source.html#l00049">types.hpp:49</a></div></div>
+<div class="ttc" id="aa00261_html"><div class="ttname"><a href="a00261.html">dds</a></div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00030">array.hpp:30</a></div></div>
+<div class="ttc" id="aa00056_html"><div class="ttname"><a href="a00056.html">macros.hpp</a></div></div>
+<div class="ttc" id="aa00262_html_af41924828eff7595b676d2196b993482"><div class="ttname"><a href="a00262.html#af41924828eff7595b676d2196b993482">dds::core::StringSeq</a></div><div class="ttdeci">std::vector&lt; std::string &gt; StringSeq</div><div class="ttdef"><b>Definition:</b> <a href="a00095_source.html#l00043">types.hpp:43</a></div></div>
+<div class="ttc" id="aa00262_html_af64219b65f7ff337e91052779680aef9"><div class="ttname"><a href="a00262.html#af64219b65f7ff337e91052779680aef9">dds::core::ByteSeq</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; ByteSeq</div><div class="ttdef"><b>Definition:</b> <a href="a00095_source.html#l00038">types.hpp:38</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_8e762eb435ebc1d0f3e9696791508c0a.html">core</a></li><li class="navelem"><a class="el" href="a00095.html">Time.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_8e762eb435ebc1d0f3e9696791508c0a.html">core</a></li><li class="navelem"><a class="el" href="a00095.html">types.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

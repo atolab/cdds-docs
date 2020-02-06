@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vortex Lite ISO C++ API Reference Guide: dds/core/cond/GuardCondition.hpp File Reference</title>
+<title>Cyclone ISO C++ API Reference Guide: dds/core/cond/StatusCondition.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="PROJECT_LOGO_Lite.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vortex Lite ISO C++ API Reference Guide
+   <div id="projectname">Cyclone ISO C++ API Reference Guide
    </div>
   </td>
  </tr>
@@ -90,26 +89,29 @@ $(document).ready(function(){initNavTree('a00026.html','');});
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
-<div class="title">GuardCondition.hpp File Reference</div>  </div>
+<div class="title">StatusCondition.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="a00023_source.html">dds/core/cond/Condition.hpp</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="a00086_source.html">dds/core/status/State.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="a00020_source.html">dds/core/cond/Condition.hpp</a>&gt;</code><br />
+<code>#include &lt;dds/core/cond/detail/StatusCondition.hpp&gt;</code><br />
+<code>#include &lt;<a class="el" href="a00041_source.html">dds/core/Entity.hpp</a>&gt;</code><br />
 </div>
 <p><a href="a00026_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00850.html">dds::core::cond::GuardCondition</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="a00850.html" title="A GuardCondition object is a specific Condition whose trigger_value is completely under the control o...">GuardCondition</a> object is a specific <a class="el" href="a00846.html" title="This class is the base class for all the conditions that may be attached to a dds::core::cond::WaitSe...">Condition</a> whose trigger_value is completely under the control of the application.  <a href="a00850.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00851.html">dds::core::cond::StatusCondition</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="a00851.html" title="A StatusCondition object is a specific Condition that is associated with each Entity.">StatusCondition</a> object is a specific <a class="el" href="a00843.html" title="This class is the base class for all the conditions that may be attached to a dds::core::cond::WaitSe...">Condition</a> that is associated with each <a class="el" href="a00863.html" title="This class is the abstract base class for all the DCPS objects.">Entity</a>.  <a href="a00851.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:a00264"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00264.html">dds</a></td></tr>
+<tr class="memitem:a00261"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00261.html">dds</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00265"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00265.html">dds::core</a></td></tr>
+<tr class="memitem:a00262"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00262.html">dds::core</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00266"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00266.html">dds::core::cond</a></td></tr>
+<tr class="memitem:a00263"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00263.html">dds::core::cond</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
@@ -117,7 +119,7 @@ Namespaces</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_8e762eb435ebc1d0f3e9696791508c0a.html">core</a></li><li class="navelem"><a class="el" href="dir_18a637d735777412aa502af42e637f28.html">cond</a></li><li class="navelem"><a class="el" href="a00026.html">GuardCondition.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_8e762eb435ebc1d0f3e9696791508c0a.html">core</a></li><li class="navelem"><a class="el" href="dir_18a637d735777412aa502af42e637f28.html">cond</a></li><li class="navelem"><a class="el" href="a00026.html">StatusCondition.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

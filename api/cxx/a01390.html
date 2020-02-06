@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vortex Lite ISO C++ API Reference Guide: dds::topic::topic_type_name&lt; T &gt; Struct Template Reference</title>
+<title>Cyclone ISO C++ API Reference Guide: dds::sub::qos Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="PROJECT_LOGO_Lite.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vortex Lite ISO C++ API Reference Guide
+   <div id="projectname">Cyclone ISO C++ API Reference Guide
    </div>
   </td>
  </tr>
@@ -87,71 +86,27 @@ $(document).ready(function(){initNavTree('a01390.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="a01387.html">List of all members</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
-<div class="title">dds::topic::topic_type_name&lt; T &gt; Struct Template Reference</div>  </div>
+<div class="title">dds::sub::qos Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Support functionality to get the default type_name of a <a class="el" href="a01366.html" title="Topic is the most basic description of the data to be published and subscribed.">Topic</a> type.  
- <a href="a01390.html#details">More...</a></p>
-
-<p><code>#include &quot;<a class="el" href="a00260_source.html">TopicTraits.hpp</a>&quot;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a7de56fb3cc4c993584e97e6ee6127701"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01390.html#a7de56fb3cc4c993584e97e6ee6127701">value</a> ()</td></tr>
-<tr class="separator:a7de56fb3cc4c993584e97e6ee6127701"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01263.html">DataReaderQos</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class provides the basic mechanism for an application to specify Quality of Service attributes for a <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a>.  <a href="a01263.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01267.html">SubscriberQos</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class provides the basic mechanism for an application to specify Quality of Service attributes for a <a class="el" href="a01307.html" title="A Subscriber is the object responsible for the actual reception of the data resulting from its subscr...">Subscriber</a>.  <a href="a01267.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename T&gt;<br />
-struct dds::topic::topic_type_name&lt; T &gt;</h3>
-
-<p>Support functionality to get the default type_name of a <a class="el" href="a01366.html" title="Topic is the most basic description of the data to be published and subscribed.">Topic</a> type. </p>
-<div class="fragment"><div class="line">std::string typeName = <a class="code" href="a01390.html#a7de56fb3cc4c993584e97e6ee6127701">dds::topic::topic_type_name&lt;Foo::Bar&gt;::value</a>();</div>
-</div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="a00260_source.html#l00046">46</a> of file <a class="el" href="a00260_source.html">TopicTraits.hpp</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a7de56fb3cc4c993584e97e6ee6127701"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7de56fb3cc4c993584e97e6ee6127701">&#9670;&nbsp;</a></span>value()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static std::string <a class="el" href="a01390.html">dds::topic::topic_type_name</a>&lt; T &gt;::value </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="a00260_source.html#l00048">48</a> of file <a class="el" href="a00260_source.html">TopicTraits.hpp</a>.</p>
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li>dds/topic/<a class="el" href="a00260_source.html">TopicTraits.hpp</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa01390_html_a7de56fb3cc4c993584e97e6ee6127701"><div class="ttname"><a href="a01390.html#a7de56fb3cc4c993584e97e6ee6127701">dds::topic::topic_type_name::value</a></div><div class="ttdeci">static std::string value()</div><div class="ttdef"><b>Definition:</b> <a href="a00260_source.html#l00048">TopicTraits.hpp:48</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00264.html">dds</a></li><li class="navelem"><a class="el" href="a00274.html">topic</a></li><li class="navelem"><a class="el" href="a01390.html">topic_type_name</a></li>
+    <li class="navelem"><a class="el" href="a00261.html">dds</a></li><li class="navelem"><a class="el" href="a00268.html">sub</a></li><li class="navelem"><a class="el" href="a01390.html">qos</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

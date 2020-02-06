@@ -1,4 +1,4 @@
 var namespaces_dup =
 [
-    [ "dds", "a00264.html", "a00264" ]
+    [ "dds", "a00261.html", "a00261" ]
 ];

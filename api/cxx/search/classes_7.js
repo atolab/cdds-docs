@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['history_625',['History',['../a01014.html',1,'dds::core::policy']]],
-  ['historykind_626',['HistoryKind',['../a01050.html',1,'dds::core::policy']]]
+  ['history_623',['History',['../a01011.html',1,'dds::core::policy']]],
+  ['historykind_624',['HistoryKind',['../a01047.html',1,'dds::core::policy']]]
 ];

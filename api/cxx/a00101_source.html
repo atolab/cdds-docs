@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vortex Lite ISO C++ API Reference Guide: dds/core/Value.hpp Source File</title>
+<title>Cyclone ISO C++ API Reference Guide: dds/core/WeakReference.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="PROJECT_LOGO_Lite.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vortex Lite ISO C++ API Reference Guide
+   <div id="projectname">Cyclone ISO C++ API Reference Guide
    </div>
   </td>
  </tr>
@@ -87,11 +86,11 @@ $(document).ready(function(){initNavTree('a00101_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Value.hpp</div>  </div>
+<div class="title">WeakReference.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="a00101.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef OMG_DDS_CORE_VALUE_HPP_</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define OMG_DDS_CORE_VALUE_HPP_</span></div>
+<a href="a00101.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef OMG_DDS_CORE_WEAK_REFERENCE_HPP_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define OMG_DDS_CORE_WEAK_REFERENCE_HPP_</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/* Copyright 2010, Object Management Group, Inc.</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * Copyright 2010, PrismTech, Corp.</span></div>
@@ -111,77 +110,50 @@ $(document).ready(function(){initNavTree('a00101_source.html','');});
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * limitations under the License.</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00264.html">dds</a></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>core</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> D&gt;</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="a01138.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="a01138.html">Value</a>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00077.html">dds/core/Reference.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00261.html">dds</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>core</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="a01139.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="a01139.html">WeakReference</a>;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> D&gt;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">class </span><a class="code" href="a01138.html">dds::core::Value</a></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    Value();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    Value(<span class="keyword">const</span> Value&amp; p);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ARG&gt;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    Value(<span class="keyword">const</span> ARG&amp; arg);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ARG1, <span class="keyword">typename</span> ARG2&gt;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    Value(<span class="keyword">const</span> ARG1&amp; arg1, <span class="keyword">const</span> ARG2&amp; arg2);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ARG1, <span class="keyword">typename</span> ARG2, <span class="keyword">typename</span> ARG3&gt;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    Value(<span class="keyword">const</span> ARG1&amp; arg1, <span class="keyword">const</span> ARG2&amp; arg2, <span class="keyword">const</span> ARG3&amp; arg3);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ARG1, <span class="keyword">typename</span> ARG2, <span class="keyword">typename</span> ARG3, <span class="keyword">typename</span> ARG4&gt;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    Value(<span class="keyword">const</span> ARG1&amp; arg1, <span class="keyword">const</span> ARG2&amp; arg2, <span class="keyword">const</span> ARG3&amp; arg3, <span class="keyword">const</span> ARG4&amp; arg4);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ARG1, <span class="keyword">typename</span> ARG2, <span class="keyword">typename</span> ARG3, <span class="keyword">typename</span> ARG4, <span class="keyword">typename</span> ARG5&gt;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    Value(<span class="keyword">const</span> ARG1&amp; arg1, <span class="keyword">const</span> ARG2&amp; arg2, <span class="keyword">const</span> ARG3&amp; arg3, <span class="keyword">const</span> ARG4&amp; arg4, <span class="keyword">const</span> ARG5&amp; arg5);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ARG1, <span class="keyword">typename</span> ARG2, <span class="keyword">typename</span> ARG3, <span class="keyword">typename</span> ARG4, <span class="keyword">typename</span> ARG5, <span class="keyword">typename</span> ARG6&gt;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    Value(<span class="keyword">const</span> ARG1&amp; arg1, <span class="keyword">const</span> ARG2&amp; arg2, <span class="keyword">const</span> ARG3&amp; arg3, <span class="keyword">const</span> ARG4&amp; arg4, <span class="keyword">const</span> ARG5&amp; arg5, <span class="keyword">const</span> ARG6&amp; arg6);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    ~Value();</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    Value&amp; <a class="code" href="a01138.html#ad78a562d097b30ce3dca30e0f1c6d66e">operator=</a>(<span class="keyword">const</span> Value&amp; other);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a01138.html#a34fd669d0051ad90b89d98a323d2d96a">operator==</a>(<span class="keyword">const</span> Value&amp; other) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a01138.html#a9b22715713bc0bfc10af93eeaeda80f4">operator !=</a>(<span class="keyword">const</span> Value&amp; other) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    D* <a class="code" href="a01138.html#a948a6f4576c26fe7e44c551a56f4d038">operator-&gt;</a>();</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keyword">const</span> D* <a class="code" href="a01138.html#a948a6f4576c26fe7e44c551a56f4d038">operator-&gt;</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keyword">const</span> D&amp; delegate() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    D&amp; delegate();</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keyword">operator</span> D&amp; ();</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keyword">operator</span> <span class="keyword">const</span> D&amp; () <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    D d_;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;};</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* OMG_DDS_CORE_VALUE_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">class </span><a class="code" href="a01139.html">dds::core::WeakReference</a></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="a01139.html#ab3814f67e8d293a126cf06ece9915a92">   44</a></span>&#160;    <span class="keyword">typedef</span> T <a class="code" href="a01139.html#ab3814f67e8d293a126cf06ece9915a92">ReferenceType</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="a01139.html#a88275ea43a3c7d43cbcbbc7ad9d4aaa8">WeakReference</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="a01139.html#a88275ea43a3c7d43cbcbbc7ad9d4aaa8">WeakReference</a>(<span class="keyword">const</span> T&amp; t);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    ~<a class="code" href="a01139.html">WeakReference</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a01139.html#a510e6d285e9ed0242bfc5b7364c7a237">expired</a>();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    T <a class="code" href="a01139.html#a64756be93d9b0a41b3772a1dd690ccd2">lock</a>();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">typename</span> T::DELEGATE_WEAK_REF_T impl_;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;};</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* OMG_DDS_CORE_WEAK_REFERENCE_HPP_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa01138_html_a948a6f4576c26fe7e44c551a56f4d038"><div class="ttname"><a href="a01138.html#a948a6f4576c26fe7e44c551a56f4d038">dds::core::Value::operator-&gt;</a></div><div class="ttdeci">D * operator-&gt;()</div></div>
-<div class="ttc" id="aa01138_html_a9b22715713bc0bfc10af93eeaeda80f4"><div class="ttname"><a href="a01138.html#a9b22715713bc0bfc10af93eeaeda80f4">dds::core::Value::operator!=</a></div><div class="ttdeci">bool operator!=(const Value &amp;other) const</div></div>
-<div class="ttc" id="aa01138_html_a34fd669d0051ad90b89d98a323d2d96a"><div class="ttname"><a href="a01138.html#a34fd669d0051ad90b89d98a323d2d96a">dds::core::Value::operator==</a></div><div class="ttdeci">bool operator==(const Value &amp;other) const</div></div>
-<div class="ttc" id="aa01138_html_ad78a562d097b30ce3dca30e0f1c6d66e"><div class="ttname"><a href="a01138.html#ad78a562d097b30ce3dca30e0f1c6d66e">dds::core::Value::operator=</a></div><div class="ttdeci">Value &amp; operator=(const Value &amp;other)</div></div>
-<div class="ttc" id="aa01138_html"><div class="ttname"><a href="a01138.html">dds::core::Value</a></div><div class="ttdoc">This class is the base for various value-type dds objects.</div><div class="ttdef"><b>Definition:</b> <a href="a00101_source.html#l00028">Value.hpp:28</a></div></div>
-<div class="ttc" id="aa00264_html"><div class="ttname"><a href="a00264.html">dds</a></div><div class="ttdef"><b>Definition:</b> <a href="a00017_source.html#l00030">array.hpp:30</a></div></div>
+<div class="ttc" id="aa01139_html_a64756be93d9b0a41b3772a1dd690ccd2"><div class="ttname"><a href="a01139.html#a64756be93d9b0a41b3772a1dd690ccd2">dds::core::WeakReference::lock</a></div><div class="ttdeci">T lock()</div></div>
+<div class="ttc" id="aa00261_html"><div class="ttname"><a href="a00261.html">dds</a></div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00030">array.hpp:30</a></div></div>
+<div class="ttc" id="aa01139_html"><div class="ttname"><a href="a01139.html">dds::core::WeakReference</a></div><div class="ttdoc">The WeakReference class enables you to maintain a weak reference to a DDS reference type.</div><div class="ttdef"><b>Definition:</b> <a href="a00101_source.html#l00029">WeakReference.hpp:29</a></div></div>
+<div class="ttc" id="aa00077_html"><div class="ttname"><a href="a00077.html">Reference.hpp</a></div></div>
+<div class="ttc" id="aa01139_html_a510e6d285e9ed0242bfc5b7364c7a237"><div class="ttname"><a href="a01139.html#a510e6d285e9ed0242bfc5b7364c7a237">dds::core::WeakReference::expired</a></div><div class="ttdeci">bool expired()</div></div>
+<div class="ttc" id="aa01139_html_ab3814f67e8d293a126cf06ece9915a92"><div class="ttname"><a href="a01139.html#ab3814f67e8d293a126cf06ece9915a92">dds::core::WeakReference::ReferenceType</a></div><div class="ttdeci">T ReferenceType</div><div class="ttdef"><b>Definition:</b> <a href="a00101_source.html#l00044">WeakReference.hpp:44</a></div></div>
+<div class="ttc" id="aa01139_html_a88275ea43a3c7d43cbcbbc7ad9d4aaa8"><div class="ttname"><a href="a01139.html#a88275ea43a3c7d43cbcbbc7ad9d4aaa8">dds::core::WeakReference::WeakReference</a></div><div class="ttdeci">WeakReference()</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_8e762eb435ebc1d0f3e9696791508c0a.html">core</a></li><li class="navelem"><a class="el" href="a00101.html">Value.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_8e762eb435ebc1d0f3e9696791508c0a.html">core</a></li><li class="navelem"><a class="el" href="a00101.html">WeakReference.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

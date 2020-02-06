@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vortex Lite ISO C++ API Reference Guide: dds/core/Reference.hpp File Reference</title>
+<title>Cyclone ISO C++ API Reference Guide: dds/core/refmacros.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="PROJECT_LOGO_Lite.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vortex Lite ISO C++ API Reference Guide
+   <div id="projectname">Cyclone ISO C++ API Reference Guide
    </div>
   </td>
  </tr>
@@ -87,61 +86,78 @@ $(document).ready(function(){initNavTree('a00080.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
-<div class="title">Reference.hpp File Reference</div>  </div>
+<div class="title">refmacros.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="a00098_source.html">dds/core/types.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="a00083_source.html">dds/core/refmacros.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="a00050_source.html">dds/core/Exception.hpp</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="a00056_source.html">dds/core/macros.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="a00074_source.html">dds/core/ref_traits.hpp</a>&gt;</code><br />
 </div>
 <p><a href="a00080_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01070.html">dds::core::Reference&lt; DELEGATE &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for reference-counted objects.  <a href="a01070.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:a00264"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00264.html">dds</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00265"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00265.html">dds::core</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a80807aff8833ad94255ca5b0649165b6"><td class="memTemplParams" colspan="2">template&lt;class D &gt; </td></tr>
-<tr class="memitem:a80807aff8833ad94255ca5b0649165b6"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00080.html#a80807aff8833ad94255ca5b0649165b6">operator!=</a> (<a class="el" href="a01134.html">dds::core::null_type</a>, const <a class="el" href="a01070.html">dds::core::Reference</a>&lt; D &gt; &amp;r)</td></tr>
-<tr class="separator:a80807aff8833ad94255ca5b0649165b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a596c38938e46358782a6cd6ffb5af35d"><td class="memTemplParams" colspan="2">template&lt;class D &gt; </td></tr>
-<tr class="memitem:a596c38938e46358782a6cd6ffb5af35d"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00080.html#a596c38938e46358782a6cd6ffb5af35d">operator==</a> (<a class="el" href="a01134.html">dds::core::null_type</a>, const <a class="el" href="a01070.html">dds::core::Reference</a>&lt; D &gt; &amp;r)</td></tr>
-<tr class="separator:a596c38938e46358782a6cd6ffb5af35d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a90649067f7ea0a8ba6bb27268019d42a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00080.html#a90649067f7ea0a8ba6bb27268019d42a">DECLARE_TYPE_TRAITS</a>(TYPE)</td></tr>
+<tr class="separator:a90649067f7ea0a8ba6bb27268019d42a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77035440da9a788fdb0a882a73b3e072"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00080.html#a77035440da9a788fdb0a882a73b3e072">OMG_DDS_EXPLICIT_REF_BASE</a>(TYPE,  FROM)</td></tr>
+<tr class="separator:a77035440da9a788fdb0a882a73b3e072"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abddd9cfadbe14b4fe3dab3408f14087a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00080.html#abddd9cfadbe14b4fe3dab3408f14087a">OMG_DDS_EXPLICIT_REF_BASE_DECL</a>(TYPE,  FROM)</td></tr>
+<tr class="separator:abddd9cfadbe14b4fe3dab3408f14087a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d9a9706bab2b2d4f7babd5b7d0737df"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00080.html#a0d9a9706bab2b2d4f7babd5b7d0737df">OMG_DDS_IMPLICIT_REF_BASE</a>(TYPE)</td></tr>
+<tr class="separator:a0d9a9706bab2b2d4f7babd5b7d0737df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af91908c8ade3eaa1b90ab3f53197c259"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00080.html#af91908c8ade3eaa1b90ab3f53197c259">OMG_DDS_REF_TYPE_BASE</a>(TYPE,  BASE,  DELEGATE)</td></tr>
+<tr class="separator:af91908c8ade3eaa1b90ab3f53197c259"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87a722386b01d4614d579be908614e14"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00080.html#a87a722386b01d4614d579be908614e14">OMG_DDS_REF_TYPE_DELEGATE_C</a>(TYPE,  BASE,  DELEGATE)</td></tr>
+<tr class="separator:a87a722386b01d4614d579be908614e14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab158cc9af4d95dbb703a49d94e05b81"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00080.html#aab158cc9af4d95dbb703a49d94e05b81">OMG_DDS_REF_TYPE_NO_DC</a>(TYPE,  BASE,  DELEGATE)</td></tr>
+<tr class="separator:aab158cc9af4d95dbb703a49d94e05b81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ca6278157c5f9f5d7d09ca213a559f6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00080.html#a2ca6278157c5f9f5d7d09ca213a559f6">OMG_DDS_REF_TYPE_PROTECTED_DC</a>(TYPE,  BASE,  DELEGATE)</td></tr>
+<tr class="separator:a2ca6278157c5f9f5d7d09ca213a559f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a744c888a8b6773eb73e67a89c369c816"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00080.html#a744c888a8b6773eb73e67a89c369c816">OMG_DDS_REF_TYPE_PROTECTED_DC_T</a>(TYPE,  BASE,  T_PARAM,  DELEGATE)</td></tr>
+<tr class="separator:a744c888a8b6773eb73e67a89c369c816"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a80807aff8833ad94255ca5b0649165b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80807aff8833ad94255ca5b0649165b6">&#9670;&nbsp;</a></span>operator!=()</h2>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a90649067f7ea0a8ba6bb27268019d42a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90649067f7ea0a8ba6bb27268019d42a">&#9670;&nbsp;</a></span>DECLARE_TYPE_TRAITS</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;class D &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool operator!= </td>
+          <td class="memname">#define DECLARE_TYPE_TRAITS</td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a01134.html">dds::core::null_type</a>&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">TYPE</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">typedef</span> TYPE  TYPE##_T;\</div>
+<div class="line">    typedef typename ::dds::core::smart_ptr_traits&lt;TYPE&gt;::ref_type       TYPE##_REF_T;\</div>
+<div class="line">    typedef typename ::dds::core::smart_ptr_traits&lt;TYPE&gt;::weak_ref_type  TYPE##_WEAK_REF_T;</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="a00080_source.html#l00029">29</a> of file <a class="el" href="a00080_source.html">refmacros.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a77035440da9a788fdb0a882a73b3e072"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77035440da9a788fdb0a882a73b3e072">&#9670;&nbsp;</a></span>OMG_DDS_EXPLICIT_REF_BASE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OMG_DDS_EXPLICIT_REF_BASE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">TYPE, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="a01070.html">dds::core::Reference</a>&lt; D &gt; &amp;&#160;</td>
-          <td class="paramname"><em>r</em>&#160;</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">FROM&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -150,33 +166,28 @@ template&lt;class D &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Special operator!= used to check if this reference object does not equal the <em>dds::core::null</em> reference.</p>
-<p>The non-null-check can be done like this: </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (dds::core::null != r) {</div>
-<div class="line">   <span class="comment">// Use the dds reference object r</span></div>
-<div class="line">}</div>
-</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>true if this reference is not null. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="a00080_source.html#l00118">118</a> of file <a class="el" href="a00080_source.html">refmacros.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a596c38938e46358782a6cd6ffb5af35d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a596c38938e46358782a6cd6ffb5af35d">&#9670;&nbsp;</a></span>operator==()</h2>
+<a id="abddd9cfadbe14b4fe3dab3408f14087a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abddd9cfadbe14b4fe3dab3408f14087a">&#9670;&nbsp;</a></span>OMG_DDS_EXPLICIT_REF_BASE_DECL</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;class D &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool operator== </td>
+          <td class="memname">#define OMG_DDS_EXPLICIT_REF_BASE_DECL</td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a01134.html">dds::core::null_type</a>&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">TYPE, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="a01070.html">dds::core::Reference</a>&lt; D &gt; &amp;&#160;</td>
-          <td class="paramname"><em>r</em>&#160;</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">FROM&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -185,20 +196,246 @@ template&lt;class D &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Special operator== used to check if this reference object does not equal the <em>dds::core::null</em> reference.</p>
-<p>The non-null-check can be done like this: </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (dds::core::null == r) {</div>
-<div class="line">   <span class="comment">// Do not use the dds reference object r in its current state</span></div>
-<div class="line">}</div>
-</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>true if this reference is not null. </dd></dl>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">public</span>:\</div>
+<div class="line">    TYPE(<span class="keyword">const</span> FROM&amp; h);    \</div>
+<div class="line">    \</div>
+<div class="line">    TYPE&amp; \</div>
+<div class="line">    operator=(<span class="keyword">const</span> FROM&amp; rhs);</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="a00080_source.html#l00111">111</a> of file <a class="el" href="a00080_source.html">refmacros.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a0d9a9706bab2b2d4f7babd5b7d0737df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d9a9706bab2b2d4f7babd5b7d0737df">&#9670;&nbsp;</a></span>OMG_DDS_IMPLICIT_REF_BASE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OMG_DDS_IMPLICIT_REF_BASE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">TYPE</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00080_source.html#l00075">75</a> of file <a class="el" href="a00080_source.html">refmacros.hpp</a>.</p>
+
+</div>
+</div>
+<a id="af91908c8ade3eaa1b90ab3f53197c259"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af91908c8ade3eaa1b90ab3f53197c259">&#9670;&nbsp;</a></span>OMG_DDS_REF_TYPE_BASE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OMG_DDS_REF_TYPE_BASE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">TYPE, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">BASE, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">DELEGATE&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="a00080_source.html#l00047">47</a> of file <a class="el" href="a00080_source.html">refmacros.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a87a722386b01d4614d579be908614e14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87a722386b01d4614d579be908614e14">&#9670;&nbsp;</a></span>OMG_DDS_REF_TYPE_DELEGATE_C</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OMG_DDS_REF_TYPE_DELEGATE_C</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">TYPE, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">BASE, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">DELEGATE&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="a00080.html#a2ca6278157c5f9f5d7d09ca213a559f6">OMG_DDS_REF_TYPE_PROTECTED_DC</a>(TYPE, BASE, DELEGATE)                     \</div>
+<div class="line">    public:                                                                 \</div>
+<div class="line">    TYPE(DELEGATE_T *impl) : <a class="code" href="a00261.html">dds</a>::core::Reference&lt; DELEGATE_T &gt;(impl) { }</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="a00080_source.html#l00183">183</a> of file <a class="el" href="a00080_source.html">refmacros.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aab158cc9af4d95dbb703a49d94e05b81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab158cc9af4d95dbb703a49d94e05b81">&#9670;&nbsp;</a></span>OMG_DDS_REF_TYPE_NO_DC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OMG_DDS_REF_TYPE_NO_DC</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">TYPE, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">BASE, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">DELEGATE&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">public</span>:                                                                     \</div>
+<div class="line">    typedef DELEGATE            DELEGATE_T;                                 \</div>
+<div class="line">    OMG_DDS_REF_TYPE_BASE(TYPE, BASE, DELEGATE_T)</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="a00080_source.html#l00178">178</a> of file <a class="el" href="a00080_source.html">refmacros.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a2ca6278157c5f9f5d7d09ca213a559f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ca6278157c5f9f5d7d09ca213a559f6">&#9670;&nbsp;</a></span>OMG_DDS_REF_TYPE_PROTECTED_DC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OMG_DDS_REF_TYPE_PROTECTED_DC</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">TYPE, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">BASE, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">DELEGATE&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">public</span>:                                                                     \</div>
+<div class="line">    typedef DELEGATE            DELEGATE_T;                                 \</div>
+<div class="line">    OMG_DDS_REF_TYPE_BASE(TYPE, BASE, DELEGATE_T)                           \</div>
+<div class="line">protected:                                                                  \</div>
+<div class="line">    TYPE() { }</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="a00080_source.html#l00164">164</a> of file <a class="el" href="a00080_source.html">refmacros.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a744c888a8b6773eb73e67a89c369c816"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a744c888a8b6773eb73e67a89c369c816">&#9670;&nbsp;</a></span>OMG_DDS_REF_TYPE_PROTECTED_DC_T</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OMG_DDS_REF_TYPE_PROTECTED_DC_T</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">TYPE, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">BASE, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">T_PARAM, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">DELEGATE&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">public</span>:                                                                     \</div>
+<div class="line">    typedef DELEGATE&lt;T_PARAM&gt;   DELEGATE_T;                                 \</div>
+<div class="line">    OMG_DDS_REF_TYPE_BASE(TYPE, BASE, DELEGATE_T)                           \</div>
+<div class="line">    protected:                                                              \</div>
+<div class="line">    TYPE() { }</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="a00080_source.html#l00171">171</a> of file <a class="el" href="a00080_source.html">refmacros.hpp</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aa00080_html_a2ca6278157c5f9f5d7d09ca213a559f6"><div class="ttname"><a href="a00080.html#a2ca6278157c5f9f5d7d09ca213a559f6">OMG_DDS_REF_TYPE_PROTECTED_DC</a></div><div class="ttdeci">#define OMG_DDS_REF_TYPE_PROTECTED_DC(TYPE, BASE, DELEGATE)</div><div class="ttdef"><b>Definition:</b> <a href="a00080_source.html#l00164">refmacros.hpp:164</a></div></div>
+<div class="ttc" id="aa00261_html"><div class="ttname"><a href="a00261.html">dds</a></div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00030">array.hpp:30</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_8e762eb435ebc1d0f3e9696791508c0a.html">core</a></li><li class="navelem"><a class="el" href="a00080.html">Reference.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_8e762eb435ebc1d0f3e9696791508c0a.html">core</a></li><li class="navelem"><a class="el" href="a00080.html">refmacros.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

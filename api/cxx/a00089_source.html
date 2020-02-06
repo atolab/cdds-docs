@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vortex Lite ISO C++ API Reference Guide: dds/core/status/State.hpp Source File</title>
+<title>Cyclone ISO C++ API Reference Guide: dds/core/status/Status.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="PROJECT_LOGO_Lite.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vortex Lite ISO C++ API Reference Guide
+   <div id="projectname">Cyclone ISO C++ API Reference Guide
    </div>
   </td>
  </tr>
@@ -87,11 +86,11 @@ $(document).ready(function(){initNavTree('a00089_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">State.hpp</div>  </div>
+<div class="title">Status.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="a00089.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef OMG_DDS_CORE_STATUS_STATE_HPP_</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define OMG_DDS_CORE_STATUS_STATE_HPP_</span></div>
+<a href="a00089.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef OMG_TDDS_CORE_STATUS_STATUS_HPP_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define OMG_TDDS_CORE_STATUS_STATUS_HPP_</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/* Copyright 2010, Object Management Group, Inc.</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * Copyright 2010, PrismTech, Corp.</span></div>
@@ -111,193 +110,263 @@ $(document).ready(function(){initNavTree('a00089_source.html','');});
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * limitations under the License.</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;bitset&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00059.html">dds/core/macros.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00098.html">dds/core/types.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00264.html">dds</a></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span>core</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="a00268.html">   31</a></span>&#160;<span class="keyword">namespace </span>status</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="a01078.html">   40</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00059.html#a3921020c081a486ceeab75dccc8aad7a">OMG_DDS_API</a> <a class="code" href="a01078.html">SampleRejectedState</a> : <span class="keyword">public</span> std::bitset&lt;OMG_DDS_STATE_BIT_COUNT&gt;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="a01078.html#a194740624f0052330b1c756ec60c5b6b">   46</a></span>&#160;    <span class="keyword">typedef</span> std::bitset&lt;OMG_DDS_STATE_BIT_COUNT&gt; <a class="code" href="a01078.html#a194740624f0052330b1c756ec60c5b6b">MaskType</a>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="a01078.html">SampleRejectedState</a>();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="a01078.html">SampleRejectedState</a>(<span class="keyword">const</span> <a class="code" href="a01078.html">SampleRejectedState</a>&amp; src);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="a01078.html">SampleRejectedState</a>(<span class="keyword">const</span> <a class="code" href="a01078.html#a194740624f0052330b1c756ec60c5b6b">MaskType</a>&amp; src);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="a01078.html#a998474fd1a6c432592e7f6c6f8572f9c">   79</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="a01078.html">SampleRejectedState</a> <a class="code" href="a01078.html#a998474fd1a6c432592e7f6c6f8572f9c">not_rejected</a>()</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="a01078.html">SampleRejectedState</a>(0u);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="a01078.html#ae3fba9957ebf0a2413df006e3bd216bb">   94</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="a01078.html">SampleRejectedState</a> <a class="code" href="a01078.html#ae3fba9957ebf0a2413df006e3bd216bb">rejected_by_samples_limit</a>()</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    {</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="a01078.html">SampleRejectedState</a>(0x0001 &lt;&lt; 1u);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="a01078.html#a613995103e230e3fa7c0453aabdf733a">  109</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="a01078.html">SampleRejectedState</a> <a class="code" href="a01078.html#a613995103e230e3fa7c0453aabdf733a">rejected_by_instances_limit</a>()</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    {</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="a01078.html">SampleRejectedState</a>(0x0001 &lt;&lt; 0u);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    }</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="a01078.html#a1b96ca8cbd477b51a1825141c009894e">  124</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="a01078.html">SampleRejectedState</a> <a class="code" href="a01078.html#a1b96ca8cbd477b51a1825141c009894e">rejected_by_samples_per_instance_limit</a>()</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    {</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="a01078.html">SampleRejectedState</a>(0x0001 &lt;&lt; 2u);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    }</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <a class="code" href="a01078.html">SampleRejectedState</a>(uint32_t s);</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;};</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
-<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="a01082.html">  144</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00059.html#a3921020c081a486ceeab75dccc8aad7a">OMG_DDS_API</a> <a class="code" href="a01082.html">StatusMask</a> : <span class="keyword">public</span> std::bitset&lt;OMG_DDS_STATUS_COUNT&gt;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;{</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="a01082.html#a2c488e9ed77637bb196edc0d3299440b">  150</a></span>&#160;    <span class="keyword">typedef</span> std::bitset&lt;OMG_DDS_STATUS_COUNT&gt; <a class="code" href="a01082.html#a2c488e9ed77637bb196edc0d3299440b">MaskType</a>;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <a class="code" href="a01082.html">StatusMask</a>();</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="a01082.html">StatusMask</a>(uint32_t mask);</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <a class="code" href="a01082.html">StatusMask</a>(<span class="keyword">const</span> <a class="code" href="a01082.html">StatusMask</a>&amp; other);</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    ~<a class="code" href="a01082.html">StatusMask</a>();</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="a01082.html#ac2f2876b85d149cdf75856ddd011caec">  184</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="a01082.html">StatusMask</a>&amp; <a class="code" href="a00182.html#a75edfa52c671f8d3730fc573e6c377fb">operator &lt;&lt; </a>(<span class="keyword">const</span> <a class="code" href="a01082.html">dds::core::status::StatusMask</a>&amp; mask)</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    {</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        *<span class="keyword">this</span> |= mask;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    }</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
-<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="a01082.html#a755f9ed62ec22b8fcf632380439a65e3">  195</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="a01082.html">StatusMask</a> <a class="code" href="a01082.html#a755f9ed62ec22b8fcf632380439a65e3">all</a>()</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    {</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="a01082.html">StatusMask</a>(0x80007fe7u);</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00098.html">dds/core/Value.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00050.html">dds/core/InstanceHandle.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00062.html">dds/core/policy/CorePolicy.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00068.html">dds/core/policy/QosPolicyCount.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00086.html">dds/core/status/State.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00261.html">dds</a></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">namespace </span>core</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">namespace </span>status</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="a01083.html">   39</a></span>&#160;<span class="keyword">class </span><a class="code" href="a01083.html">InconsistentTopicStatus</a> : <span class="keyword">public</span> <a class="code" href="a01135.html">dds::core::Value</a></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="a01083.html#a8a6dfd9154229da6825d23fa15b16c88">InconsistentTopicStatus</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    int32_t <a class="code" href="a01083.html#afb965d7858cb83ae5306e5de7de7da1d">total_count</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    int32_t <a class="code" href="a01083.html#abd92c8a010a6111d8becd56691ef09cf">total_count_change</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;};</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="a01087.html">   61</a></span>&#160;<span class="keyword">class </span><a class="code" href="a01087.html">SampleLostStatus</a> : <span class="keyword">public</span> <a class="code" href="a01135.html">dds::core::Value</a></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="a01087.html#aefe7cad93b741a96da2424e7fa8c93ec">SampleLostStatus</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    int32_t <a class="code" href="a01087.html#a46a1d13fb7b3cb81c95bbe8c91c93b58">total_count</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    int32_t <a class="code" href="a01087.html#a5673a667ce4f840a6413ea9f78b0e1a3">total_count_change</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;};</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="a01091.html">   85</a></span>&#160;<span class="keyword">class </span><a class="code" href="a01091.html">SampleRejectedStatus</a> : <span class="keyword">public</span> <a class="code" href="a01135.html">dds::core::Value</a></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="a01091.html#a6c5ddc536bd20c61d702ddf61d6a9902">SampleRejectedStatus</a>();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    int32_t <a class="code" href="a01091.html#a6bee8616aeeedf37c037d6269de2cb88">total_count</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    int32_t <a class="code" href="a01091.html#addb29ef23206edf2016be20a6f7227c8">total_count_change</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">const</span> <a class="code" href="a01075.html">dds::core::status::SampleRejectedState</a> <a class="code" href="a01091.html#abcf7f03df88034d50ada14ec0a13c1ae">last_reason</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keyword">const</span> <a class="code" href="a00931.html">dds::core::InstanceHandle</a> <a class="code" href="a01091.html#a587ab10a17747c4365fa8025c45b285b">last_instance_handle</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;};</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="a01095.html">  119</a></span>&#160;<span class="keyword">class </span><a class="code" href="a01095.html">LivelinessLostStatus</a> : <span class="keyword">public</span> <a class="code" href="a01135.html">dds::core::Value</a></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;{</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <a class="code" href="a01095.html#a6b5a1fbf8a9be65b5949c74e62be45a8">LivelinessLostStatus</a>();</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    int32_t <a class="code" href="a01095.html#a3194c3ea0040f89398dcfa5804b94e74">total_count</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    int32_t <a class="code" href="a01095.html#afd825612f43fff3836af80a09905d49e">total_count_change</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;};</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="a01099.html">  145</a></span>&#160;<span class="keyword">class </span><a class="code" href="a01099.html">LivelinessChangedStatus</a> : <span class="keyword">public</span> <a class="code" href="a01135.html">dds::core::Value</a></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;{</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <a class="code" href="a01099.html#a6e2d2a9d719ba0f3e2eed211018fd549">LivelinessChangedStatus</a>();</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    int32_t <a class="code" href="a01099.html#a60d76a3d56dbe5cd05695bbe5632eacf">alive_count</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    int32_t <a class="code" href="a01099.html#aafe130f3cd2cd49e68f947b6bf7e7696">not_alive_count</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    int32_t <a class="code" href="a01099.html#a19569db0a526407f73c210c6a1f1062f">alive_count_change</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    int32_t <a class="code" href="a01099.html#a0a609c9bdf8b7a6f9e41eb8337e6211c">not_alive_count_change</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keyword">const</span> <a class="code" href="a00931.html">dds::core::InstanceHandle</a> <a class="code" href="a01099.html#af6eb702b40d149550279200fdb34ef45">last_publication_handle</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;};</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
+<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="a01103.html">  195</a></span>&#160;<span class="keyword">class </span><a class="code" href="a01103.html">OfferedDeadlineMissedStatus</a> : <span class="keyword">public</span> <a class="code" href="a01135.html">dds::core::Value</a></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;{</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <a class="code" href="a01103.html#a0daae150c11f991c6cb87df697739cca">OfferedDeadlineMissedStatus</a>();</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
-<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="a01082.html#a37dcfbbbf459c4836f3db5050a1057b3">  205</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="a01082.html">StatusMask</a> <a class="code" href="a01082.html#a37dcfbbbf459c4836f3db5050a1057b3">none</a>()</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    {</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="a01082.html">StatusMask</a>(0u);</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    }</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00216"></a><span class="lineno"><a class="line" href="a01082.html#a3ce8ea1de44c9b9c2d1a7aa98962f5a7">  216</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="a01082.html">StatusMask</a> <a class="code" href="a01082.html#a3ce8ea1de44c9b9c2d1a7aa98962f5a7">inconsistent_topic</a>()</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    {</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="a01082.html">StatusMask</a>(0x00000001 &lt;&lt; 0u);</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    }</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; </div>
-<div class="line"><a name="l00226"></a><span class="lineno"><a class="line" href="a01082.html#a978c2485f0c328b8e118e0648b3a4dfa">  226</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="a01082.html">StatusMask</a> <a class="code" href="a01082.html#a978c2485f0c328b8e118e0648b3a4dfa">offered_deadline_missed</a>()</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    {</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="a01082.html">StatusMask</a>(0x00000001 &lt;&lt; 1u);</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    }</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
-<div class="line"><a name="l00236"></a><span class="lineno"><a class="line" href="a01082.html#a1502c92138d0b02c87f0b39d3981fb93">  236</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="a01082.html">StatusMask</a> <a class="code" href="a01082.html#a1502c92138d0b02c87f0b39d3981fb93">requested_deadline_missed</a>()</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    {</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="a01082.html">StatusMask</a>(0x00000001 &lt;&lt; 2u);</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    }</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
-<div class="line"><a name="l00246"></a><span class="lineno"><a class="line" href="a01082.html#ac33dc97a0616cbd5ad85ec7a5c40358d">  246</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="a01082.html">StatusMask</a> <a class="code" href="a01082.html#ac33dc97a0616cbd5ad85ec7a5c40358d">offered_incompatible_qos</a>()</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    {</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="a01082.html">StatusMask</a>(0x00000001 &lt;&lt; 5u);</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    }</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
-<div class="line"><a name="l00256"></a><span class="lineno"><a class="line" href="a01082.html#a98588a6f2593aac7d0c64dcb02004451">  256</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="a01082.html">StatusMask</a> <a class="code" href="a01082.html#a98588a6f2593aac7d0c64dcb02004451">requested_incompatible_qos</a>()</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    {</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="a01082.html">StatusMask</a>(0x00000001 &lt;&lt; 6u);</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    }</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
-<div class="line"><a name="l00266"></a><span class="lineno"><a class="line" href="a01082.html#ac8e3e6fc736bdb9ea8820ef7eb888819">  266</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="a01082.html">StatusMask</a> <a class="code" href="a01082.html#ac8e3e6fc736bdb9ea8820ef7eb888819">sample_lost</a>()</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    {</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="a01082.html">StatusMask</a>(0x00000001 &lt;&lt; 7u);</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    }</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    int32_t <a class="code" href="a01103.html#accd62d49b101a14b9b73caa5af3e8847">total_count</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    int32_t <a class="code" href="a01103.html#a95bb52a559b574baef34081bc8afb4cc">total_count_change</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keyword">const</span> <a class="code" href="a00931.html">dds::core::InstanceHandle</a> <a class="code" href="a01103.html#aaf58916bb69fba1ae819786e0cefb392">last_instance_handle</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;};</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno"><a class="line" href="a01107.html">  226</a></span>&#160;<span class="keyword">class </span><a class="code" href="a01107.html">RequestedDeadlineMissedStatus</a> : <span class="keyword">public</span> <a class="code" href="a01135.html">dds::core::Value</a></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;{</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <a class="code" href="a01107.html#a3a9d72873315c4265b856a8cb9b1f179">RequestedDeadlineMissedStatus</a>();</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    int32_t <a class="code" href="a01107.html#af759a954fff846d69a5ecb363796644a">total_count</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    int32_t <a class="code" href="a01107.html#a60c1ae4a97ce73953b5ab690c2c6da9e">total_count_change</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keyword">const</span> <a class="code" href="a00931.html">dds::core::InstanceHandle</a> <a class="code" href="a01107.html#a8f4df692edb0926e686b7ade6dae1c89">last_instance_handle</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;};</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
+<div class="line"><a name="l00258"></a><span class="lineno"><a class="line" href="a01111.html">  258</a></span>&#160;<span class="keyword">class </span><a class="code" href="a01111.html">OfferedIncompatibleQosStatus</a> : <span class="keyword">public</span> <a class="code" href="a01135.html">dds::core::Value</a></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;{</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <a class="code" href="a01111.html#ac98978529be227eb5939a19c1281dbb1">OfferedIncompatibleQosStatus</a>();</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    int32_t <a class="code" href="a01111.html#a667c9d8b72eebb114dfc01d52532861d">total_count</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160; </div>
-<div class="line"><a name="l00276"></a><span class="lineno"><a class="line" href="a01082.html#ad87a7098bd03dd3ee9ae1a549aa2ae89">  276</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="a01082.html">StatusMask</a> <a class="code" href="a01082.html#ad87a7098bd03dd3ee9ae1a549aa2ae89">sample_rejected</a>()</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    {</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="a01082.html">StatusMask</a>(0x00000001 &lt;&lt; 8u);</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    }</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
-<div class="line"><a name="l00286"></a><span class="lineno"><a class="line" href="a01082.html#a8d9c4fa6889fa6fc665faf7641cc484c">  286</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="a01082.html">StatusMask</a> <a class="code" href="a01082.html#a8d9c4fa6889fa6fc665faf7641cc484c">data_on_readers</a>()</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    {</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="a01082.html">StatusMask</a>(0x00000001 &lt;&lt; 9u);</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    }</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    int32_t <a class="code" href="a01111.html#a3d916cf5a3404eeea6f39a05602e406f">total_count_change</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    dds::core::policy::QosPolicyId <a class="code" href="a01111.html#a7a862ff02ea8062b312822766f312f94">last_policy_id</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keyword">const</span> dds::core::policy::QosPolicyCountSeq <a class="code" href="a01111.html#aa942ac3166f0b7efa923767efcb3e25c">policies</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
-<div class="line"><a name="l00296"></a><span class="lineno"><a class="line" href="a01082.html#aee3d8577fb212ffb4eed88e60d0073ad">  296</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="a01082.html">StatusMask</a> <a class="code" href="a01082.html#aee3d8577fb212ffb4eed88e60d0073ad">data_available</a>()</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    {</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="a01082.html">StatusMask</a>(0x00000001 &lt;&lt; 10u);</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    }</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
-<div class="line"><a name="l00306"></a><span class="lineno"><a class="line" href="a01082.html#a96edeb12bc2c483e6e5d76ac7dab10ab">  306</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="a01082.html">StatusMask</a> <a class="code" href="a01082.html#a96edeb12bc2c483e6e5d76ac7dab10ab">liveliness_lost</a>()</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    {</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="a01082.html">StatusMask</a>(0x00000001 &lt;&lt; 11u);</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    }</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
-<div class="line"><a name="l00316"></a><span class="lineno"><a class="line" href="a01082.html#ab26258279f5d106554f94db180fe0443">  316</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="a01082.html">StatusMask</a> <a class="code" href="a01082.html#ab26258279f5d106554f94db180fe0443">liveliness_changed</a>()</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    {</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="a01082.html">StatusMask</a>(0x00000001 &lt;&lt; 12u);</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    }</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
-<div class="line"><a name="l00326"></a><span class="lineno"><a class="line" href="a01082.html#af6cb144b88aec4687910f0c1767d2c9c">  326</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="a01082.html">StatusMask</a> <a class="code" href="a01082.html#af6cb144b88aec4687910f0c1767d2c9c">publication_matched</a>()</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    {</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="a01082.html">StatusMask</a>(0x00000001 &lt;&lt; 13u);</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    }</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160; </div>
-<div class="line"><a name="l00336"></a><span class="lineno"><a class="line" href="a01082.html#a2dffbcddc7ed29370d8d4897898b42a5">  336</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="a01082.html">StatusMask</a> <a class="code" href="a01082.html#a2dffbcddc7ed29370d8d4897898b42a5">subscription_matched</a>()</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    {</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="a01082.html">StatusMask</a>(0x00000001 &lt;&lt; 14u);</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    }</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160; </div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;};</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160; </div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;}</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;}</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;} <span class="comment">/* namespace dds / core / status*/</span></div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160; </div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160; </div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* OMG_DDS_CORE_STATUS_STATE_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keyword">const</span> dds::core::policy::QosPolicyCountSeq&amp;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <a class="code" href="a01111.html#aa942ac3166f0b7efa923767efcb3e25c">policies</a>(dds::core::policy::QosPolicyCountSeq&amp; dst) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;};</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
+<div class="line"><a name="l00307"></a><span class="lineno"><a class="line" href="a01115.html">  307</a></span>&#160;<span class="keyword">class </span><a class="code" href="a01115.html">RequestedIncompatibleQosStatus</a> : <span class="keyword">public</span> <a class="code" href="a01135.html">dds::core::Value</a></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;{</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <a class="code" href="a01115.html#a7dca7835e57d961489fda5d7ccb1aaa2">RequestedIncompatibleQosStatus</a>();</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160; </div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    int32_t <a class="code" href="a01115.html#a12866434ad56763ee29f934e65569c8f">total_count</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160; </div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    int32_t <a class="code" href="a01115.html#a74a94e26f692b7f261cad416349a09d6">total_count_change</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    dds::core::policy::QosPolicyId <a class="code" href="a01115.html#a68fca7a1e16b2044f7d6c6c86c51c0a8">last_policy_id</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160; </div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    <span class="keyword">const</span> dds::core::policy::QosPolicyCountSeq <a class="code" href="a01115.html#a2cb4d19fd09876282da7a2cbd90dc57b">policies</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160; </div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="keyword">const</span> dds::core::policy::QosPolicyCountSeq&amp;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <a class="code" href="a01115.html#a2cb4d19fd09876282da7a2cbd90dc57b">policies</a>(dds::core::policy::QosPolicyCountSeq&amp; dst) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;};</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
+<div class="line"><a name="l00356"></a><span class="lineno"><a class="line" href="a01119.html">  356</a></span>&#160;<span class="keyword">class </span><a class="code" href="a01119.html">PublicationMatchedStatus</a> : <span class="keyword">public</span> <a class="code" href="a01135.html">dds::core::Value</a></div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;{</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <a class="code" href="a01119.html#a004af1c01c60fb2b78b7cbd8834e80c4">PublicationMatchedStatus</a>();</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160; </div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    int32_t <a class="code" href="a01119.html#a5b52966a7a01610a997589a7452643ab">total_count</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160; </div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    int32_t <a class="code" href="a01119.html#a05a9a58677290da416b0f2cce120ee53">total_count_change</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160; </div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    int32_t <a class="code" href="a01119.html#a225338890f90797c419c49224b7b70ef">current_count</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160; </div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    int32_t <a class="code" href="a01119.html#acff7c80ef024b6a7a957da06553a6c1c">current_count_change</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160; </div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    <span class="keyword">const</span> <a class="code" href="a00931.html">dds::core::InstanceHandle</a> <a class="code" href="a01119.html#a24b55ac8ddad308ce9adc8571d3eb80a">last_subscription_handle</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;};</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160; </div>
+<div class="line"><a name="l00399"></a><span class="lineno"><a class="line" href="a01123.html">  399</a></span>&#160;<span class="keyword">class </span><a class="code" href="a01123.html">SubscriptionMatchedStatus</a> : <span class="keyword">public</span> <a class="code" href="a01135.html">dds::core::Value</a></div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;{</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <a class="code" href="a01123.html#a0010fe11fc3273cd16121453628e60f4">SubscriptionMatchedStatus</a>();</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160; </div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    int32_t <a class="code" href="a01123.html#a866af23cf85fd4614d6818b32ec236d7">total_count</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160; </div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    int32_t <a class="code" href="a01123.html#a21b2fafbd6d5dc7d8872bbaf67f67b0f">total_count_change</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160; </div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    int32_t <a class="code" href="a01123.html#a897e09a45a7dc7394499269724121b81">current_count</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160; </div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    int32_t <a class="code" href="a01123.html#a956bdd349facfdaec512a54d3db6beda">current_count_change</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160; </div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    <span class="keyword">const</span> <a class="code" href="a00931.html">dds::core::InstanceHandle</a> <a class="code" href="a01123.html#abdd27a6625542f58890c41a212e99cef">last_publication_handle</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;};</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160; </div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;}</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;}</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;}<span class="comment">/* namespace dds::core::status */</span></div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160; </div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* OMG_TDDS_CORE_STATUS_STATUS_HPP_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa01082_html_a755f9ed62ec22b8fcf632380439a65e3"><div class="ttname"><a href="a01082.html#a755f9ed62ec22b8fcf632380439a65e3">dds::core::status::StatusMask::all</a></div><div class="ttdeci">static StatusMask all()</div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00195">State.hpp:195</a></div></div>
-<div class="ttc" id="aa01082_html_ab26258279f5d106554f94db180fe0443"><div class="ttname"><a href="a01082.html#ab26258279f5d106554f94db180fe0443">dds::core::status::StatusMask::liveliness_changed</a></div><div class="ttdeci">static StatusMask liveliness_changed()</div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00316">State.hpp:316</a></div></div>
-<div class="ttc" id="aa01078_html"><div class="ttname"><a href="a01078.html">dds::core::status::SampleRejectedState</a></div><div class="ttdoc">Class to contain the statistics about samples that have been rejected.</div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00040">State.hpp:40</a></div></div>
-<div class="ttc" id="aa01082_html_a978c2485f0c328b8e118e0648b3a4dfa"><div class="ttname"><a href="a01082.html#a978c2485f0c328b8e118e0648b3a4dfa">dds::core::status::StatusMask::offered_deadline_missed</a></div><div class="ttdeci">static StatusMask offered_deadline_missed()</div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00226">State.hpp:226</a></div></div>
-<div class="ttc" id="aa00182_html_a75edfa52c671f8d3730fc573e6c377fb"><div class="ttname"><a href="a00182.html#a75edfa52c671f8d3730fc573e6c377fb">operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const dds::sub::status::DataState &amp;s)</div></div>
-<div class="ttc" id="aa01078_html_a998474fd1a6c432592e7f6c6f8572f9c"><div class="ttname"><a href="a01078.html#a998474fd1a6c432592e7f6c6f8572f9c">dds::core::status::SampleRejectedState::not_rejected</a></div><div class="ttdeci">static SampleRejectedState not_rejected()</div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00079">State.hpp:79</a></div></div>
-<div class="ttc" id="aa01082_html_a8d9c4fa6889fa6fc665faf7641cc484c"><div class="ttname"><a href="a01082.html#a8d9c4fa6889fa6fc665faf7641cc484c">dds::core::status::StatusMask::data_on_readers</a></div><div class="ttdeci">static StatusMask data_on_readers()</div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00286">State.hpp:286</a></div></div>
-<div class="ttc" id="aa01082_html_a2c488e9ed77637bb196edc0d3299440b"><div class="ttname"><a href="a01082.html#a2c488e9ed77637bb196edc0d3299440b">dds::core::status::StatusMask::MaskType</a></div><div class="ttdeci">std::bitset&lt; OMG_DDS_STATUS_COUNT &gt; MaskType</div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00150">State.hpp:150</a></div></div>
-<div class="ttc" id="aa00059_html"><div class="ttname"><a href="a00059.html">macros.hpp</a></div></div>
-<div class="ttc" id="aa01082_html_a2dffbcddc7ed29370d8d4897898b42a5"><div class="ttname"><a href="a01082.html#a2dffbcddc7ed29370d8d4897898b42a5">dds::core::status::StatusMask::subscription_matched</a></div><div class="ttdeci">static StatusMask subscription_matched()</div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00336">State.hpp:336</a></div></div>
-<div class="ttc" id="aa01082_html_ad87a7098bd03dd3ee9ae1a549aa2ae89"><div class="ttname"><a href="a01082.html#ad87a7098bd03dd3ee9ae1a549aa2ae89">dds::core::status::StatusMask::sample_rejected</a></div><div class="ttdeci">static StatusMask sample_rejected()</div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00276">State.hpp:276</a></div></div>
-<div class="ttc" id="aa01082_html_a96edeb12bc2c483e6e5d76ac7dab10ab"><div class="ttname"><a href="a01082.html#a96edeb12bc2c483e6e5d76ac7dab10ab">dds::core::status::StatusMask::liveliness_lost</a></div><div class="ttdeci">static StatusMask liveliness_lost()</div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00306">State.hpp:306</a></div></div>
-<div class="ttc" id="aa01078_html_ae3fba9957ebf0a2413df006e3bd216bb"><div class="ttname"><a href="a01078.html#ae3fba9957ebf0a2413df006e3bd216bb">dds::core::status::SampleRejectedState::rejected_by_samples_limit</a></div><div class="ttdeci">static SampleRejectedState rejected_by_samples_limit()</div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00094">State.hpp:94</a></div></div>
-<div class="ttc" id="aa01082_html_af6cb144b88aec4687910f0c1767d2c9c"><div class="ttname"><a href="a01082.html#af6cb144b88aec4687910f0c1767d2c9c">dds::core::status::StatusMask::publication_matched</a></div><div class="ttdeci">static StatusMask publication_matched()</div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00326">State.hpp:326</a></div></div>
-<div class="ttc" id="aa01082_html_a98588a6f2593aac7d0c64dcb02004451"><div class="ttname"><a href="a01082.html#a98588a6f2593aac7d0c64dcb02004451">dds::core::status::StatusMask::requested_incompatible_qos</a></div><div class="ttdeci">static StatusMask requested_incompatible_qos()</div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00256">State.hpp:256</a></div></div>
-<div class="ttc" id="aa01078_html_a1b96ca8cbd477b51a1825141c009894e"><div class="ttname"><a href="a01078.html#a1b96ca8cbd477b51a1825141c009894e">dds::core::status::SampleRejectedState::rejected_by_samples_per_instance_limit</a></div><div class="ttdeci">static SampleRejectedState rejected_by_samples_per_instance_limit()</div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00124">State.hpp:124</a></div></div>
-<div class="ttc" id="aa00059_html_a3921020c081a486ceeab75dccc8aad7a"><div class="ttname"><a href="a00059.html#a3921020c081a486ceeab75dccc8aad7a">OMG_DDS_API</a></div><div class="ttdeci">#define OMG_DDS_API</div><div class="ttdef"><b>Definition:</b> <a href="a00059_source.html#l00052">macros.hpp:52</a></div></div>
-<div class="ttc" id="aa01082_html_ac8e3e6fc736bdb9ea8820ef7eb888819"><div class="ttname"><a href="a01082.html#ac8e3e6fc736bdb9ea8820ef7eb888819">dds::core::status::StatusMask::sample_lost</a></div><div class="ttdeci">static StatusMask sample_lost()</div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00266">State.hpp:266</a></div></div>
-<div class="ttc" id="aa00264_html"><div class="ttname"><a href="a00264.html">dds</a></div><div class="ttdef"><b>Definition:</b> <a href="a00017_source.html#l00030">array.hpp:30</a></div></div>
-<div class="ttc" id="aa01082_html_a3ce8ea1de44c9b9c2d1a7aa98962f5a7"><div class="ttname"><a href="a01082.html#a3ce8ea1de44c9b9c2d1a7aa98962f5a7">dds::core::status::StatusMask::inconsistent_topic</a></div><div class="ttdeci">static StatusMask inconsistent_topic()</div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00216">State.hpp:216</a></div></div>
-<div class="ttc" id="aa01082_html"><div class="ttname"><a href="a01082.html">dds::core::status::StatusMask</a></div><div class="ttdoc">StatusMask is a bitmap or bitset field.</div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00144">State.hpp:144</a></div></div>
-<div class="ttc" id="aa01082_html_ac33dc97a0616cbd5ad85ec7a5c40358d"><div class="ttname"><a href="a01082.html#ac33dc97a0616cbd5ad85ec7a5c40358d">dds::core::status::StatusMask::offered_incompatible_qos</a></div><div class="ttdeci">static StatusMask offered_incompatible_qos()</div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00246">State.hpp:246</a></div></div>
-<div class="ttc" id="aa00098_html"><div class="ttname"><a href="a00098.html">types.hpp</a></div></div>
-<div class="ttc" id="aa01082_html_a37dcfbbbf459c4836f3db5050a1057b3"><div class="ttname"><a href="a01082.html#a37dcfbbbf459c4836f3db5050a1057b3">dds::core::status::StatusMask::none</a></div><div class="ttdeci">static StatusMask none()</div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00205">State.hpp:205</a></div></div>
-<div class="ttc" id="aa01078_html_a194740624f0052330b1c756ec60c5b6b"><div class="ttname"><a href="a01078.html#a194740624f0052330b1c756ec60c5b6b">dds::core::status::SampleRejectedState::MaskType</a></div><div class="ttdeci">std::bitset&lt; OMG_DDS_STATE_BIT_COUNT &gt; MaskType</div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00046">State.hpp:46</a></div></div>
-<div class="ttc" id="aa01078_html_a613995103e230e3fa7c0453aabdf733a"><div class="ttname"><a href="a01078.html#a613995103e230e3fa7c0453aabdf733a">dds::core::status::SampleRejectedState::rejected_by_instances_limit</a></div><div class="ttdeci">static SampleRejectedState rejected_by_instances_limit()</div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00109">State.hpp:109</a></div></div>
-<div class="ttc" id="aa01082_html_a1502c92138d0b02c87f0b39d3981fb93"><div class="ttname"><a href="a01082.html#a1502c92138d0b02c87f0b39d3981fb93">dds::core::status::StatusMask::requested_deadline_missed</a></div><div class="ttdeci">static StatusMask requested_deadline_missed()</div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00236">State.hpp:236</a></div></div>
-<div class="ttc" id="aa01082_html_aee3d8577fb212ffb4eed88e60d0073ad"><div class="ttname"><a href="a01082.html#aee3d8577fb212ffb4eed88e60d0073ad">dds::core::status::StatusMask::data_available</a></div><div class="ttdeci">static StatusMask data_available()</div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00296">State.hpp:296</a></div></div>
+<div class="ttc" id="aa01107_html"><div class="ttname"><a href="a01107.html">dds::core::status::RequestedDeadlineMissedStatus</a></div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00226">Status.hpp:226</a></div></div>
+<div class="ttc" id="aa01115_html_a12866434ad56763ee29f934e65569c8f"><div class="ttname"><a href="a01115.html#a12866434ad56763ee29f934e65569c8f">dds::core::status::RequestedIncompatibleQosStatus::total_count</a></div><div class="ttdeci">int32_t total_count() const</div></div>
+<div class="ttc" id="aa01107_html_a3a9d72873315c4265b856a8cb9b1f179"><div class="ttname"><a href="a01107.html#a3a9d72873315c4265b856a8cb9b1f179">dds::core::status::RequestedDeadlineMissedStatus::RequestedDeadlineMissedStatus</a></div><div class="ttdeci">RequestedDeadlineMissedStatus()</div></div>
+<div class="ttc" id="aa01099_html_a19569db0a526407f73c210c6a1f1062f"><div class="ttname"><a href="a01099.html#a19569db0a526407f73c210c6a1f1062f">dds::core::status::LivelinessChangedStatus::alive_count_change</a></div><div class="ttdeci">int32_t alive_count_change() const</div></div>
+<div class="ttc" id="aa01123_html_a956bdd349facfdaec512a54d3db6beda"><div class="ttname"><a href="a01123.html#a956bdd349facfdaec512a54d3db6beda">dds::core::status::SubscriptionMatchedStatus::current_count_change</a></div><div class="ttdeci">int32_t current_count_change() const</div></div>
+<div class="ttc" id="aa00086_html"><div class="ttname"><a href="a00086.html">State.hpp</a></div></div>
+<div class="ttc" id="aa01099_html_a60d76a3d56dbe5cd05695bbe5632eacf"><div class="ttname"><a href="a01099.html#a60d76a3d56dbe5cd05695bbe5632eacf">dds::core::status::LivelinessChangedStatus::alive_count</a></div><div class="ttdeci">int32_t alive_count() const</div></div>
+<div class="ttc" id="aa01123_html"><div class="ttname"><a href="a01123.html">dds::core::status::SubscriptionMatchedStatus</a></div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00399">Status.hpp:399</a></div></div>
+<div class="ttc" id="aa01111_html_a7a862ff02ea8062b312822766f312f94"><div class="ttname"><a href="a01111.html#a7a862ff02ea8062b312822766f312f94">dds::core::status::OfferedIncompatibleQosStatus::last_policy_id</a></div><div class="ttdeci">dds::core::policy::QosPolicyId last_policy_id() const</div></div>
+<div class="ttc" id="aa01123_html_a21b2fafbd6d5dc7d8872bbaf67f67b0f"><div class="ttname"><a href="a01123.html#a21b2fafbd6d5dc7d8872bbaf67f67b0f">dds::core::status::SubscriptionMatchedStatus::total_count_change</a></div><div class="ttdeci">int32_t total_count_change() const</div></div>
+<div class="ttc" id="aa01091_html_a6bee8616aeeedf37c037d6269de2cb88"><div class="ttname"><a href="a01091.html#a6bee8616aeeedf37c037d6269de2cb88">dds::core::status::SampleRejectedStatus::total_count</a></div><div class="ttdeci">int32_t total_count() const</div></div>
+<div class="ttc" id="aa01111_html_a667c9d8b72eebb114dfc01d52532861d"><div class="ttname"><a href="a01111.html#a667c9d8b72eebb114dfc01d52532861d">dds::core::status::OfferedIncompatibleQosStatus::total_count</a></div><div class="ttdeci">int32_t total_count() const</div></div>
+<div class="ttc" id="aa01099_html_a6e2d2a9d719ba0f3e2eed211018fd549"><div class="ttname"><a href="a01099.html#a6e2d2a9d719ba0f3e2eed211018fd549">dds::core::status::LivelinessChangedStatus::LivelinessChangedStatus</a></div><div class="ttdeci">LivelinessChangedStatus()</div></div>
+<div class="ttc" id="aa01119_html_acff7c80ef024b6a7a957da06553a6c1c"><div class="ttname"><a href="a01119.html#acff7c80ef024b6a7a957da06553a6c1c">dds::core::status::PublicationMatchedStatus::current_count_change</a></div><div class="ttdeci">int32_t current_count_change() const</div></div>
+<div class="ttc" id="aa01087_html_a46a1d13fb7b3cb81c95bbe8c91c93b58"><div class="ttname"><a href="a01087.html#a46a1d13fb7b3cb81c95bbe8c91c93b58">dds::core::status::SampleLostStatus::total_count</a></div><div class="ttdeci">int32_t total_count() const</div></div>
+<div class="ttc" id="aa01103_html"><div class="ttname"><a href="a01103.html">dds::core::status::OfferedDeadlineMissedStatus</a></div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00195">Status.hpp:195</a></div></div>
+<div class="ttc" id="aa01099_html"><div class="ttname"><a href="a01099.html">dds::core::status::LivelinessChangedStatus</a></div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00145">Status.hpp:145</a></div></div>
+<div class="ttc" id="aa01103_html_accd62d49b101a14b9b73caa5af3e8847"><div class="ttname"><a href="a01103.html#accd62d49b101a14b9b73caa5af3e8847">dds::core::status::OfferedDeadlineMissedStatus::total_count</a></div><div class="ttdeci">int32_t total_count() const</div></div>
+<div class="ttc" id="aa01103_html_aaf58916bb69fba1ae819786e0cefb392"><div class="ttname"><a href="a01103.html#aaf58916bb69fba1ae819786e0cefb392">dds::core::status::OfferedDeadlineMissedStatus::last_instance_handle</a></div><div class="ttdeci">const dds::core::InstanceHandle last_instance_handle() const</div></div>
+<div class="ttc" id="aa01111_html_a3d916cf5a3404eeea6f39a05602e406f"><div class="ttname"><a href="a01111.html#a3d916cf5a3404eeea6f39a05602e406f">dds::core::status::OfferedIncompatibleQosStatus::total_count_change</a></div><div class="ttdeci">int32_t total_count_change() const</div></div>
+<div class="ttc" id="aa01103_html_a95bb52a559b574baef34081bc8afb4cc"><div class="ttname"><a href="a01103.html#a95bb52a559b574baef34081bc8afb4cc">dds::core::status::OfferedDeadlineMissedStatus::total_count_change</a></div><div class="ttdeci">int32_t total_count_change() const</div></div>
+<div class="ttc" id="aa01123_html_a0010fe11fc3273cd16121453628e60f4"><div class="ttname"><a href="a01123.html#a0010fe11fc3273cd16121453628e60f4">dds::core::status::SubscriptionMatchedStatus::SubscriptionMatchedStatus</a></div><div class="ttdeci">SubscriptionMatchedStatus()</div></div>
+<div class="ttc" id="aa01091_html_abcf7f03df88034d50ada14ec0a13c1ae"><div class="ttname"><a href="a01091.html#abcf7f03df88034d50ada14ec0a13c1ae">dds::core::status::SampleRejectedStatus::last_reason</a></div><div class="ttdeci">const dds::core::status::SampleRejectedState last_reason() const</div></div>
+<div class="ttc" id="aa01111_html_aa942ac3166f0b7efa923767efcb3e25c"><div class="ttname"><a href="a01111.html#aa942ac3166f0b7efa923767efcb3e25c">dds::core::status::OfferedIncompatibleQosStatus::policies</a></div><div class="ttdeci">const dds::core::policy::QosPolicyCountSeq policies() const</div></div>
+<div class="ttc" id="aa01095_html"><div class="ttname"><a href="a01095.html">dds::core::status::LivelinessLostStatus</a></div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00119">Status.hpp:119</a></div></div>
+<div class="ttc" id="aa00931_html"><div class="ttname"><a href="a00931.html">dds::core::InstanceHandle</a></div><div class="ttdoc">Class to hold the handle associated with in sample instance.</div><div class="ttdef"><b>Definition:</b> <a href="a00050_source.html#l00040">InstanceHandle.hpp:40</a></div></div>
+<div class="ttc" id="aa01083_html_a8a6dfd9154229da6825d23fa15b16c88"><div class="ttname"><a href="a01083.html#a8a6dfd9154229da6825d23fa15b16c88">dds::core::status::InconsistentTopicStatus::InconsistentTopicStatus</a></div><div class="ttdeci">InconsistentTopicStatus()</div></div>
+<div class="ttc" id="aa01103_html_a0daae150c11f991c6cb87df697739cca"><div class="ttname"><a href="a01103.html#a0daae150c11f991c6cb87df697739cca">dds::core::status::OfferedDeadlineMissedStatus::OfferedDeadlineMissedStatus</a></div><div class="ttdeci">OfferedDeadlineMissedStatus()</div></div>
+<div class="ttc" id="aa01099_html_aafe130f3cd2cd49e68f947b6bf7e7696"><div class="ttname"><a href="a01099.html#aafe130f3cd2cd49e68f947b6bf7e7696">dds::core::status::LivelinessChangedStatus::not_alive_count</a></div><div class="ttdeci">int32_t not_alive_count() const</div></div>
+<div class="ttc" id="aa01095_html_a3194c3ea0040f89398dcfa5804b94e74"><div class="ttname"><a href="a01095.html#a3194c3ea0040f89398dcfa5804b94e74">dds::core::status::LivelinessLostStatus::total_count</a></div><div class="ttdeci">int32_t total_count() const</div></div>
+<div class="ttc" id="aa01083_html_abd92c8a010a6111d8becd56691ef09cf"><div class="ttname"><a href="a01083.html#abd92c8a010a6111d8becd56691ef09cf">dds::core::status::InconsistentTopicStatus::total_count_change</a></div><div class="ttdeci">int32_t total_count_change() const</div></div>
+<div class="ttc" id="aa01123_html_a897e09a45a7dc7394499269724121b81"><div class="ttname"><a href="a01123.html#a897e09a45a7dc7394499269724121b81">dds::core::status::SubscriptionMatchedStatus::current_count</a></div><div class="ttdeci">int32_t current_count() const</div></div>
+<div class="ttc" id="aa01087_html_a5673a667ce4f840a6413ea9f78b0e1a3"><div class="ttname"><a href="a01087.html#a5673a667ce4f840a6413ea9f78b0e1a3">dds::core::status::SampleLostStatus::total_count_change</a></div><div class="ttdeci">int32_t total_count_change() const</div></div>
+<div class="ttc" id="aa01115_html_a2cb4d19fd09876282da7a2cbd90dc57b"><div class="ttname"><a href="a01115.html#a2cb4d19fd09876282da7a2cbd90dc57b">dds::core::status::RequestedIncompatibleQosStatus::policies</a></div><div class="ttdeci">const dds::core::policy::QosPolicyCountSeq policies() const</div></div>
+<div class="ttc" id="aa01087_html"><div class="ttname"><a href="a01087.html">dds::core::status::SampleLostStatus</a></div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00061">Status.hpp:61</a></div></div>
+<div class="ttc" id="aa01075_html"><div class="ttname"><a href="a01075.html">dds::core::status::SampleRejectedState</a></div><div class="ttdoc">Class to contain the statistics about samples that have been rejected.</div><div class="ttdef"><b>Definition:</b> <a href="a00086_source.html#l00040">State.hpp:40</a></div></div>
+<div class="ttc" id="aa01123_html_abdd27a6625542f58890c41a212e99cef"><div class="ttname"><a href="a01123.html#abdd27a6625542f58890c41a212e99cef">dds::core::status::SubscriptionMatchedStatus::last_publication_handle</a></div><div class="ttdeci">const dds::core::InstanceHandle last_publication_handle() const</div></div>
+<div class="ttc" id="aa01119_html_a004af1c01c60fb2b78b7cbd8834e80c4"><div class="ttname"><a href="a01119.html#a004af1c01c60fb2b78b7cbd8834e80c4">dds::core::status::PublicationMatchedStatus::PublicationMatchedStatus</a></div><div class="ttdeci">PublicationMatchedStatus()</div></div>
+<div class="ttc" id="aa01087_html_aefe7cad93b741a96da2424e7fa8c93ec"><div class="ttname"><a href="a01087.html#aefe7cad93b741a96da2424e7fa8c93ec">dds::core::status::SampleLostStatus::SampleLostStatus</a></div><div class="ttdeci">SampleLostStatus()</div></div>
+<div class="ttc" id="aa01099_html_a0a609c9bdf8b7a6f9e41eb8337e6211c"><div class="ttname"><a href="a01099.html#a0a609c9bdf8b7a6f9e41eb8337e6211c">dds::core::status::LivelinessChangedStatus::not_alive_count_change</a></div><div class="ttdeci">int32_t not_alive_count_change() const</div></div>
+<div class="ttc" id="aa01115_html_a7dca7835e57d961489fda5d7ccb1aaa2"><div class="ttname"><a href="a01115.html#a7dca7835e57d961489fda5d7ccb1aaa2">dds::core::status::RequestedIncompatibleQosStatus::RequestedIncompatibleQosStatus</a></div><div class="ttdeci">RequestedIncompatibleQosStatus()</div></div>
+<div class="ttc" id="aa01119_html_a24b55ac8ddad308ce9adc8571d3eb80a"><div class="ttname"><a href="a01119.html#a24b55ac8ddad308ce9adc8571d3eb80a">dds::core::status::PublicationMatchedStatus::last_subscription_handle</a></div><div class="ttdeci">const dds::core::InstanceHandle last_subscription_handle() const</div></div>
+<div class="ttc" id="aa01119_html_a225338890f90797c419c49224b7b70ef"><div class="ttname"><a href="a01119.html#a225338890f90797c419c49224b7b70ef">dds::core::status::PublicationMatchedStatus::current_count</a></div><div class="ttdeci">int32_t current_count() const</div></div>
+<div class="ttc" id="aa00261_html"><div class="ttname"><a href="a00261.html">dds</a></div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00030">array.hpp:30</a></div></div>
+<div class="ttc" id="aa01083_html"><div class="ttname"><a href="a01083.html">dds::core::status::InconsistentTopicStatus</a></div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00039">Status.hpp:39</a></div></div>
+<div class="ttc" id="aa01111_html"><div class="ttname"><a href="a01111.html">dds::core::status::OfferedIncompatibleQosStatus</a></div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00258">Status.hpp:258</a></div></div>
+<div class="ttc" id="aa01115_html_a74a94e26f692b7f261cad416349a09d6"><div class="ttname"><a href="a01115.html#a74a94e26f692b7f261cad416349a09d6">dds::core::status::RequestedIncompatibleQosStatus::total_count_change</a></div><div class="ttdeci">int32_t total_count_change() const</div></div>
+<div class="ttc" id="aa00068_html"><div class="ttname"><a href="a00068.html">QosPolicyCount.hpp</a></div></div>
+<div class="ttc" id="aa01119_html_a5b52966a7a01610a997589a7452643ab"><div class="ttname"><a href="a01119.html#a5b52966a7a01610a997589a7452643ab">dds::core::status::PublicationMatchedStatus::total_count</a></div><div class="ttdeci">int32_t total_count() const</div></div>
+<div class="ttc" id="aa01095_html_afd825612f43fff3836af80a09905d49e"><div class="ttname"><a href="a01095.html#afd825612f43fff3836af80a09905d49e">dds::core::status::LivelinessLostStatus::total_count_change</a></div><div class="ttdeci">int32_t total_count_change() const</div></div>
+<div class="ttc" id="aa01123_html_a866af23cf85fd4614d6818b32ec236d7"><div class="ttname"><a href="a01123.html#a866af23cf85fd4614d6818b32ec236d7">dds::core::status::SubscriptionMatchedStatus::total_count</a></div><div class="ttdeci">int32_t total_count() const</div></div>
+<div class="ttc" id="aa01111_html_ac98978529be227eb5939a19c1281dbb1"><div class="ttname"><a href="a01111.html#ac98978529be227eb5939a19c1281dbb1">dds::core::status::OfferedIncompatibleQosStatus::OfferedIncompatibleQosStatus</a></div><div class="ttdeci">OfferedIncompatibleQosStatus()</div></div>
+<div class="ttc" id="aa01107_html_af759a954fff846d69a5ecb363796644a"><div class="ttname"><a href="a01107.html#af759a954fff846d69a5ecb363796644a">dds::core::status::RequestedDeadlineMissedStatus::total_count</a></div><div class="ttdeci">int32_t total_count() const</div></div>
+<div class="ttc" id="aa01119_html_a05a9a58677290da416b0f2cce120ee53"><div class="ttname"><a href="a01119.html#a05a9a58677290da416b0f2cce120ee53">dds::core::status::PublicationMatchedStatus::total_count_change</a></div><div class="ttdeci">int32_t total_count_change() const</div></div>
+<div class="ttc" id="aa01091_html_a6c5ddc536bd20c61d702ddf61d6a9902"><div class="ttname"><a href="a01091.html#a6c5ddc536bd20c61d702ddf61d6a9902">dds::core::status::SampleRejectedStatus::SampleRejectedStatus</a></div><div class="ttdeci">SampleRejectedStatus()</div></div>
+<div class="ttc" id="aa00062_html"><div class="ttname"><a href="a00062.html">CorePolicy.hpp</a></div></div>
+<div class="ttc" id="aa01107_html_a8f4df692edb0926e686b7ade6dae1c89"><div class="ttname"><a href="a01107.html#a8f4df692edb0926e686b7ade6dae1c89">dds::core::status::RequestedDeadlineMissedStatus::last_instance_handle</a></div><div class="ttdeci">const dds::core::InstanceHandle last_instance_handle() const</div></div>
+<div class="ttc" id="aa00050_html"><div class="ttname"><a href="a00050.html">InstanceHandle.hpp</a></div></div>
+<div class="ttc" id="aa01095_html_a6b5a1fbf8a9be65b5949c74e62be45a8"><div class="ttname"><a href="a01095.html#a6b5a1fbf8a9be65b5949c74e62be45a8">dds::core::status::LivelinessLostStatus::LivelinessLostStatus</a></div><div class="ttdeci">LivelinessLostStatus()</div></div>
+<div class="ttc" id="aa01119_html"><div class="ttname"><a href="a01119.html">dds::core::status::PublicationMatchedStatus</a></div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00356">Status.hpp:356</a></div></div>
+<div class="ttc" id="aa01091_html_a587ab10a17747c4365fa8025c45b285b"><div class="ttname"><a href="a01091.html#a587ab10a17747c4365fa8025c45b285b">dds::core::status::SampleRejectedStatus::last_instance_handle</a></div><div class="ttdeci">const dds::core::InstanceHandle last_instance_handle() const</div></div>
+<div class="ttc" id="aa01107_html_a60c1ae4a97ce73953b5ab690c2c6da9e"><div class="ttname"><a href="a01107.html#a60c1ae4a97ce73953b5ab690c2c6da9e">dds::core::status::RequestedDeadlineMissedStatus::total_count_change</a></div><div class="ttdeci">int32_t total_count_change() const</div></div>
+<div class="ttc" id="aa00098_html"><div class="ttname"><a href="a00098.html">Value.hpp</a></div></div>
+<div class="ttc" id="aa01135_html"><div class="ttname"><a href="a01135.html">dds::core::Value</a></div><div class="ttdoc">This class is the base for various value-type dds objects.</div><div class="ttdef"><b>Definition:</b> <a href="a00098_source.html#l00028">Value.hpp:28</a></div></div>
+<div class="ttc" id="aa01091_html_addb29ef23206edf2016be20a6f7227c8"><div class="ttname"><a href="a01091.html#addb29ef23206edf2016be20a6f7227c8">dds::core::status::SampleRejectedStatus::total_count_change</a></div><div class="ttdeci">int32_t total_count_change() const</div></div>
+<div class="ttc" id="aa01091_html"><div class="ttname"><a href="a01091.html">dds::core::status::SampleRejectedStatus</a></div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00085">Status.hpp:85</a></div></div>
+<div class="ttc" id="aa01083_html_afb965d7858cb83ae5306e5de7de7da1d"><div class="ttname"><a href="a01083.html#afb965d7858cb83ae5306e5de7de7da1d">dds::core::status::InconsistentTopicStatus::total_count</a></div><div class="ttdeci">int32_t total_count() const</div></div>
+<div class="ttc" id="aa01115_html"><div class="ttname"><a href="a01115.html">dds::core::status::RequestedIncompatibleQosStatus</a></div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00307">Status.hpp:307</a></div></div>
+<div class="ttc" id="aa01115_html_a68fca7a1e16b2044f7d6c6c86c51c0a8"><div class="ttname"><a href="a01115.html#a68fca7a1e16b2044f7d6c6c86c51c0a8">dds::core::status::RequestedIncompatibleQosStatus::last_policy_id</a></div><div class="ttdeci">dds::core::policy::QosPolicyId last_policy_id() const</div></div>
+<div class="ttc" id="aa01099_html_af6eb702b40d149550279200fdb34ef45"><div class="ttname"><a href="a01099.html#af6eb702b40d149550279200fdb34ef45">dds::core::status::LivelinessChangedStatus::last_publication_handle</a></div><div class="ttdeci">const dds::core::InstanceHandle last_publication_handle() const</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_8e762eb435ebc1d0f3e9696791508c0a.html">core</a></li><li class="navelem"><a class="el" href="dir_fc4b6255ffdd11997061c2e21f474211.html">status</a></li><li class="navelem"><a class="el" href="a00089.html">State.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_8e762eb435ebc1d0f3e9696791508c0a.html">core</a></li><li class="navelem"><a class="el" href="dir_fc4b6255ffdd11997061c2e21f474211.html">status</a></li><li class="navelem"><a class="el" href="a00089.html">Status.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

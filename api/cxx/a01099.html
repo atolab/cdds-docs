@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vortex Lite ISO C++ API Reference Guide: Member List</title>
+<title>Cyclone ISO C++ API Reference Guide: dds::core::status::LivelinessChangedStatus Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="PROJECT_LOGO_Lite.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vortex Lite ISO C++ API Reference Guide
+   <div id="projectname">Cyclone ISO C++ API Reference Guide
    </div>
   </td>
  </tr>
@@ -67,7 +66,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('a01102.html','');});
+$(document).ready(function(){initNavTree('a01099.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -86,29 +85,301 @@ $(document).ready(function(){initNavTree('a01102.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="a01096.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">dds::core::status::LivelinessChangedStatus Member List</div>  </div>
+<div class="title">dds::core::status::LivelinessChangedStatus Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="a01102.html">dds::core::status::LivelinessChangedStatus</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a01102.html#a60d76a3d56dbe5cd05695bbe5632eacf">alive_count</a>() const</td><td class="entry"><a class="el" href="a01102.html">dds::core::status::LivelinessChangedStatus</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a01102.html#a19569db0a526407f73c210c6a1f1062f">alive_count_change</a>() const</td><td class="entry"><a class="el" href="a01102.html">dds::core::status::LivelinessChangedStatus</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01102.html#af6eb702b40d149550279200fdb34ef45">last_publication_handle</a>() const</td><td class="entry"><a class="el" href="a01102.html">dds::core::status::LivelinessChangedStatus</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a01102.html#a6e2d2a9d719ba0f3e2eed211018fd549">LivelinessChangedStatus</a>()</td><td class="entry"><a class="el" href="a01102.html">dds::core::status::LivelinessChangedStatus</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01102.html#aafe130f3cd2cd49e68f947b6bf7e7696">not_alive_count</a>() const</td><td class="entry"><a class="el" href="a01102.html">dds::core::status::LivelinessChangedStatus</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a01102.html#a0a609c9bdf8b7a6f9e41eb8337e6211c">not_alive_count_change</a>() const</td><td class="entry"><a class="el" href="a01102.html">dds::core::status::LivelinessChangedStatus</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01138.html#a9b22715713bc0bfc10af93eeaeda80f4">operator!=</a>(const Value &amp;other) const</td><td class="entry"><a class="el" href="a01138.html">dds::core::Value&lt; D &gt;</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a01138.html#a948a6f4576c26fe7e44c551a56f4d038">operator-&gt;</a>()</td><td class="entry"><a class="el" href="a01138.html">dds::core::Value&lt; D &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01138.html#a0147b1dea8bdb0987505033b7025470c">operator-&gt;</a>() const</td><td class="entry"><a class="el" href="a01138.html">dds::core::Value&lt; D &gt;</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a01138.html#ad78a562d097b30ce3dca30e0f1c6d66e">operator=</a>(const Value &amp;other)</td><td class="entry"><a class="el" href="a01138.html">dds::core::Value&lt; D &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01138.html#a34fd669d0051ad90b89d98a323d2d96a">operator==</a>(const Value &amp;other) const</td><td class="entry"><a class="el" href="a01138.html">dds::core::Value&lt; D &gt;</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<p> 
+ <a href="a01099.html#details">More...</a></p>
+
+<p><code>#include &quot;<a class="el" href="a00089_source.html">Status.hpp</a>&quot;</code></p>
+
+<p>Inherits <a class="el" href="a01135.html">dds::core::Value&lt; D &gt;</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a6e2d2a9d719ba0f3e2eed211018fd549"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01099.html#a6e2d2a9d719ba0f3e2eed211018fd549">LivelinessChangedStatus</a> ()</td></tr>
+<tr class="separator:a6e2d2a9d719ba0f3e2eed211018fd549"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60d76a3d56dbe5cd05695bbe5632eacf"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01099.html#a60d76a3d56dbe5cd05695bbe5632eacf">alive_count</a> () const</td></tr>
+<tr class="separator:a60d76a3d56dbe5cd05695bbe5632eacf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19569db0a526407f73c210c6a1f1062f"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01099.html#a19569db0a526407f73c210c6a1f1062f">alive_count_change</a> () const</td></tr>
+<tr class="separator:a19569db0a526407f73c210c6a1f1062f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6eb702b40d149550279200fdb34ef45"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="a00931.html">dds::core::InstanceHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01099.html#af6eb702b40d149550279200fdb34ef45">last_publication_handle</a> () const</td></tr>
+<tr class="separator:af6eb702b40d149550279200fdb34ef45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafe130f3cd2cd49e68f947b6bf7e7696"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01099.html#aafe130f3cd2cd49e68f947b6bf7e7696">not_alive_count</a> () const</td></tr>
+<tr class="separator:aafe130f3cd2cd49e68f947b6bf7e7696"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a609c9bdf8b7a6f9e41eb8337e6211c"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01099.html#a0a609c9bdf8b7a6f9e41eb8337e6211c">not_alive_count_change</a> () const</td></tr>
+<tr class="separator:a0a609c9bdf8b7a6f9e41eb8337e6211c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b22715713bc0bfc10af93eeaeda80f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01135.html#a9b22715713bc0bfc10af93eeaeda80f4">operator!=</a> (const <a class="el" href="a01135.html">Value</a> &amp;other) const</td></tr>
+<tr class="separator:a9b22715713bc0bfc10af93eeaeda80f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a948a6f4576c26fe7e44c551a56f4d038"><td class="memItemLeft" align="right" valign="top">D *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01135.html#a948a6f4576c26fe7e44c551a56f4d038">operator-&gt;</a> ()</td></tr>
+<tr class="separator:a948a6f4576c26fe7e44c551a56f4d038"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0147b1dea8bdb0987505033b7025470c"><td class="memItemLeft" align="right" valign="top">const D *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01135.html#a0147b1dea8bdb0987505033b7025470c">operator-&gt;</a> () const</td></tr>
+<tr class="separator:a0147b1dea8bdb0987505033b7025470c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34fd669d0051ad90b89d98a323d2d96a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01135.html#a34fd669d0051ad90b89d98a323d2d96a">operator==</a> (const <a class="el" href="a01135.html">Value</a> &amp;other) const</td></tr>
+<tr class="separator:a34fd669d0051ad90b89d98a323d2d96a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="a00089_source.html#l00145">145</a> of file <a class="el" href="a00089_source.html">Status.hpp</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a6e2d2a9d719ba0f3e2eed211018fd549"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e2d2a9d719ba0f3e2eed211018fd549">&#9670;&nbsp;</a></span>LivelinessChangedStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dds::core::status::LivelinessChangedStatus::LivelinessChangedStatus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a60d76a3d56dbe5cd05695bbe5632eacf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60d76a3d56dbe5cd05695bbe5632eacf">&#9670;&nbsp;</a></span>alive_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t dds::core::status::LivelinessChangedStatus::alive_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The total number of currently active DataWriters that write the Topic read by the DataReader. This count increases when a newly-matched DataWriter asserts its liveliness for the first time or when a DataWriter previously considered to be not alive reasserts its liveliness. The count decreases when a DataWriter considered alive fails to assert its liveliness and becomes not alive, whether because it was deleted normally or for some other reason. </dd></dl>
+
+</div>
+</div>
+<a id="a19569db0a526407f73c210c6a1f1062f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19569db0a526407f73c210c6a1f1062f">&#9670;&nbsp;</a></span>alive_count_change()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t dds::core::status::LivelinessChangedStatus::alive_count_change </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The change in the alive_count since the last time the listener was called or the status was read. </dd></dl>
+
+</div>
+</div>
+<a id="af6eb702b40d149550279200fdb34ef45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6eb702b40d149550279200fdb34ef45">&#9670;&nbsp;</a></span>last_publication_handle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="a00931.html">dds::core::InstanceHandle</a> dds::core::status::LivelinessChangedStatus::last_publication_handle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Handle to the last DataWriter whose change in liveliness caused this status to change. </dd></dl>
+
+</div>
+</div>
+<a id="aafe130f3cd2cd49e68f947b6bf7e7696"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafe130f3cd2cd49e68f947b6bf7e7696">&#9670;&nbsp;</a></span>not_alive_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t dds::core::status::LivelinessChangedStatus::not_alive_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The total count of currently DataWriters that write the Topic read by the DataReader that are no longer asserting their liveliness. This count increases when a DataWriter considered alive fails to assert its liveliness and becomes not alive for some reason other than the normal deletion of that DataWriter. It decreases when a previously not alive DataWriter either reasserts its liveliness or is deleted normally. </dd></dl>
+
+</div>
+</div>
+<a id="a0a609c9bdf8b7a6f9e41eb8337e6211c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a609c9bdf8b7a6f9e41eb8337e6211c">&#9670;&nbsp;</a></span>not_alive_count_change()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t dds::core::status::LivelinessChangedStatus::not_alive_count_change </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The change in the not_alive_count since the last time the listener was called or the status was read. </dd></dl>
+
+</div>
+</div>
+<a id="a9b22715713bc0bfc10af93eeaeda80f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b22715713bc0bfc10af93eeaeda80f4">&#9670;&nbsp;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="a01135.html">dds::core::Value</a>&lt; D &gt;::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a01135.html">Value</a>&lt; D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compare this <a class="el" href="a01135.html" title="This class is the base for various value-type dds objects.">Value</a> with another <a class="el" href="a01135.html" title="This class is the base for various value-type dds objects.">Value</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td><a class="el" href="a01135.html" title="This class is the base for various value-type dds objects.">Value</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if not equal </dd></dl>
+
+</div>
+</div>
+<a id="a948a6f4576c26fe7e44c551a56f4d038"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a948a6f4576c26fe7e44c551a56f4d038">&#9670;&nbsp;</a></span>operator-&gt;() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">D* <a class="el" href="a01135.html">dds::core::Value</a>&lt; D &gt;::operator-&gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The <a class="el" href="a01135.html#a948a6f4576c26fe7e44c551a56f4d038">operator-&gt;()</a> is provided to be able to directly invoke functions on the delegate.</p>
+<p>The decision to provide direct access to the delegate was motivated by the need for providing a way that was not invasive with respect to the CXXDDS API and yet would allow for vendor-specific extension. Thus vendor-specific extensions can be invoked on the <a class="el" href="a01135.html" title="This class is the base for various value-type dds objects.">Value</a> and on all its subclasses as follows: </p><div class="fragment"><div class="line">my_dds_value.standard_function();</div>
+<div class="line">my_dds_value-&gt;vendor_specific_extension();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>a reference to delegate. </dd></dl>
+
+</div>
+</div>
+<a id="a0147b1dea8bdb0987505033b7025470c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0147b1dea8bdb0987505033b7025470c">&#9670;&nbsp;</a></span>operator-&gt;() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const D* <a class="el" href="a01135.html">dds::core::Value</a>&lt; D &gt;::operator-&gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p></p>
+<p>The <a class="el" href="a01135.html#a948a6f4576c26fe7e44c551a56f4d038">operator-&gt;()</a> is provided to be able to directly invoke functions on the delegate.</p>
+<p>The decision to provide direct access to the delegate was motivated by the need for providing a way that was not invasive with respect to the CXXDDS API and yet would allow for vendor-specific extension. Thus vendor-specific extensions can be invoked on the <a class="el" href="a01135.html" title="This class is the base for various value-type dds objects.">Value</a> and on all its subclasses as follows: </p><div class="fragment"><div class="line">my_dds_value.standard_function();</div>
+<div class="line">my_dds_value-&gt;vendor_specific_extension();</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>a reference to delegate. </dd></dl>
+
+</div>
+</div>
+<a id="a34fd669d0051ad90b89d98a323d2d96a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34fd669d0051ad90b89d98a323d2d96a">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="a01135.html">dds::core::Value</a>&lt; D &gt;::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a01135.html">Value</a>&lt; D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compare this <a class="el" href="a01135.html" title="This class is the base for various value-type dds objects.">Value</a> with another <a class="el" href="a01135.html" title="This class is the base for various value-type dds objects.">Value</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td><a class="el" href="a01135.html" title="This class is the base for various value-type dds objects.">Value</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if equal </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>dds/core/status/<a class="el" href="a00089_source.html">Status.hpp</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="a00261.html">dds</a></li><li class="navelem"><a class="el" href="a00262.html">core</a></li><li class="navelem"><a class="el" href="a00265.html">status</a></li><li class="navelem"><a class="el" href="a01099.html">LivelinessChangedStatus</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

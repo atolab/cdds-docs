@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vortex Lite ISO C++ API Reference Guide: dds/topic/Topic.hpp Source File</title>
+<title>Cyclone ISO C++ API Reference Guide: dds/topic/TopicDescription.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="PROJECT_LOGO_Lite.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vortex Lite ISO C++ API Reference Guide
+   <div id="projectname">Cyclone ISO C++ API Reference Guide
    </div>
   </td>
  </tr>
@@ -87,11 +86,11 @@ $(document).ready(function(){initNavTree('a00248_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Topic.hpp</div>  </div>
+<div class="title">TopicDescription.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="a00248.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef OMG_DDS_TTOPIC_TOPIC_HPP_</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define OMG_DDS_TTOPIC_TOPIC_HPP_</span></div>
+<a href="a00248.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef OMG_DDS_T_TOPIC_TOPIC_DESCRIPTION_HPP_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define OMG_DDS_T_TOPIC_TOPIC_DESCRIPTION_HPP_</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/* Copyright 2010, Object Management Group, Inc.</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * Copyright 2010, PrismTech, Corp.</span></div>
@@ -111,116 +110,57 @@ $(document).ready(function(){initNavTree('a00248_source.html','');});
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * limitations under the License.</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00035.html">dds/core/conformance.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00098.html">dds/core/types.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00077.html">dds/core/ref_traits.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00116.html">dds/domain/DomainParticipant.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00245.html">dds/topic/qos/TopicQos.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00251.html">dds/topic/TopicDescription.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00221.html">dds/topic/AnyTopic.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00041.html">dds/core/Entity.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00257.html">dds/topic/TopicTraits.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00113.html">dds/domain/DomainParticipant.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00261.html">dds</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span>topic</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00264.html">dds</a></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">namespace </span>topic</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="a01366.html">   36</a></span>&#160;<span class="keyword">class </span><a class="code" href="a01366.html">Topic</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="a01370.html">   39</a></span>&#160;<span class="keyword">class </span><a class="code" href="a01370.html">TopicListener</a>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">class </span><a class="code" href="a01366.html">dds::topic::Topic</a> : <span class="keyword">public</span> <a class="code" href="a01322.html">dds::topic::AnyTopic</a></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="a01366.html#a6e4e424c332e70ccbaf3491882ed4c6b">   81</a></span>&#160;    <span class="keyword">typedef</span> T                               <a class="code" href="a01366.html#a6e4e424c332e70ccbaf3491882ed4c6b">DataType</a>;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="a01366.html#a63dec6dfa7ac12521bbf19b021d037c4">   86</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="a01370.html">TopicListener&lt;T&gt;</a>                <a class="code" href="a01366.html#a63dec6dfa7ac12521bbf19b021d037c4">Listener</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">class </span>TopicDescription;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="a01371.html">   48</a></span>&#160;<span class="keyword">class </span><a class="code" href="a01371.html">dds::topic::TopicDescription</a> : <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code" href="a01067.html">dds::core::Reference</a></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="a00080.html#a2ca6278157c5f9f5d7d09ca213a559f6">OMG_DDS_REF_TYPE_PROTECTED_DC</a>(<a class="code" href="a01371.html">TopicDescription</a>, <a class="code" href="a01067.html">dds::core::Reference</a>)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="a00080.html#a0d9a9706bab2b2d4f7babd5b7d0737df">OMG_DDS_IMPLICIT_REF_BASE</a>(<a class="code" href="a01371.html">TopicDescription</a>)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="a01371.html">TopicDescription</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="a01371.html#ab934ece0f7d1bddeaeaab48531639114">name</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="a01371.html#aeefcc637041c6306c591212af79580e1">type_name</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">const</span> <a class="code" href="a01143.html">dds::domain::DomainParticipant</a>&amp; <a class="code" href="a01371.html#a4a360efabbc8f5bb2c95309eb53a759c">domain_participant</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;};</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="a00083.html#a744c888a8b6773eb73e67a89c369c816">OMG_DDS_REF_TYPE_PROTECTED_DC_T</a>(<a class="code" href="a01366.html">Topic</a>, ::<a class="code" href="a01322.html">dds::topic::AnyTopic</a>, T)</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="a00083.html#a0d9a9706bab2b2d4f7babd5b7d0737df">OMG_DDS_IMPLICIT_REF_BASE</a>(<a class="code" href="a01366.html">Topic</a>)</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="a01366.html">Topic</a>();</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <a class="code" href="a01366.html#a399e6716615d77b05e3fdbea4b07e4dd">Topic</a>(<span class="keyword">const</span> <a class="code" href="a01146.html">dds::domain::DomainParticipant</a>&amp; dp,</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;          <span class="keyword">const</span> std::string&amp; topic_name);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <a class="code" href="a01366.html#a399e6716615d77b05e3fdbea4b07e4dd">Topic</a>(<span class="keyword">const</span> <a class="code" href="a01146.html">dds::domain::DomainParticipant</a>&amp; dp,</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;          <span class="keyword">const</span> std::string&amp; topic_name,</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;          <span class="keyword">const</span> std::string&amp; <a class="code" href="a01374.html#aeefcc637041c6306c591212af79580e1">type_name</a>);</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <a class="code" href="a01366.html#a399e6716615d77b05e3fdbea4b07e4dd">Topic</a>(<span class="keyword">const</span> <a class="code" href="a01146.html">dds::domain::DomainParticipant</a>&amp; dp,</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;          <span class="keyword">const</span> std::string&amp; topic_name,</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;          <span class="keyword">const</span> <a class="code" href="a01362.html">dds::topic::qos::TopicQos</a>&amp; <a class="code" href="a01322.html#ab393ce49c2bb8a6ab60bc9a9611c664a">qos</a>,</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;          <a class="code" href="a01370.html">dds::topic::TopicListener&lt;T&gt;</a>* <a class="code" href="a01366.html#a961624153077c10879f215101acd4544">listener</a> = NULL,</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;          <span class="keyword">const</span> <a class="code" href="a01082.html">dds::core::status::StatusMask</a>&amp; mask = <a class="code" href="a01082.html#a37dcfbbbf459c4836f3db5050a1057b3">dds::core::status::StatusMask::none</a>());</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <a class="code" href="a01366.html#a399e6716615d77b05e3fdbea4b07e4dd">Topic</a>(<span class="keyword">const</span> <a class="code" href="a01146.html">dds::domain::DomainParticipant</a>&amp; dp,</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;          <span class="keyword">const</span> std::string&amp; topic_name,</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;          <span class="keyword">const</span> std::string&amp; <a class="code" href="a01374.html#aeefcc637041c6306c591212af79580e1">type_name</a>,</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;          <span class="keyword">const</span> <a class="code" href="a01362.html">dds::topic::qos::TopicQos</a>&amp; <a class="code" href="a01322.html#ab393ce49c2bb8a6ab60bc9a9611c664a">qos</a>,</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;          <a class="code" href="a01370.html">dds::topic::TopicListener&lt;T&gt;</a>* <a class="code" href="a01366.html#a961624153077c10879f215101acd4544">listener</a> = NULL,</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;          <span class="keyword">const</span> <a class="code" href="a01082.html">dds::core::status::StatusMask</a>&amp; mask = <a class="code" href="a01082.html#a37dcfbbbf459c4836f3db5050a1057b3">dds::core::status::StatusMask::none</a>());</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="preprocessor">    #if defined (OMG_DDS_X_TYPE_DYNAMIC_TYPES_SUPPORT)</span></div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <a class="code" href="a01366.html#a399e6716615d77b05e3fdbea4b07e4dd">Topic</a>(<span class="keyword">const</span> <a class="code" href="a01146.html">dds::domain::DomainParticipant</a>&amp; dp,</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;          <span class="keyword">const</span> std::string&amp; topic_name,</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;          <span class="keyword">const</span> dds::core::xtypes::DynamicType type);</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <a class="code" href="a01366.html#a399e6716615d77b05e3fdbea4b07e4dd">Topic</a>(<span class="keyword">const</span> <a class="code" href="a01146.html">dds::domain::DomainParticipant</a>&amp; dp,</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;          <span class="keyword">const</span> std::string&amp; topic_name,</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;          <span class="keyword">const</span> dds::core::xtypes::DynamicType type</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;          <span class="keyword">const</span> <a class="code" href="a01362.html">dds::topic::qos::TopicQos</a>&amp; <a class="code" href="a01322.html#ab393ce49c2bb8a6ab60bc9a9611c664a">qos</a>,</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;          <a class="code" href="a01370.html">dds::topic::TopicListener&lt;T&gt;</a>* <a class="code" href="a01366.html#a961624153077c10879f215101acd4544">listener</a> = NULL,</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;          <span class="keyword">const</span> <a class="code" href="a01082.html">dds::core::status::StatusMask</a>&amp; mask = <a class="code" href="a01082.html#a37dcfbbbf459c4836f3db5050a1057b3">dds::core::status::StatusMask::none</a>());</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160; </div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;<span class="preprocessor">    #endif </span><span class="comment">/* OMG_DDS_X_TYPE_DYNAMIC_TYPES_SUPPORT */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160; </div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a01366.html#a961624153077c10879f215101acd4544">listener</a>(<a class="code" href="a01370.html">Listener</a>* <a class="code" href="a01366.html#a961624153077c10879f215101acd4544">listener</a>,</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;                  const ::dds::core::status::StatusMask&amp; event_mask);</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160; </div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    <a class="code" href="a01370.html">Listener</a>* <a class="code" href="a01366.html#a961624153077c10879f215101acd4544">listener</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160; </div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;};</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160; </div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160; </div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* OMG_DDS_TTOPIC_TOPIC_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* OMG_DDS_T_TOPIC_TOPIC_DESCRIPTION_HPP_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa00116_html"><div class="ttname"><a href="a00116.html">DomainParticipant.hpp</a></div></div>
-<div class="ttc" id="aa01366_html_a399e6716615d77b05e3fdbea4b07e4dd"><div class="ttname"><a href="a01366.html#a399e6716615d77b05e3fdbea4b07e4dd">dds::topic::Topic::Topic</a></div><div class="ttdeci">Topic(const dds::domain::DomainParticipant &amp;dp, const std::string &amp;topic_name)</div></div>
-<div class="ttc" id="aa00245_html"><div class="ttname"><a href="a00245.html">TopicQos.hpp</a></div></div>
-<div class="ttc" id="aa01366_html"><div class="ttname"><a href="a01366.html">dds::topic::Topic</a></div><div class="ttdoc">Topic is the most basic description of the data to be published and subscribed.</div><div class="ttdef"><b>Definition:</b> <a href="a00248_source.html#l00036">Topic.hpp:36</a></div></div>
-<div class="ttc" id="aa01322_html"><div class="ttname"><a href="a01322.html">dds::topic::AnyTopic</a></div><div class="ttdoc">Typeless base class for the typed Topic.</div><div class="ttdef"><b>Definition:</b> <a href="a00221_source.html#l00053">AnyTopic.hpp:53</a></div></div>
-<div class="ttc" id="aa01374_html_aeefcc637041c6306c591212af79580e1"><div class="ttname"><a href="a01374.html#aeefcc637041c6306c591212af79580e1">dds::topic::TopicDescription::type_name</a></div><div class="ttdeci">const std::string &amp; type_name() const</div></div>
-<div class="ttc" id="aa01366_html_a63dec6dfa7ac12521bbf19b021d037c4"><div class="ttname"><a href="a01366.html#a63dec6dfa7ac12521bbf19b021d037c4">dds::topic::Topic::Listener</a></div><div class="ttdeci">TopicListener&lt; T &gt; Listener</div><div class="ttdef"><b>Definition:</b> <a href="a00248_source.html#l00086">Topic.hpp:86</a></div></div>
-<div class="ttc" id="aa00083_html_a0d9a9706bab2b2d4f7babd5b7d0737df"><div class="ttname"><a href="a00083.html#a0d9a9706bab2b2d4f7babd5b7d0737df">OMG_DDS_IMPLICIT_REF_BASE</a></div><div class="ttdeci">#define OMG_DDS_IMPLICIT_REF_BASE(TYPE)</div><div class="ttdef"><b>Definition:</b> <a href="a00083_source.html#l00075">refmacros.hpp:75</a></div></div>
-<div class="ttc" id="aa01322_html_ab393ce49c2bb8a6ab60bc9a9611c664a"><div class="ttname"><a href="a01322.html#ab393ce49c2bb8a6ab60bc9a9611c664a">dds::topic::AnyTopic::qos</a></div><div class="ttdeci">dds::topic::qos::TopicQos qos() const</div></div>
-<div class="ttc" id="aa01146_html"><div class="ttname"><a href="a01146.html">dds::domain::DomainParticipant</a></div><div class="ttdoc">A DomainParticipant represents the local membership of the application in a Domain.</div><div class="ttdef"><b>Definition:</b> <a href="a00116_source.html#l00065">DomainParticipant.hpp:65</a></div></div>
-<div class="ttc" id="aa00083_html_a744c888a8b6773eb73e67a89c369c816"><div class="ttname"><a href="a00083.html#a744c888a8b6773eb73e67a89c369c816">OMG_DDS_REF_TYPE_PROTECTED_DC_T</a></div><div class="ttdeci">#define OMG_DDS_REF_TYPE_PROTECTED_DC_T(TYPE, BASE, T_PARAM, DELEGATE)</div><div class="ttdef"><b>Definition:</b> <a href="a00083_source.html#l00171">refmacros.hpp:171</a></div></div>
-<div class="ttc" id="aa00035_html"><div class="ttname"><a href="a00035.html">conformance.hpp</a></div></div>
-<div class="ttc" id="aa00077_html"><div class="ttname"><a href="a00077.html">ref_traits.hpp</a></div></div>
-<div class="ttc" id="aa00264_html"><div class="ttname"><a href="a00264.html">dds</a></div><div class="ttdef"><b>Definition:</b> <a href="a00017_source.html#l00030">array.hpp:30</a></div></div>
-<div class="ttc" id="aa01082_html"><div class="ttname"><a href="a01082.html">dds::core::status::StatusMask</a></div><div class="ttdoc">StatusMask is a bitmap or bitset field.</div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00144">State.hpp:144</a></div></div>
-<div class="ttc" id="aa01370_html"><div class="ttname"><a href="a01370.html">dds::topic::TopicListener</a></div><div class="ttdoc">Topic events Listener.</div><div class="ttdef"><b>Definition:</b> <a href="a00248_source.html#l00039">Topic.hpp:39</a></div></div>
-<div class="ttc" id="aa01366_html_a961624153077c10879f215101acd4544"><div class="ttname"><a href="a01366.html#a961624153077c10879f215101acd4544">dds::topic::Topic::listener</a></div><div class="ttdeci">Listener * listener() const</div></div>
-<div class="ttc" id="aa00098_html"><div class="ttname"><a href="a00098.html">types.hpp</a></div></div>
-<div class="ttc" id="aa01366_html_a6e4e424c332e70ccbaf3491882ed4c6b"><div class="ttname"><a href="a01366.html#a6e4e424c332e70ccbaf3491882ed4c6b">dds::topic::Topic::DataType</a></div><div class="ttdeci">T DataType</div><div class="ttdef"><b>Definition:</b> <a href="a00248_source.html#l00081">Topic.hpp:81</a></div></div>
-<div class="ttc" id="aa01082_html_a37dcfbbbf459c4836f3db5050a1057b3"><div class="ttname"><a href="a01082.html#a37dcfbbbf459c4836f3db5050a1057b3">dds::core::status::StatusMask::none</a></div><div class="ttdeci">static StatusMask none()</div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00205">State.hpp:205</a></div></div>
-<div class="ttc" id="aa01362_html"><div class="ttname"><a href="a01362.html">dds::topic::qos::TopicQos</a></div><div class="ttdoc">This struct provides the basic mechanism for an application to specify Quality of Service attributes ...</div><div class="ttdef"><b>Definition:</b> <a href="a00245_source.html#l00067">TopicQos.hpp:67</a></div></div>
-<div class="ttc" id="aa00221_html"><div class="ttname"><a href="a00221.html">AnyTopic.hpp</a></div></div>
-<div class="ttc" id="aa00251_html"><div class="ttname"><a href="a00251.html">TopicDescription.hpp</a></div></div>
+<div class="ttc" id="aa00080_html_a0d9a9706bab2b2d4f7babd5b7d0737df"><div class="ttname"><a href="a00080.html#a0d9a9706bab2b2d4f7babd5b7d0737df">OMG_DDS_IMPLICIT_REF_BASE</a></div><div class="ttdeci">#define OMG_DDS_IMPLICIT_REF_BASE(TYPE)</div><div class="ttdef"><b>Definition:</b> <a href="a00080_source.html#l00075">refmacros.hpp:75</a></div></div>
+<div class="ttc" id="aa00080_html_a2ca6278157c5f9f5d7d09ca213a559f6"><div class="ttname"><a href="a00080.html#a2ca6278157c5f9f5d7d09ca213a559f6">OMG_DDS_REF_TYPE_PROTECTED_DC</a></div><div class="ttdeci">#define OMG_DDS_REF_TYPE_PROTECTED_DC(TYPE, BASE, DELEGATE)</div><div class="ttdef"><b>Definition:</b> <a href="a00080_source.html#l00164">refmacros.hpp:164</a></div></div>
+<div class="ttc" id="aa00113_html"><div class="ttname"><a href="a00113.html">DomainParticipant.hpp</a></div></div>
+<div class="ttc" id="aa01067_html"><div class="ttname"><a href="a01067.html">dds::core::Reference</a></div><div class="ttdoc">Base class for reference-counted objects.</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00094">Reference.hpp:94</a></div></div>
+<div class="ttc" id="aa00261_html"><div class="ttname"><a href="a00261.html">dds</a></div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00030">array.hpp:30</a></div></div>
+<div class="ttc" id="aa00257_html"><div class="ttname"><a href="a00257.html">TopicTraits.hpp</a></div></div>
+<div class="ttc" id="aa00041_html"><div class="ttname"><a href="a00041.html">Entity.hpp</a></div></div>
+<div class="ttc" id="aa01371_html_aeefcc637041c6306c591212af79580e1"><div class="ttname"><a href="a01371.html#aeefcc637041c6306c591212af79580e1">dds::topic::TopicDescription::type_name</a></div><div class="ttdeci">const std::string &amp; type_name() const</div></div>
+<div class="ttc" id="aa01371_html_ab934ece0f7d1bddeaeaab48531639114"><div class="ttname"><a href="a01371.html#ab934ece0f7d1bddeaeaab48531639114">dds::topic::TopicDescription::name</a></div><div class="ttdeci">const std::string &amp; name() const</div></div>
+<div class="ttc" id="aa01143_html"><div class="ttname"><a href="a01143.html">dds::domain::DomainParticipant</a></div><div class="ttdoc">A DomainParticipant represents the local membership of the application in a Domain.</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00065">DomainParticipant.hpp:65</a></div></div>
+<div class="ttc" id="aa01371_html_a4a360efabbc8f5bb2c95309eb53a759c"><div class="ttname"><a href="a01371.html#a4a360efabbc8f5bb2c95309eb53a759c">dds::topic::TopicDescription::domain_participant</a></div><div class="ttdeci">const dds::domain::DomainParticipant &amp; domain_participant() const</div></div>
+<div class="ttc" id="aa01371_html"><div class="ttname"><a href="a01371.html">dds::topic::TopicDescription</a></div><div class="ttdoc">This class is the base for Topic, ContentFilteredTopic and MultiTopic.</div><div class="ttdef"><b>Definition:</b> <a href="a00248_source.html#l00048">TopicDescription.hpp:48</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_f680b8f4508778ee53c71cb8dcb8d6eb.html">topic</a></li><li class="navelem"><a class="el" href="a00248.html">Topic.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_f680b8f4508778ee53c71cb8dcb8d6eb.html">topic</a></li><li class="navelem"><a class="el" href="a00248.html">TopicDescription.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

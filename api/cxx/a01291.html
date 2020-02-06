@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vortex Lite ISO C++ API Reference Guide: Member List</title>
+<title>Cyclone ISO C++ API Reference Guide: dds::sub::status::SampleState Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="PROJECT_LOGO_Lite.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vortex Lite ISO C++ API Reference Guide
+   <div id="projectname">Cyclone ISO C++ API Reference Guide
    </div>
   </td>
  </tr>
@@ -67,7 +66,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('a01294.html','');});
+$(document).ready(function(){initNavTree('a01291.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -86,26 +85,281 @@ $(document).ready(function(){initNavTree('a01294.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="a01288.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">dds::sub::status::SampleState Member List</div>  </div>
+<div class="title">dds::sub::status::SampleState Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="a01294.html">dds::sub::status::SampleState</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a01294.html#a45d07d5561bb4468d0aa41788fd55f06">any</a>()</td><td class="entry"><a class="el" href="a01294.html">dds::sub::status::SampleState</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a01294.html#a1883a5d6c866872fdc02047e80bbc30e">MaskType</a> typedef</td><td class="entry"><a class="el" href="a01294.html">dds::sub::status::SampleState</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01294.html#ad84dc3347fda6f76a38278e953f1e52e">not_read</a>()</td><td class="entry"><a class="el" href="a01294.html">dds::sub::status::SampleState</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a01294.html#af336814879880b9e5bfb02e0a30219fc">read</a>()</td><td class="entry"><a class="el" href="a01294.html">dds::sub::status::SampleState</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01294.html#a8ff58cea7ad8ca9c4eb4b852bbb5d9ce">SampleState</a>()</td><td class="entry"><a class="el" href="a01294.html">dds::sub::status::SampleState</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a01294.html#aa5cf23dd615877e704ef02c8a89e51c4">SampleState</a>(uint32_t i)</td><td class="entry"><a class="el" href="a01294.html">dds::sub::status::SampleState</a></td><td class="entry"><span class="mlabel">explicit</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01294.html#a7d1bb8a90284f1b08bc5690da09657d7">SampleState</a>(const SampleState &amp;src)</td><td class="entry"><a class="el" href="a01294.html">dds::sub::status::SampleState</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a01294.html#afc0bfe0f5c62828995692fbe69570818">SampleState</a>(const MaskType &amp;src)</td><td class="entry"><a class="el" href="a01294.html">dds::sub::status::SampleState</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<p>Class to hold <a class="el" href="a01291.html" title="Class to hold SampleState information.">SampleState</a> information.  
+ <a href="a01291.html#details">More...</a></p>
+
+<p><code>#include &quot;<a class="el" href="a00209_source.html">DataState.hpp</a>&quot;</code></p>
+
+<p>Inherits std::bitset&lt; Bits &gt;.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a1883a5d6c866872fdc02047e80bbc30e"><td class="memItemLeft" align="right" valign="top">typedef std::bitset&lt; <a class="el" href="a00056.html#abf9d7a65e0f8c604d0c4c90e9a76739c">OMG_DDS_STATE_BIT_COUNT</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01291.html#a1883a5d6c866872fdc02047e80bbc30e">MaskType</a></td></tr>
+<tr class="separator:a1883a5d6c866872fdc02047e80bbc30e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a8ff58cea7ad8ca9c4eb4b852bbb5d9ce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01291.html#a8ff58cea7ad8ca9c4eb4b852bbb5d9ce">SampleState</a> ()</td></tr>
+<tr class="separator:a8ff58cea7ad8ca9c4eb4b852bbb5d9ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc0bfe0f5c62828995692fbe69570818"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01291.html#afc0bfe0f5c62828995692fbe69570818">SampleState</a> (const <a class="el" href="a01291.html#a1883a5d6c866872fdc02047e80bbc30e">MaskType</a> &amp;src)</td></tr>
+<tr class="separator:afc0bfe0f5c62828995692fbe69570818"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d1bb8a90284f1b08bc5690da09657d7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01291.html#a7d1bb8a90284f1b08bc5690da09657d7">SampleState</a> (const <a class="el" href="a01291.html">SampleState</a> &amp;src)</td></tr>
+<tr class="separator:a7d1bb8a90284f1b08bc5690da09657d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5cf23dd615877e704ef02c8a89e51c4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01291.html#aa5cf23dd615877e704ef02c8a89e51c4">SampleState</a> (uint32_t i)</td></tr>
+<tr class="separator:aa5cf23dd615877e704ef02c8a89e51c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a45d07d5561bb4468d0aa41788fd55f06"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="a01291.html">SampleState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01291.html#a45d07d5561bb4468d0aa41788fd55f06">any</a> ()</td></tr>
+<tr class="separator:a45d07d5561bb4468d0aa41788fd55f06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad84dc3347fda6f76a38278e953f1e52e"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="a01291.html">SampleState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01291.html#ad84dc3347fda6f76a38278e953f1e52e">not_read</a> ()</td></tr>
+<tr class="separator:ad84dc3347fda6f76a38278e953f1e52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af336814879880b9e5bfb02e0a30219fc"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="a01291.html">SampleState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01291.html#af336814879880b9e5bfb02e0a30219fc">read</a> ()</td></tr>
+<tr class="separator:af336814879880b9e5bfb02e0a30219fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class to hold <a class="el" href="a01291.html" title="Class to hold SampleState information.">SampleState</a> information. </p>
+<p>For each sample, the Data Distribution Service internally maintains a sample_state specific to each <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a>. The sample_state can either be READ_SAMPLE_STATE or NOT_READ_SAMPLE_STATE.</p><ul>
+<li><b><em>read</em></b><ul>
+<li>The <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> has already accessed that sample by means of read. Had the sample been accessed by take it would no longer be available to the <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a>.</li>
+</ul>
+</li>
+<li><b><em>not_read</em></b><ul>
+<li>The <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> has not accessed that sample before.</li>
+</ul>
+</li>
+</ul>
+<dl class="section see"><dt>See also</dt><dd>SampleInfo for more information </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="a00209_source.html#l00057">57</a> of file <a class="el" href="a00209_source.html">DataState.hpp</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a1883a5d6c866872fdc02047e80bbc30e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1883a5d6c866872fdc02047e80bbc30e">&#9670;&nbsp;</a></span>MaskType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::bitset&lt;<a class="el" href="a00056.html#abf9d7a65e0f8c604d0c4c90e9a76739c">OMG_DDS_STATE_BIT_COUNT</a>&gt; <a class="el" href="a01291.html#a1883a5d6c866872fdc02047e80bbc30e">dds::sub::status::SampleState::MaskType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Convenience typedef for std::bitset&lt;OMG_DDS_STATE_BIT_COUNT&gt;. </p>
+
+<p class="definition">Definition at line <a class="el" href="a00209_source.html#l00063">63</a> of file <a class="el" href="a00209_source.html">DataState.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a8ff58cea7ad8ca9c4eb4b852bbb5d9ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ff58cea7ad8ca9c4eb4b852bbb5d9ce">&#9670;&nbsp;</a></span>SampleState() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dds::sub::status::SampleState::SampleState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Construct a <a class="el" href="a01291.html" title="Class to hold SampleState information.">SampleState</a> with default MaskType. </p>
+
+</div>
+</div>
+<a id="aa5cf23dd615877e704ef02c8a89e51c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5cf23dd615877e704ef02c8a89e51c4">&#9670;&nbsp;</a></span>SampleState() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dds::sub::status::SampleState::SampleState </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Construct a <a class="el" href="a01291.html" title="Class to hold SampleState information.">SampleState</a> with MaskType of i.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>MaskType </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7d1bb8a90284f1b08bc5690da09657d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d1bb8a90284f1b08bc5690da09657d7">&#9670;&nbsp;</a></span>SampleState() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dds::sub::status::SampleState::SampleState </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a01291.html">SampleState</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Copy constructor. Construct a <a class="el" href="a01291.html" title="Class to hold SampleState information.">SampleState</a> with existing <a class="el" href="a01291.html" title="Class to hold SampleState information.">SampleState</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>the <a class="el" href="a01291.html" title="Class to hold SampleState information.">SampleState</a> to copy from </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afc0bfe0f5c62828995692fbe69570818"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc0bfe0f5c62828995692fbe69570818">&#9670;&nbsp;</a></span>SampleState() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dds::sub::status::SampleState::SampleState </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a01291.html#a1883a5d6c866872fdc02047e80bbc30e">MaskType</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Construct a <a class="el" href="a01291.html" title="Class to hold SampleState information.">SampleState</a> with existing MaskType.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>the MaskType to copy from </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a45d07d5561bb4468d0aa41788fd55f06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45d07d5561bb4468d0aa41788fd55f06">&#9670;&nbsp;</a></span>any()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="a01291.html">SampleState</a> dds::sub::status::SampleState::any </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get any <a class="el" href="a01291.html" title="Class to hold SampleState information.">SampleState</a>.</p>
+<p>Either the sample has already been read or not read.</p>
+<dl class="section return"><dt>Returns</dt><dd>any <a class="el" href="a01291.html" title="Class to hold SampleState information.">SampleState</a> </dd></dl>
+
+</div>
+</div>
+<a id="ad84dc3347fda6f76a38278e953f1e52e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad84dc3347fda6f76a38278e953f1e52e">&#9670;&nbsp;</a></span>not_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="a01291.html">SampleState</a> dds::sub::status::SampleState::not_read </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the NOT_READ_SAMPLE_STATE.</p>
+<p><em>not_read</em></p><ul>
+<li>The <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> has not accessed that sample before.</li>
+</ul>
+<dl class="section return"><dt>Returns</dt><dd>the not_read <a class="el" href="a01291.html" title="Class to hold SampleState information.">SampleState</a> </dd></dl>
+
+</div>
+</div>
+<a id="af336814879880b9e5bfb02e0a30219fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af336814879880b9e5bfb02e0a30219fc">&#9670;&nbsp;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="a01291.html">SampleState</a> dds::sub::status::SampleState::read </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the READ_SAMPLE_STATE.</p>
+<p><em>read</em></p><ul>
+<li>The <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> has already accessed that sample by means of read. Had the sample been accessed by take it would no longer be available to the <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a>.</li>
+</ul>
+<dl class="section return"><dt>Returns</dt><dd>the read <a class="el" href="a01291.html" title="Class to hold SampleState information.">SampleState</a> </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>dds/sub/status/<a class="el" href="a00209_source.html">DataState.hpp</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="a00261.html">dds</a></li><li class="navelem"><a class="el" href="a00268.html">sub</a></li><li class="navelem"><a class="el" href="a00270.html">status</a></li><li class="navelem"><a class="el" href="a01291.html">SampleState</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

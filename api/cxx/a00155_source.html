@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vortex Lite ISO C++ API Reference Guide: dds/pub/qos/PublisherQos.hpp Source File</title>
+<title>Cyclone ISO C++ API Reference Guide: dds/pub/SuspendedPublication.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="PROJECT_LOGO_Lite.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vortex Lite ISO C++ API Reference Guide
+   <div id="projectname">Cyclone ISO C++ API Reference Guide
    </div>
   </td>
  </tr>
@@ -87,11 +86,11 @@ $(document).ready(function(){initNavTree('a00155_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">PublisherQos.hpp</div>  </div>
+<div class="title">SuspendedPublication.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="a00155.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef OMG_DDS_PUB_QOS_DETAIL_PUBLISER_QOS_HPP_</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define OMG_DDS_PUB_QOS_DETAIL_PUBLISER_QOS_HPP_</span></div>
+<a href="a00155.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef OMG_TDDS_PUB_SUSPENDED_PUBLICATION_HPP_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define OMG_TDDS_PUB_SUSPENDED_PUBLICATION_HPP_</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/* Copyright 2010, Object Management Group, Inc.</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * Copyright 2010, PrismTech, Corp.</span></div>
@@ -111,42 +110,45 @@ $(document).ready(function(){initNavTree('a00155_source.html','');});
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * limitations under the License.</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;dds/core/detail/TEntityQosImpl.hpp&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;org/eclipse/cyclonedds/pub/qos/PublisherQosDelegate.hpp&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_FOR_ISOCPP</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">/* The above macro is never (and must never) be defined in normal compilation.</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> * The class below is just used to create informative API documentation.</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> * The predoxygen.py script will copy this over the QoS API header file.</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="a01206.html">   58</a></span>&#160;<span class="keyword">class </span><a class="code" href="a01206.html">dds::pub::qos::PublisherQos</a> : <span class="keyword">public</span> <a class="code" href="a00870.html">::dds::core::EntityQos</a>&lt;org::eclipse::cyclonedds::pub::qos::PublisherQosDelegate&gt;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="a01206.html#ae1a8cefc915e96ac87e87b16d27d6323">   64</a></span>&#160;    <a class="code" href="a01206.html#ae1a8cefc915e96ac87e87b16d27d6323">PublisherQos</a>() {}</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="a01206.html#ae1a8cefc915e96ac87e87b16d27d6323">PublisherQos</a>(<span class="keyword">const</span> <a class="code" href="a01206.html">PublisherQos</a>&amp; qos);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#else </span><span class="comment">/* DOXYGEN_FOR_ISOCPP */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00264.html">dds</a> { <span class="keyword">namespace </span>pub { <span class="keyword">namespace </span>qos { <span class="keyword">namespace </span>detail {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        typedef ::dds::core::TEntityQos&lt; ::org::eclipse::cyclonedds::pub::qos::PublisherQosDelegate&gt; PublisherQos;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;} } } }</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_FOR_ISOCPP */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* OMG_DDS_PUB_QOS_DETAIL_PUBLISER_QOS_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00143.html">dds/pub/Publisher.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00261.html">dds</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>pub</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">class </span>SuspendedPublication;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="a01207.html">   66</a></span>&#160;<span class="keyword">class </span><a class="code" href="a01207.html">dds::pub::SuspendedPublication</a> : <span class="keyword">public</span> <a class="code" href="a01135.html">dds::core::Value</a></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="a01207.html#a614ff154af7838ed6cac82b08862b572">SuspendedPublication</a>(<span class="keyword">const</span> <a class="code" href="a01187.html">dds::pub::Publisher</a>&amp; pub);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a01207.html#a8a2563cf3d960e806d12c7907e229c46">resume</a>();</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <a class="code" href="a01207.html#a076f489543369ddc24ce3e961cacdb5c">~SuspendedPublication</a>();</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;};</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* OMG_TDDS_PUB_SUSPENDED_PUBLICATION_HPP_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa00870_html"><div class="ttname"><a href="a00870.html">dds::core::EntityQos</a></div><div class="ttdoc">QoS Container.</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00045">EntityQos.hpp:45</a></div></div>
-<div class="ttc" id="aa00264_html"><div class="ttname"><a href="a00264.html">dds</a></div><div class="ttdef"><b>Definition:</b> <a href="a00017_source.html#l00030">array.hpp:30</a></div></div>
-<div class="ttc" id="aa01206_html"><div class="ttname"><a href="a01206.html">dds::pub::qos::PublisherQos</a></div><div class="ttdoc">This object provides the basic mechanism for an application to specify Quality of Service attributes ...</div><div class="ttdef"><b>Definition:</b> <a href="a00155_source.html#l00058">PublisherQos.hpp:58</a></div></div>
-<div class="ttc" id="aa01206_html_ae1a8cefc915e96ac87e87b16d27d6323"><div class="ttname"><a href="a01206.html#ae1a8cefc915e96ac87e87b16d27d6323">dds::pub::qos::PublisherQos::PublisherQos</a></div><div class="ttdeci">PublisherQos()</div><div class="ttdef"><b>Definition:</b> <a href="a00155_source.html#l00064">PublisherQos.hpp:64</a></div></div>
+<div class="ttc" id="aa01207_html"><div class="ttname"><a href="a01207.html">dds::pub::SuspendedPublication</a></div><div class="ttdoc">Class for RAII way of suspending/resuming publication.</div><div class="ttdef"><b>Definition:</b> <a href="a00155_source.html#l00066">SuspendedPublication.hpp:66</a></div></div>
+<div class="ttc" id="aa01207_html_a076f489543369ddc24ce3e961cacdb5c"><div class="ttname"><a href="a01207.html#a076f489543369ddc24ce3e961cacdb5c">dds::pub::SuspendedPublication::~SuspendedPublication</a></div><div class="ttdeci">~SuspendedPublication()</div></div>
+<div class="ttc" id="aa01187_html"><div class="ttname"><a href="a01187.html">dds::pub::Publisher</a></div><div class="ttdoc">The Publisher acts on the behalf of one or several DataWriter objects that belong to it.</div><div class="ttdef"><b>Definition:</b> <a href="a00143_source.html#l00055">Publisher.hpp:55</a></div></div>
+<div class="ttc" id="aa00261_html"><div class="ttname"><a href="a00261.html">dds</a></div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00030">array.hpp:30</a></div></div>
+<div class="ttc" id="aa01207_html_a8a2563cf3d960e806d12c7907e229c46"><div class="ttname"><a href="a01207.html#a8a2563cf3d960e806d12c7907e229c46">dds::pub::SuspendedPublication::resume</a></div><div class="ttdeci">void resume()</div></div>
+<div class="ttc" id="aa00143_html"><div class="ttname"><a href="a00143.html">Publisher.hpp</a></div></div>
+<div class="ttc" id="aa01135_html"><div class="ttname"><a href="a01135.html">dds::core::Value</a></div><div class="ttdoc">This class is the base for various value-type dds objects.</div><div class="ttdef"><b>Definition:</b> <a href="a00098_source.html#l00028">Value.hpp:28</a></div></div>
+<div class="ttc" id="aa01207_html_a614ff154af7838ed6cac82b08862b572"><div class="ttname"><a href="a01207.html#a614ff154af7838ed6cac82b08862b572">dds::pub::SuspendedPublication::SuspendedPublication</a></div><div class="ttdeci">SuspendedPublication(const dds::pub::Publisher &amp;pub)</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_92f394caea5fe0d83e692891df52b3b0.html">pub</a></li><li class="navelem"><a class="el" href="dir_9fd410540ecd6467f00ab905ac07412d.html">qos</a></li><li class="navelem"><a class="el" href="a00155.html">PublisherQos.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_92f394caea5fe0d83e692891df52b3b0.html">pub</a></li><li class="navelem"><a class="el" href="a00155.html">SuspendedPublication.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

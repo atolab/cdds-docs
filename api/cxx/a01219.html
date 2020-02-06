@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vortex Lite ISO C++ API Reference Guide: Member List</title>
+<title>Cyclone ISO C++ API Reference Guide: dds::sub::NoOpAnyDataReaderListener Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="PROJECT_LOGO_Lite.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vortex Lite ISO C++ API Reference Guide
+   <div id="projectname">Cyclone ISO C++ API Reference Guide
    </div>
   </td>
  </tr>
@@ -67,7 +66,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('a01222.html','');});
+$(document).ready(function(){initNavTree('a01219.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -86,25 +85,386 @@ $(document).ready(function(){initNavTree('a01222.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="a01216.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">dds::sub::NoOpAnyDataReaderListener Member List</div>  </div>
+<div class="title">dds::sub::NoOpAnyDataReaderListener Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="a01222.html">dds::sub::NoOpAnyDataReaderListener</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a01218.html#a20ee0a13665c430fcbe25ea4e41346e2">on_data_available</a>(AnyDataReader &amp;reader)=0</td><td class="entry"><a class="el" href="a01218.html">dds::sub::AnyDataReaderListener</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a01218.html#abb07bb74cee6b0b5af8ae5eacc99e715">on_liveliness_changed</a>(AnyDataReader &amp;reader, const dds::core::status::LivelinessChangedStatus &amp;status)=0</td><td class="entry"><a class="el" href="a01218.html">dds::sub::AnyDataReaderListener</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01218.html#a352b482a97476de2d94bd735f79b7531">on_requested_deadline_missed</a>(AnyDataReader &amp;reader, const dds::core::status::RequestedDeadlineMissedStatus &amp;status)=0</td><td class="entry"><a class="el" href="a01218.html">dds::sub::AnyDataReaderListener</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a01218.html#a5e97f8396ef53e2c8609ce7c94837968">on_requested_incompatible_qos</a>(AnyDataReader &amp;reader, const dds::core::status::RequestedIncompatibleQosStatus &amp;status)=0</td><td class="entry"><a class="el" href="a01218.html">dds::sub::AnyDataReaderListener</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01218.html#a3f8193f2d85d29df34d82fef42f63279">on_sample_lost</a>(AnyDataReader &amp;reader, const dds::core::status::SampleLostStatus &amp;status)=0</td><td class="entry"><a class="el" href="a01218.html">dds::sub::AnyDataReaderListener</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a01218.html#aec7bedbb07af5d29c42d5fbea4625a42">on_sample_rejected</a>(AnyDataReader &amp;reader, const dds::core::status::SampleRejectedStatus &amp;status)=0</td><td class="entry"><a class="el" href="a01218.html">dds::sub::AnyDataReaderListener</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01218.html#a1ec1b9f36a89b475056d55f7386d7a04">on_subscription_matched</a>(AnyDataReader &amp;reader, const dds::core::status::SubscriptionMatchedStatus &amp;status)=0</td><td class="entry"><a class="el" href="a01218.html">dds::sub::AnyDataReaderListener</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-</table></div><!-- contents -->
+<p><a class="el" href="a01211.html" title="Typeless base class for the typed DataReader.">AnyDataReader</a> events Listener.  
+ <a href="a01219.html#details">More...</a></p>
+
+<p><code>#include &quot;<a class="el" href="a00161_source.html">AnyDataReaderListener.hpp</a>&quot;</code></p>
+
+<p>Inherits <a class="el" href="a01215.html">dds::sub::AnyDataReaderListener</a>.</p>
+
+<p>Inherited by <a class="el" href="a01315.html">dds::sub::NoOpSubscriberListener</a><code> [virtual]</code>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a20ee0a13665c430fcbe25ea4e41346e2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01215.html#a20ee0a13665c430fcbe25ea4e41346e2">on_data_available</a> (<a class="el" href="a01211.html">AnyDataReader</a> &amp;reader)=0</td></tr>
+<tr class="separator:a20ee0a13665c430fcbe25ea4e41346e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb07bb74cee6b0b5af8ae5eacc99e715"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01215.html#abb07bb74cee6b0b5af8ae5eacc99e715">on_liveliness_changed</a> (<a class="el" href="a01211.html">AnyDataReader</a> &amp;reader, const <a class="el" href="a01099.html">dds::core::status::LivelinessChangedStatus</a> &amp;status)=0</td></tr>
+<tr class="separator:abb07bb74cee6b0b5af8ae5eacc99e715"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a352b482a97476de2d94bd735f79b7531"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01215.html#a352b482a97476de2d94bd735f79b7531">on_requested_deadline_missed</a> (<a class="el" href="a01211.html">AnyDataReader</a> &amp;reader, const <a class="el" href="a01107.html">dds::core::status::RequestedDeadlineMissedStatus</a> &amp;status)=0</td></tr>
+<tr class="separator:a352b482a97476de2d94bd735f79b7531"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e97f8396ef53e2c8609ce7c94837968"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01215.html#a5e97f8396ef53e2c8609ce7c94837968">on_requested_incompatible_qos</a> (<a class="el" href="a01211.html">AnyDataReader</a> &amp;reader, const <a class="el" href="a01115.html">dds::core::status::RequestedIncompatibleQosStatus</a> &amp;status)=0</td></tr>
+<tr class="separator:a5e97f8396ef53e2c8609ce7c94837968"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f8193f2d85d29df34d82fef42f63279"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01215.html#a3f8193f2d85d29df34d82fef42f63279">on_sample_lost</a> (<a class="el" href="a01211.html">AnyDataReader</a> &amp;reader, const <a class="el" href="a01087.html">dds::core::status::SampleLostStatus</a> &amp;status)=0</td></tr>
+<tr class="separator:a3f8193f2d85d29df34d82fef42f63279"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec7bedbb07af5d29c42d5fbea4625a42"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01215.html#aec7bedbb07af5d29c42d5fbea4625a42">on_sample_rejected</a> (<a class="el" href="a01211.html">AnyDataReader</a> &amp;reader, const <a class="el" href="a01091.html">dds::core::status::SampleRejectedStatus</a> &amp;status)=0</td></tr>
+<tr class="separator:aec7bedbb07af5d29c42d5fbea4625a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ec1b9f36a89b475056d55f7386d7a04"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01215.html#a1ec1b9f36a89b475056d55f7386d7a04">on_subscription_matched</a> (<a class="el" href="a01211.html">AnyDataReader</a> &amp;reader, const <a class="el" href="a01123.html">dds::core::status::SubscriptionMatchedStatus</a> &amp;status)=0</td></tr>
+<tr class="separator:a1ec1b9f36a89b475056d55f7386d7a04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="a01211.html" title="Typeless base class for the typed DataReader.">AnyDataReader</a> events Listener. </p>
+<p>This listener is just like <a class="el" href="a01215.html" title="AnyDataReader events Listener.">AnyDataReaderListener</a>, except that the application doesn't have to implement all operations.</p>
+<p>This class is used as a base for other listeners and is not used on its own.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="a01215.html" title="AnyDataReader events Listener.">dds::sub::AnyDataReaderListener</a> </dd>
+<dd>
+<a class="el" href="a01315.html" title="Subscriber events Listener.">dds::sub::NoOpSubscriberListener</a> </dd>
+<dd>
+<a class="el" href="a01151.html" title="DomainParticipant events Listener.">dds::domain::NoOpDomainParticipantListener</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="a00161_source.html#l00110">110</a> of file <a class="el" href="a00161_source.html">AnyDataReaderListener.hpp</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a20ee0a13665c430fcbe25ea4e41346e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20ee0a13665c430fcbe25ea4e41346e2">&#9670;&nbsp;</a></span>on_data_available()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void dds::sub::AnyDataReaderListener::on_data_available </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a01211.html">AnyDataReader</a> &amp;&#160;</td>
+          <td class="paramname"><em>reader</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p></p>
+<p>This operation is called by the Data Distribution Service when new data is available for this <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a>.</p>
+<p>The implementation may be left empty when this functionality is not needed. This operation will only be called when the relevant <a class="el" href="a01239.html" title="DataReader events Listener.">DataReaderListener</a> is installed and enabled for the StatusMask::data_available().</p>
+<p>The Data Distribution Service will provide a reference to the <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> in the parameter reader for use by the application.</p>
+<p>The statuses StatusMask::data_on_readers() and StatusMask::data_available() will occur together. In case these status changes occur, the Data Distribution Service will look for an attached and activated <a class="el" href="a01311.html" title="Subscriber events Listener.">SubscriberListener</a> or DomainParticipantListener (in that order) for the enabled StatusMask::data_on_readers(). In case the StatusMask::data_on_readers() can not be handled, the Data Distribution Service will look for an attached and activated <a class="el" href="a01239.html" title="DataReader events Listener.">DataReaderListener</a>, <a class="el" href="a01311.html" title="Subscriber events Listener.">SubscriberListener</a> or DomainParticipantListener for the enabled StatusMask::data_available() (in that order).</p>
+<p>Note that if on_data_on_readers is called, then the Data Distribution Service will not try to call on_data_available, however, the application can force a call to the <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> objects that have data by means of the <a class="el" href="a01307.html#a2405cbe584b3efba00959a6fb354462a">Subscriber::notify_datareaders()</a> operation.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reader</td><td>contain a pointer to the <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> for which data is available (this is an input to the application provided by the Data Distribution Service). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abb07bb74cee6b0b5af8ae5eacc99e715"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb07bb74cee6b0b5af8ae5eacc99e715">&#9670;&nbsp;</a></span>on_liveliness_changed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void dds::sub::AnyDataReaderListener::on_liveliness_changed </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a01211.html">AnyDataReader</a> &amp;&#160;</td>
+          <td class="paramname"><em>reader</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a01099.html">dds::core::status::LivelinessChangedStatus</a> &amp;&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p></p>
+<p>This operation is called by the Data Distribution Service when the liveliness of one or more DataWriter objects that were writing instances read through this <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> has changed.</p>
+<p>In other words, some DataWriter have become “alive” or “not alive”. The implementation may be left empty when this functionality is not needed. This operation will only be called when the relevant <a class="el" href="a01239.html" title="DataReader events Listener.">DataReaderListener</a> is installed and enabled for the StatusMask::liveliness_changed().</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reader</td><td>contain a pointer to the <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> for which the liveliness of one or more DataWriter objects has changed (this is an input to the application provided by the Data Distribution Service). </td></tr>
+    <tr><td class="paramname">status</td><td>contain the LivelinessChangedStatus object (this is an input to the application provided by the Data Distribution Service). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a352b482a97476de2d94bd735f79b7531"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a352b482a97476de2d94bd735f79b7531">&#9670;&nbsp;</a></span>on_requested_deadline_missed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void dds::sub::AnyDataReaderListener::on_requested_deadline_missed </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a01211.html">AnyDataReader</a> &amp;&#160;</td>
+          <td class="paramname"><em>reader</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a01107.html">dds::core::status::RequestedDeadlineMissedStatus</a> &amp;&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p></p>
+<p>This operation called by the Data Distribution Service when the deadline that the <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> was expecting through its DeadlineQosPolicy was not respected for a specific instance.</p>
+<p>The implementation may be left empty when this functionality is not needed. This operation will only be called when the relevant <a class="el" href="a01239.html" title="DataReader events Listener.">DataReaderListener</a> is installed and enabled for the StatusMask::requested_deadline_missed().</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reader</td><td>contain a pointer to the <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> for which the deadline was missed (this is an input to the application provided by the Data Distribution Service). </td></tr>
+    <tr><td class="paramname">status</td><td>contain the RequestedDeadlineMissedStatus object (this is an input to the application provided by the Data Distribution Service). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5e97f8396ef53e2c8609ce7c94837968"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e97f8396ef53e2c8609ce7c94837968">&#9670;&nbsp;</a></span>on_requested_incompatible_qos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void dds::sub::AnyDataReaderListener::on_requested_incompatible_qos </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a01211.html">AnyDataReader</a> &amp;&#160;</td>
+          <td class="paramname"><em>reader</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a01115.html">dds::core::status::RequestedIncompatibleQosStatus</a> &amp;&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p></p>
+<p>This operation is called by the Data Distribution Service when the RequestedIncompatibleQosStatus changes.</p>
+<p>The implementation may be left empty when this functionality is not needed. This operation will only be called when the relevant <a class="el" href="a01239.html" title="DataReader events Listener.">DataReaderListener</a> is installed and enabled for the StatusMask::requested_incompatible_qos().</p>
+<p>The Data Distribution Service will provide a reference to the <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> in the parameter reader and the RequestedIncompatibleQosStatus object in the parameter status, for use by the application.</p>
+<p>When the <a class="el" href="a01239.html" title="DataReader events Listener.">DataReaderListener</a> on the <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> is not enabled with the StatusMask::requested_incompatible_qos(), the RequestedIncompatibleQosStatus change will propagate to the <a class="el" href="a01311.html" title="Subscriber events Listener.">SubscriberListener</a> of the <a class="el" href="a01307.html" title="A Subscriber is the object responsible for the actual reception of the data resulting from its subscr...">Subscriber</a> (if enabled) or to the DomainParticipantListener of the DomainParticipant (if enabled).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reader</td><td>the <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> provided by the Data Distribution Service. </td></tr>
+    <tr><td class="paramname">status</td><td>the RequestedIncompatibleQosStatus object provided by the Data Distribution Service. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3f8193f2d85d29df34d82fef42f63279"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f8193f2d85d29df34d82fef42f63279">&#9670;&nbsp;</a></span>on_sample_lost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void dds::sub::AnyDataReaderListener::on_sample_lost </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a01211.html">AnyDataReader</a> &amp;&#160;</td>
+          <td class="paramname"><em>reader</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a01087.html">dds::core::status::SampleLostStatus</a> &amp;&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p></p>
+<p><b><em> NOTE: This operation is not yet implemented. It is scheduled for a future release. </em><b></b></b></p>
+<p><b><b></p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reader</td><td>the <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> the Listener is applied to </td></tr>
+    <tr><td class="paramname">status</td><td>the SampleLostStatus status </td></tr>
+  </table>
+  </dd>
+</dl>
+<p></b></b></p>
+
+</div>
+</div>
+<a id="aec7bedbb07af5d29c42d5fbea4625a42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec7bedbb07af5d29c42d5fbea4625a42">&#9670;&nbsp;</a></span>on_sample_rejected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void dds::sub::AnyDataReaderListener::on_sample_rejected </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a01211.html">AnyDataReader</a> &amp;&#160;</td>
+          <td class="paramname"><em>reader</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a01091.html">dds::core::status::SampleRejectedStatus</a> &amp;&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p></p>
+<p>This operation called by the Data Distribution Service when a (received) sample has been rejected.</p>
+<p>Samples may be rejected by the <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> when it runs out of resource_limits to store incoming samples. Usually this means that old samples need to be ‘consumed’ (for example by ‘taking’ them instead of ‘reading’ them) to make room for newly incoming samples.</p>
+<p>The implementation may be left empty when this functionality is not needed. This operation will only be called when the relevant <a class="el" href="a01239.html" title="DataReader events Listener.">DataReaderListener</a> is installed and enabled with the StatusMask::sample_lost().</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reader</td><td>contains a pointer to the <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> for which a sample has been rejected (this is an input to the application provided by the Data Distribution Service). </td></tr>
+    <tr><td class="paramname">status</td><td>contains the SampleRejectedStatus object (this is an input to the application provided by the Data Distribution Service). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1ec1b9f36a89b475056d55f7386d7a04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ec1b9f36a89b475056d55f7386d7a04">&#9670;&nbsp;</a></span>on_subscription_matched()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void dds::sub::AnyDataReaderListener::on_subscription_matched </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a01211.html">AnyDataReader</a> &amp;&#160;</td>
+          <td class="paramname"><em>reader</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a01123.html">dds::core::status::SubscriptionMatchedStatus</a> &amp;&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p></p>
+<p>This operation is called by the Data Distribution Service when a new match has been discovered for the current subscription, or when an existing match has ceased to exist.</p>
+<p>Usually this means that a new DataWriter that matches the Topic and that has compatible Qos as the current <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> has either been discovered, or that a previously discovered DataWriter has ceased to be matched to the current <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a>. A DataWriter may cease to match when it gets deleted, when it changes its Qos to a value that is incompatible with the current <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> or when either the <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> or the DataWriter has chosen to put its matching counterpart on its ignore-list using the <a class="el" href="a00268.html#a23a3ef8f425ebdeb5a52541fa7e16f91">dds::sub::ignore</a> or <a class="el" href="a00267.html#aee1323e2f432791145523b64a615b9ef">dds::pub::ignore</a> operations.</p>
+<p>The implementation of this Listener operation may be left empty when this functionality is not needed: it will only be called when the relevant <a class="el" href="a01239.html" title="DataReader events Listener.">DataReaderListener</a> is installed and enabled for the StatusMask::subscription_matched().</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reader</td><td>contains a pointer to the <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> for which a match has been discovered (this is an input to the application provided by the Data Distribution Service). </td></tr>
+    <tr><td class="paramname">status</td><td>contains the SubscriptionMatchedStatus object (this is an input to the application provided by the Data Distribution Service). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>dds/sub/<a class="el" href="a00161_source.html">AnyDataReaderListener.hpp</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="a00261.html">dds</a></li><li class="navelem"><a class="el" href="a00268.html">sub</a></li><li class="navelem"><a class="el" href="a01219.html">NoOpAnyDataReaderListener</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

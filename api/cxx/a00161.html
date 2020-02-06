@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vortex Lite ISO C++ API Reference Guide: dds/sub/AnyDataReader.hpp File Reference</title>
+<title>Cyclone ISO C++ API Reference Guide: dds/sub/AnyDataReaderListener.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="PROJECT_LOGO_Lite.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vortex Lite ISO C++ API Reference Guide
+   <div id="projectname">Cyclone ISO C++ API Reference Guide
    </div>
   </td>
  </tr>
@@ -90,27 +89,29 @@ $(document).ready(function(){initNavTree('a00161.html','');});
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
-<div class="title">AnyDataReader.hpp File Reference</div>  </div>
+<div class="title">AnyDataReaderListener.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="a00044_source.html">dds/core/Entity.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="a00215_source.html">dds/sub/Subscriber.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="a00191_source.html">dds/sub/qos/DataReaderQos.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="a00251_source.html">dds/topic/TopicDescription.hpp</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="a00080_source.html">dds/core/refmacros.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="a00089_source.html">dds/core/status/Status.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="a00158_source.html">dds/sub/AnyDataReader.hpp</a>&gt;</code><br />
 </div>
 <p><a href="a00161_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01214.html">dds::sub::AnyDataReader</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Typeless base class for the typed <a class="el" href="a01238.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a>.  <a href="a01214.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01215.html">dds::sub::AnyDataReaderListener</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a01211.html" title="Typeless base class for the typed DataReader.">AnyDataReader</a> events Listener.  <a href="a01215.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01219.html">dds::sub::NoOpAnyDataReaderListener</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a01211.html" title="Typeless base class for the typed DataReader.">AnyDataReader</a> events Listener.  <a href="a01219.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:a00264"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00264.html">dds</a></td></tr>
+<tr class="memitem:a00261"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00261.html">dds</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00271"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00271.html">dds::sub</a></td></tr>
+<tr class="memitem:a00268"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00268.html">dds::sub</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
@@ -118,7 +119,7 @@ Namespaces</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_4ed4fe74c0873b885d65b827f26fae2a.html">sub</a></li><li class="navelem"><a class="el" href="a00161.html">AnyDataReader.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_4ed4fe74c0873b885d65b827f26fae2a.html">sub</a></li><li class="navelem"><a class="el" href="a00161.html">AnyDataReaderListener.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

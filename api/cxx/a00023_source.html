@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vortex Lite ISO C++ API Reference Guide: dds/core/cond/Condition.hpp Source File</title>
+<title>Cyclone ISO C++ API Reference Guide: dds/core/cond/GuardCondition.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="PROJECT_LOGO_Lite.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vortex Lite ISO C++ API Reference Guide
+   <div id="projectname">Cyclone ISO C++ API Reference Guide
    </div>
   </td>
  </tr>
@@ -87,11 +86,11 @@ $(document).ready(function(){initNavTree('a00023_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Condition.hpp</div>  </div>
+<div class="title">GuardCondition.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="a00023.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef OMG_TDDS_DDS_CORE_COND_CONDITION_HPP_</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define OMG_TDDS_DDS_CORE_COND_CONDITION_HPP_</span></div>
+<a href="a00023.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef OMG_TDDS_CORE_COND_GUARD_CONDITION_HPP_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define OMG_TDDS_CORE_COND_GUARD_CONDITION_HPP_</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/* Copyright 2010, Object Management Group, Inc.</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * Copyright 2010, PrismTech, Corp.</span></div>
@@ -111,67 +110,59 @@ $(document).ready(function(){initNavTree('a00023_source.html','');});
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * limitations under the License.</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00080.html">dds/core/Reference.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;dds/core/cond/detail/GuardCondition.hpp&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;dds/core/cond/detail/StatusCondition.hpp&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;dds/sub/cond/detail/ReadCondition.hpp&gt;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;dds/sub/cond/detail/QueryCondition.hpp&gt;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00264.html">dds</a></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">namespace </span>core</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="a00266.html">   32</a></span>&#160;<span class="keyword">namespace </span>cond</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">class </span><a class="code" href="a00846.html">Condition</a>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="a00846.html">   58</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00846.html">dds::core::cond::Condition</a> : <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code" href="a01070.html">dds::core::Reference</a></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="a00083.html#a2ca6278157c5f9f5d7d09ca213a559f6">OMG_DDS_REF_TYPE_PROTECTED_DC</a>(<a class="code" href="a00846.html">Condition</a>, <a class="code" href="a01070.html">dds::core::Reference</a>)</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="a00083.html#abddd9cfadbe14b4fe3dab3408f14087a">OMG_DDS_EXPLICIT_REF_BASE_DECL</a>(<a class="code" href="a00846.html">Condition</a>, dds::core::cond::detail::StatusCondition)</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="a00083.html#abddd9cfadbe14b4fe3dab3408f14087a">OMG_DDS_EXPLICIT_REF_BASE_DECL</a>(<a class="code" href="a00846.html">Condition</a>, dds::core::cond::detail::GuardCondition)</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="a00083.html#abddd9cfadbe14b4fe3dab3408f14087a">OMG_DDS_EXPLICIT_REF_BASE_DECL</a>(<a class="code" href="a00846.html">Condition</a>, dds::sub::cond::detail::ReadCondition)</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="a00083.html#abddd9cfadbe14b4fe3dab3408f14087a">OMG_DDS_EXPLICIT_REF_BASE_DECL</a>(<a class="code" href="a00846.html">Condition</a>, dds::sub::cond::detail::QueryCondition)</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    ~<a class="code" href="a00846.html">Condition</a>();</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Functor&gt;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00846.html#ae04f8cd96028c933abdb13308d8c3520">handler</a>(Functor&amp; func);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Functor&gt;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00846.html#ae04f8cd96028c933abdb13308d8c3520">handler</a>(<span class="keyword">const</span> Functor&amp; func);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00846.html#a530c66cb9c2610347f44fda8fa69f824">reset_handler</a>();</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00846.html#a951e1017981f4110068dbf801d8bb29e">dispatch</a>();</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00846.html#abef89849b48291363fee4e0569676aa3">trigger_value</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;};</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00020.html">dds/core/cond/Condition.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00261.html">dds</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>core</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span>cond</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">class </span>GuardCondition;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="a00847.html">   67</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00847.html">dds::core::cond::GuardCondition</a> : <span class="keyword">public</span> <a class="code" href="a00843.html">dds::core::cond::Condition</a></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="a00080.html#aab158cc9af4d95dbb703a49d94e05b81">OMG_DDS_REF_TYPE_NO_DC</a>(<a class="code" href="a00847.html">GuardCondition</a>, <a class="code" href="a00843.html">dds::core::cond::Condition</a>)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="a00080.html#a77035440da9a788fdb0a882a73b3e072">OMG_DDS_EXPLICIT_REF_BASE</a>(<a class="code" href="a00847.html">GuardCondition</a>, <a class="code" href="a00843.html">dds::core::cond::Condition</a>)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="a00847.html#a2b568c214d22de9022454067f7af47e0">GuardCondition</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> FUN&gt;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="a00847.html#a2b568c214d22de9022454067f7af47e0">GuardCondition</a>(FUN&amp; functor);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> FUN&gt;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="a00847.html#a2b568c214d22de9022454067f7af47e0">GuardCondition</a>(<span class="keyword">const</span> FUN&amp; functor);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    ~<a class="code" href="a00847.html">GuardCondition</a>();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00847.html#a30f44fbfdf9d7cfedfa8e32f6a0d9989">trigger_value</a>(<span class="keywordtype">bool</span> value);</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* OMG_TDDS_DDS_CORE_CONDITION_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00847.html#a30f44fbfdf9d7cfedfa8e32f6a0d9989">trigger_value</a>();</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;};</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* OMG_TDDS_CORE_GUARD_CONDITION_HPP_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa00846_html_a951e1017981f4110068dbf801d8bb29e"><div class="ttname"><a href="a00846.html#a951e1017981f4110068dbf801d8bb29e">dds::core::cond::Condition::dispatch</a></div><div class="ttdeci">void dispatch()</div></div>
-<div class="ttc" id="aa00846_html_a530c66cb9c2610347f44fda8fa69f824"><div class="ttname"><a href="a00846.html#a530c66cb9c2610347f44fda8fa69f824">dds::core::cond::Condition::reset_handler</a></div><div class="ttdeci">void reset_handler()</div></div>
-<div class="ttc" id="aa00080_html"><div class="ttname"><a href="a00080.html">Reference.hpp</a></div></div>
-<div class="ttc" id="aa00846_html"><div class="ttname"><a href="a00846.html">dds::core::cond::Condition</a></div><div class="ttdoc">This class is the base class for all the conditions that may be attached to a dds::core::cond::WaitSe...</div><div class="ttdef"><b>Definition:</b> <a href="a00023_source.html#l00058">Condition.hpp:58</a></div></div>
-<div class="ttc" id="aa00846_html_ae04f8cd96028c933abdb13308d8c3520"><div class="ttname"><a href="a00846.html#ae04f8cd96028c933abdb13308d8c3520">dds::core::cond::Condition::handler</a></div><div class="ttdeci">void handler(Functor &amp;func)</div></div>
-<div class="ttc" id="aa00083_html_a2ca6278157c5f9f5d7d09ca213a559f6"><div class="ttname"><a href="a00083.html#a2ca6278157c5f9f5d7d09ca213a559f6">OMG_DDS_REF_TYPE_PROTECTED_DC</a></div><div class="ttdeci">#define OMG_DDS_REF_TYPE_PROTECTED_DC(TYPE, BASE, DELEGATE)</div><div class="ttdef"><b>Definition:</b> <a href="a00083_source.html#l00164">refmacros.hpp:164</a></div></div>
-<div class="ttc" id="aa00264_html"><div class="ttname"><a href="a00264.html">dds</a></div><div class="ttdef"><b>Definition:</b> <a href="a00017_source.html#l00030">array.hpp:30</a></div></div>
-<div class="ttc" id="aa00083_html_abddd9cfadbe14b4fe3dab3408f14087a"><div class="ttname"><a href="a00083.html#abddd9cfadbe14b4fe3dab3408f14087a">OMG_DDS_EXPLICIT_REF_BASE_DECL</a></div><div class="ttdeci">#define OMG_DDS_EXPLICIT_REF_BASE_DECL(TYPE, FROM)</div><div class="ttdef"><b>Definition:</b> <a href="a00083_source.html#l00111">refmacros.hpp:111</a></div></div>
-<div class="ttc" id="aa01070_html"><div class="ttname"><a href="a01070.html">dds::core::Reference</a></div><div class="ttdoc">Base class for reference-counted objects.</div><div class="ttdef"><b>Definition:</b> <a href="a00080_source.html#l00094">Reference.hpp:94</a></div></div>
-<div class="ttc" id="aa00846_html_abef89849b48291363fee4e0569676aa3"><div class="ttname"><a href="a00846.html#abef89849b48291363fee4e0569676aa3">dds::core::cond::Condition::trigger_value</a></div><div class="ttdeci">bool trigger_value() const</div></div>
+<div class="ttc" id="aa00847_html_a2b568c214d22de9022454067f7af47e0"><div class="ttname"><a href="a00847.html#a2b568c214d22de9022454067f7af47e0">dds::core::cond::GuardCondition::GuardCondition</a></div><div class="ttdeci">GuardCondition()</div></div>
+<div class="ttc" id="aa00080_html_a77035440da9a788fdb0a882a73b3e072"><div class="ttname"><a href="a00080.html#a77035440da9a788fdb0a882a73b3e072">OMG_DDS_EXPLICIT_REF_BASE</a></div><div class="ttdeci">#define OMG_DDS_EXPLICIT_REF_BASE(TYPE, FROM)</div><div class="ttdef"><b>Definition:</b> <a href="a00080_source.html#l00118">refmacros.hpp:118</a></div></div>
+<div class="ttc" id="aa00261_html"><div class="ttname"><a href="a00261.html">dds</a></div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00030">array.hpp:30</a></div></div>
+<div class="ttc" id="aa00847_html_a30f44fbfdf9d7cfedfa8e32f6a0d9989"><div class="ttname"><a href="a00847.html#a30f44fbfdf9d7cfedfa8e32f6a0d9989">dds::core::cond::GuardCondition::trigger_value</a></div><div class="ttdeci">bool trigger_value()</div></div>
+<div class="ttc" id="aa00847_html"><div class="ttname"><a href="a00847.html">dds::core::cond::GuardCondition</a></div><div class="ttdoc">A GuardCondition object is a specific Condition whose trigger_value is completely under the control o...</div><div class="ttdef"><b>Definition:</b> <a href="a00023_source.html#l00067">GuardCondition.hpp:67</a></div></div>
+<div class="ttc" id="aa00020_html"><div class="ttname"><a href="a00020.html">Condition.hpp</a></div></div>
+<div class="ttc" id="aa00080_html_aab158cc9af4d95dbb703a49d94e05b81"><div class="ttname"><a href="a00080.html#aab158cc9af4d95dbb703a49d94e05b81">OMG_DDS_REF_TYPE_NO_DC</a></div><div class="ttdeci">#define OMG_DDS_REF_TYPE_NO_DC(TYPE, BASE, DELEGATE)</div><div class="ttdef"><b>Definition:</b> <a href="a00080_source.html#l00178">refmacros.hpp:178</a></div></div>
+<div class="ttc" id="aa00843_html"><div class="ttname"><a href="a00843.html">dds::core::cond::Condition</a></div><div class="ttdoc">This class is the base class for all the conditions that may be attached to a dds::core::cond::WaitSe...</div><div class="ttdef"><b>Definition:</b> <a href="a00020_source.html#l00058">Condition.hpp:58</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_8e762eb435ebc1d0f3e9696791508c0a.html">core</a></li><li class="navelem"><a class="el" href="dir_18a637d735777412aa502af42e637f28.html">cond</a></li><li class="navelem"><a class="el" href="a00023.html">Condition.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_8e762eb435ebc1d0f3e9696791508c0a.html">core</a></li><li class="navelem"><a class="el" href="dir_18a637d735777412aa502af42e637f28.html">cond</a></li><li class="navelem"><a class="el" href="a00023.html">GuardCondition.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

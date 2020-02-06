@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['qospolicycount_674',['QosPolicyCount',['../a01062.html',1,'dds::core::policy']]],
-  ['qosprovider_675',['QosProvider',['../a01066.html',1,'dds::core']]],
-  ['query_676',['Query',['../a01274.html',1,'dds::sub']]],
-  ['querycondition_677',['QueryCondition',['../a01230.html',1,'dds::sub::cond']]]
+  ['qospolicycount_672',['QosPolicyCount',['../a01059.html',1,'dds::core::policy']]],
+  ['qosprovider_673',['QosProvider',['../a01063.html',1,'dds::core']]],
+  ['query_674',['Query',['../a01271.html',1,'dds::sub']]],
+  ['querycondition_675',['QueryCondition',['../a01227.html',1,'dds::sub::cond']]]
 ];

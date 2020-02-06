@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vortex Lite ISO C++ API Reference Guide: dds::domain Namespace Reference</title>
+<title>Cyclone ISO C++ API Reference Guide: dds::sub::cond Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="PROJECT_LOGO_Lite.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vortex Lite ISO C++ API Reference Guide
+   <div id="projectname">Cyclone ISO C++ API Reference Guide
    </div>
   </td>
  </tr>
@@ -87,156 +86,27 @@ $(document).ready(function(){initNavTree('a00269.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
-<div class="title">dds::domain Namespace Reference</div>  </div>
+<div class="title">dds::sub::cond Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:a01391"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01391.html">qos</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01146.html">DomainParticipant</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="a01146.html" title="A DomainParticipant represents the local membership of the application in a Domain.">DomainParticipant</a> represents the local membership of the application in a Domain.  <a href="a01146.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01227.html">QueryCondition</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a01227.html" title="QueryCondition objects are specialized ReadCondition objects that allow the application to also speci...">QueryCondition</a> objects are specialized <a class="el" href="a01231.html" title="ReadCondition objects are conditions specifically dedicated to read operations and attached to one Da...">ReadCondition</a> objects that allow the application to also specify a filter on the locally available data.  <a href="a01227.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01150.html">DomainParticipantListener</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a01146.html" title="A DomainParticipant represents the local membership of the application in a Domain.">DomainParticipant</a> events Listener.  <a href="a01150.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01231.html">ReadCondition</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a01231.html" title="ReadCondition objects are conditions specifically dedicated to read operations and attached to one Da...">ReadCondition</a> objects are conditions specifically dedicated to read operations and attached to one <a class="el" href="a01235.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a>.  <a href="a01231.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01154.html">NoOpDomainParticipantListener</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a01146.html" title="A DomainParticipant represents the local membership of the application in a Domain.">DomainParticipant</a> events Listener.  <a href="a01154.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:adcaa25d1bdfacd00ea345a6164660387"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01146.html">DomainParticipant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00269.html#adcaa25d1bdfacd00ea345a6164660387">find</a> (uint32_t id)</td></tr>
-<tr class="separator:adcaa25d1bdfacd00ea345a6164660387"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96040476be3d1132a5e2380764b524dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00269.html#a96040476be3d1132a5e2380764b524dd">ignore</a> (const <a class="el" href="a01146.html">dds::domain::DomainParticipant</a> &amp;dp, const <a class="el" href="a00934.html">dds::core::InstanceHandle</a> &amp;handle)</td></tr>
-<tr class="separator:a96040476be3d1132a5e2380764b524dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69ab317ccdf0912e89b22681d94e7c05"><td class="memTemplParams" colspan="2">template&lt;typename FwdIterator &gt; </td></tr>
-<tr class="memitem:a69ab317ccdf0912e89b22681d94e7c05"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00269.html#a69ab317ccdf0912e89b22681d94e7c05">ignore</a> (const <a class="el" href="a01146.html">dds::domain::DomainParticipant</a> &amp;dp, FwdIterator begin, FwdIterator end)</td></tr>
-<tr class="separator:a69ab317ccdf0912e89b22681d94e7c05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="adcaa25d1bdfacd00ea345a6164660387"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adcaa25d1bdfacd00ea345a6164660387">&#9670;&nbsp;</a></span>find()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a01146.html">DomainParticipant</a> dds::domain::find </td>
-          <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>This operation retrieves a previously-created <a class="el" href="a01146.html" title="A DomainParticipant represents the local membership of the application in a Domain.">DomainParticipant</a> belonging to the specified domain_id. If no such <a class="el" href="a01146.html" title="A DomainParticipant represents the local membership of the application in a Domain.">DomainParticipant</a> exists, the operation will return a dds::core::null <a class="el" href="a01146.html" title="A DomainParticipant represents the local membership of the application in a Domain.">DomainParticipant</a>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">id</td><td>the domain id </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a96040476be3d1132a5e2380764b524dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96040476be3d1132a5e2380764b524dd">&#9670;&nbsp;</a></span>ignore() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void dds::domain::ignore </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a01146.html">dds::domain::DomainParticipant</a> &amp;&#160;</td>
-          <td class="paramname"><em>dp</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00934.html">dds::core::InstanceHandle</a> &amp;&#160;</td>
-          <td class="paramname"><em>handle</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>This function enables you to ignore the entity represented by the given InstanceHandle for the specific <a class="el" href="a01146.html" title="A DomainParticipant represents the local membership of the application in a Domain.">DomainParticipant</a>.</p>
-<p><b><em>This operation is not yet implemented. It is scheduled for a future release.</em></b></p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dp</td><td>the <a class="el" href="a01146.html" title="A DomainParticipant represents the local membership of the application in a Domain.">DomainParticipant</a> for which the remote entity will be ignored</td></tr>
-    <tr><td class="paramname">handle</td><td>the InstanceHandle of the remote entity that has to be ignored </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a69ab317ccdf0912e89b22681d94e7c05"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69ab317ccdf0912e89b22681d94e7c05">&#9670;&nbsp;</a></span>ignore() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename FwdIterator &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void dds::domain::ignore </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a01146.html">dds::domain::DomainParticipant</a> &amp;&#160;</td>
-          <td class="paramname"><em>dp</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">FwdIterator&#160;</td>
-          <td class="paramname"><em>begin</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">FwdIterator&#160;</td>
-          <td class="paramname"><em>end</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>This function enables you to ignore a series of entities whose instance handles are made available via the provided iterators.</p>
-<p><b><em>This operation is not yet implemented. It is scheduled for a future release.</em></b></p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dp</td><td>the <a class="el" href="a01146.html" title="A DomainParticipant represents the local membership of the application in a Domain.">DomainParticipant</a> for which the remote entity will be ignored</td></tr>
-    <tr><td class="paramname">begin</td><td>the begin iterator for the InstanceHandle to ignore</td></tr>
-    <tr><td class="paramname">end</td><td>the end iterator for the InstanceHandle to ignore </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00264.html">dds</a></li><li class="navelem"><a class="el" href="a00269.html">domain</a></li>
+    <li class="navelem"><a class="el" href="a00261.html">dds</a></li><li class="navelem"><a class="el" href="a00268.html">sub</a></li><li class="navelem"><a class="el" href="a00269.html">cond</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

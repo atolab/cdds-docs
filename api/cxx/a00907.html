@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vortex Lite ISO C++ API Reference Guide: Member List</title>
+<title>Cyclone ISO C++ API Reference Guide: dds::core::PreconditionNotMetError Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="PROJECT_LOGO_Lite.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vortex Lite ISO C++ API Reference Guide
+   <div id="projectname">Cyclone ISO C++ API Reference Guide
    </div>
   </td>
  </tr>
@@ -67,7 +66,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('a00910.html','');});
+$(document).ready(function(){initNavTree('a00907.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -86,19 +85,96 @@ $(document).ready(function(){initNavTree('a00910.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="a00904.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">dds::core::PreconditionNotMetError Member List</div>  </div>
+<div class="title">dds::core::PreconditionNotMetError Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="a00910.html">dds::core::PreconditionNotMetError</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a00874.html#a031ca2541620c9f7b2836847ce9ae9ca">what</a>() const =0</td><td class="entry"><a class="el" href="a00874.html">dds::core::Exception</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-</table></div><!-- contents -->
+<p>Exception: A pre-condition for the operation was not met.  
+ <a href="a00907.html#details">More...</a></p>
+
+<p><code>#include &quot;<a class="el" href="a00047_source.html">Exception.hpp</a>&quot;</code></p>
+
+<p>Inherits <a class="el" href="a00871.html">dds::core::Exception</a>, and std::logic_error.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a031ca2541620c9f7b2836847ce9ae9ca"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00871.html#a031ca2541620c9f7b2836847ce9ae9ca">what</a> () const =0  throw ()</td></tr>
+<tr class="separator:a031ca2541620c9f7b2836847ce9ae9ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Exception: A pre-condition for the operation was not met. </p>
+
+<p class="definition">Definition at line <a class="el" href="a00047_source.html#l00254">254</a> of file <a class="el" href="a00047_source.html">Exception.hpp</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a031ca2541620c9f7b2836847ce9ae9ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a031ca2541620c9f7b2836847ce9ae9ca">&#9670;&nbsp;</a></span>what()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const char* dds::core::Exception::what </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve information about the exception that was thrown.</p>
+<p>Example </p><div class="fragment"><div class="line"><span class="keywordflow">try</span> {</div>
+<div class="line">    <span class="comment">// Do something that will trigger a dds exception, like:</span></div>
+<div class="line">    <a class="code" href="a01143.html">dds::domain::DomainParticipant</a> participant = dds::core::null;</div>
+<div class="line">    participant.<a class="code" href="a01143.html#aa61e17705b127c699bb9eddadbfa5195">domain_id</a>();</div>
+<div class="line">} <span class="keywordflow">catch</span> (<span class="keyword">const</span> <a class="code" href="a00871.html">dds::core::Exception</a>&amp; e) {</div>
+<div class="line">    std::cout &lt;&lt; e.<a class="code" href="a00871.html#a031ca2541620c9f7b2836847ce9ae9ca">what</a>() &lt;&lt; std::endl;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> Exception information (of the <a class="el" href="a00923.html" title="Exception: Application used a null reference.">NullReferenceError</a> in this case) </p><div class="fragment"><div class="line">Null reference: Reference[157] == dds::core::null</div>
+<div class="line">========================================================================================</div>
+<div class="line">Context     : <a class="code" href="a01143.html#aa61e17705b127c699bb9eddadbfa5195">dds::domain::DomainParticipant::domain_id</a></div>
+<div class="line">Date        : Wed Oct 21 19:28:00 CET 2015</div>
+<div class="line">Node        : DeLorean</div>
+<div class="line">Process     : flux_capacitor &lt;15423&gt;</div>
+<div class="line">Thread      : mr_fusion b6f25700</div>
+<div class="line">Internals   : ReferenceImpl.hpp/157/V6.6.0</div>
+<div class="line">----------------------------------------------------------------------------------------</div>
+<div class="line">Report      : Null reference: Reference[157] == dds::core::null</div>
+<div class="line">Internals   : <a class="code" href="a01067.html">dds::core::Reference&lt;DELEGATE&gt;::delegate</a>/ReferenceImpl.hpp/157</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd><a class="el" href="a00871.html" title="Exception: base class for specified DDS Exceptions.">Exception</a> information </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>dds/core/<a class="el" href="a00047_source.html">Exception.hpp</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aa01143_html_aa61e17705b127c699bb9eddadbfa5195"><div class="ttname"><a href="a01143.html#aa61e17705b127c699bb9eddadbfa5195">dds::domain::DomainParticipant::domain_id</a></div><div class="ttdeci">uint32_t domain_id() const</div></div>
+<div class="ttc" id="aa01067_html"><div class="ttname"><a href="a01067.html">dds::core::Reference</a></div><div class="ttdoc">Base class for reference-counted objects.</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00094">Reference.hpp:94</a></div></div>
+<div class="ttc" id="aa00871_html_a031ca2541620c9f7b2836847ce9ae9ca"><div class="ttname"><a href="a00871.html#a031ca2541620c9f7b2836847ce9ae9ca">dds::core::Exception::what</a></div><div class="ttdeci">virtual const char * what() const =0</div></div>
+<div class="ttc" id="aa00871_html"><div class="ttname"><a href="a00871.html">dds::core::Exception</a></div><div class="ttdoc">Exception: base class for specified DDS Exceptions.</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00064">Exception.hpp:64</a></div></div>
+<div class="ttc" id="aa01143_html"><div class="ttname"><a href="a01143.html">dds::domain::DomainParticipant</a></div><div class="ttdoc">A DomainParticipant represents the local membership of the application in a Domain.</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00065">DomainParticipant.hpp:65</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="a00261.html">dds</a></li><li class="navelem"><a class="el" href="a00262.html">core</a></li><li class="navelem"><a class="el" href="a00907.html">PreconditionNotMetError</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

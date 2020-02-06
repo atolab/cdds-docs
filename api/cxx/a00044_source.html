@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vortex Lite ISO C++ API Reference Guide: dds/core/Entity.hpp Source File</title>
+<title>Cyclone ISO C++ API Reference Guide: dds/core/EntityQos.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="PROJECT_LOGO_Lite.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vortex Lite ISO C++ API Reference Guide
+   <div id="projectname">Cyclone ISO C++ API Reference Guide
    </div>
   </td>
  </tr>
@@ -87,11 +86,11 @@ $(document).ready(function(){initNavTree('a00044_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Entity.hpp</div>  </div>
+<div class="title">EntityQos.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="a00044.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef OMG_TDDS_CORE_ENTITY_HPP_</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define OMG_TDDS_CORE_ENTITY_HPP_</span></div>
+<a href="a00044.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef OMG_TDDS_CORE_QOS_ENTITY_QOS_HPP_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define OMG_TDDS_CORE_QOS_ENTITY_QOS_HPP_</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/* Copyright 2010, Object Management Group, Inc.</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * Copyright 2010, PrismTech, Corp.</span></div>
@@ -111,64 +110,68 @@ $(document).ready(function(){initNavTree('a00044_source.html','');});
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * limitations under the License.</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00098.html">dds/core/Value.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00080.html">dds/core/Reference.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="a00092.html">dds/core/status/Status.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00264.html">dds</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00261.html">dds</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>core</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span>core</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">class </span>Entity;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="a00866.html">   55</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00866.html">dds::core::Entity</a> : <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code" href="a01070.html">dds::core::Reference</a></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="a00083.html#a2ca6278157c5f9f5d7d09ca213a559f6">OMG_DDS_REF_TYPE_PROTECTED_DC</a>(<a class="code" href="a00866.html">Entity</a>, <a class="code" href="a01070.html">dds::core::Reference</a>)</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="a00083.html#a0d9a9706bab2b2d4f7babd5b7d0737df">OMG_DDS_IMPLICIT_REF_BASE</a>(<a class="code" href="a00866.html">Entity</a>)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="a00866.html">Entity</a>();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00866.html#afbb1832f08c711ec6bc3a17e31d1bb97">enable</a>();</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keyword">const</span> <a class="code" href="a01082.html">dds::core::status::StatusMask</a> <a class="code" href="a00866.html#acdda22b434936dc3897a7e3070f8dddc">status_changes</a>();</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keyword">const</span> <a class="code" href="a00934.html">dds::core::InstanceHandle</a> <a class="code" href="a00866.html#af634c63fcb32c965b1f76be2873ddb1c">instance_handle</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00866.html#afb9d5bf145ddf0096ca22ad31e0a3e23">close</a>();</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00866.html#a19de3f3ffae7901686cf156ad9f1e762">retain</a>();</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;};</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* OMG_TDDS_CORE_ENTITY_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">class </span>EntityQos;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="a00867.html">   45</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00867.html">dds::core::EntityQos</a> : <span class="keyword">public</span> <a class="code" href="a01135.html">dds::core::Value</a></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="a00867.html#a727a00ea95745500f835ec4293851d54">EntityQos</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="a00867.html#a727a00ea95745500f835ec4293851d54">EntityQos</a>(<span class="keyword">const</span> <a class="code" href="a00867.html">EntityQos</a>&amp; other);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="a00867.html#a727a00ea95745500f835ec4293851d54">EntityQos</a>(<span class="keyword">const</span> <a class="code" href="a00867.html">EntityQos&lt;T&gt;</a>&amp; qos);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    ~<a class="code" href="a00867.html">EntityQos</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> POLICY&gt;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="a00867.html">EntityQos</a>&amp; <a class="code" href="a00867.html#a4f1bf30cf56b5b53f9f69990a38c2548">policy</a>(<span class="keyword">const</span> POLICY&amp; p);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> POLICY&gt;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">const</span> POLICY&amp; <a class="code" href="a00867.html#a4f1bf30cf56b5b53f9f69990a38c2548">policy</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> POLICY&gt;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    POLICY&amp; <a class="code" href="a00867.html#a4f1bf30cf56b5b53f9f69990a38c2548">policy</a>();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> POLICY&gt;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <a class="code" href="a00867.html">EntityQos</a>&amp; <a class="code" href="a00867.html#a4865e5ca4e41416965142eb0ddcd9e56">operator &lt;&lt; </a>(<span class="keyword">const</span> POLICY&amp; p);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> POLICY&gt;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">const</span> <a class="code" href="a00867.html">EntityQos</a>&amp; <a class="code" href="a00867.html#a950c50e71d1317572945499764fe3653">operator &gt;&gt; </a>(POLICY&amp; p) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <a class="code" href="a00867.html">EntityQos</a>&amp; <a class="code" href="a00867.html#a5da16b2b61c407ffc707564ba31fde4f">operator = </a>(<span class="keyword">const</span> <a class="code" href="a00867.html">EntityQos&lt;T&gt;</a>&amp; other);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;};</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment">/* namespace tdds / namespace core / namespace qos */</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* OMG_TDDS_CORE_QOS_ENTITY_QOS_HPP_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa00866_html_acdda22b434936dc3897a7e3070f8dddc"><div class="ttname"><a href="a00866.html#acdda22b434936dc3897a7e3070f8dddc">dds::core::Entity::status_changes</a></div><div class="ttdeci">const dds::core::status::StatusMask status_changes()</div></div>
-<div class="ttc" id="aa00866_html"><div class="ttname"><a href="a00866.html">dds::core::Entity</a></div><div class="ttdoc">This class is the abstract base class for all the DCPS objects.</div><div class="ttdef"><b>Definition:</b> <a href="a00044_source.html#l00055">Entity.hpp:55</a></div></div>
-<div class="ttc" id="aa00080_html"><div class="ttname"><a href="a00080.html">Reference.hpp</a></div></div>
-<div class="ttc" id="aa00866_html_a19de3f3ffae7901686cf156ad9f1e762"><div class="ttname"><a href="a00866.html#a19de3f3ffae7901686cf156ad9f1e762">dds::core::Entity::retain</a></div><div class="ttdeci">void retain()</div></div>
-<div class="ttc" id="aa00866_html_afb9d5bf145ddf0096ca22ad31e0a3e23"><div class="ttname"><a href="a00866.html#afb9d5bf145ddf0096ca22ad31e0a3e23">dds::core::Entity::close</a></div><div class="ttdeci">void close()</div></div>
-<div class="ttc" id="aa00934_html"><div class="ttname"><a href="a00934.html">dds::core::InstanceHandle</a></div><div class="ttdoc">Class to hold the handle associated with in sample instance.</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00040">InstanceHandle.hpp:40</a></div></div>
-<div class="ttc" id="aa00083_html_a0d9a9706bab2b2d4f7babd5b7d0737df"><div class="ttname"><a href="a00083.html#a0d9a9706bab2b2d4f7babd5b7d0737df">OMG_DDS_IMPLICIT_REF_BASE</a></div><div class="ttdeci">#define OMG_DDS_IMPLICIT_REF_BASE(TYPE)</div><div class="ttdef"><b>Definition:</b> <a href="a00083_source.html#l00075">refmacros.hpp:75</a></div></div>
-<div class="ttc" id="aa00866_html_af634c63fcb32c965b1f76be2873ddb1c"><div class="ttname"><a href="a00866.html#af634c63fcb32c965b1f76be2873ddb1c">dds::core::Entity::instance_handle</a></div><div class="ttdeci">const dds::core::InstanceHandle instance_handle() const</div></div>
-<div class="ttc" id="aa00083_html_a2ca6278157c5f9f5d7d09ca213a559f6"><div class="ttname"><a href="a00083.html#a2ca6278157c5f9f5d7d09ca213a559f6">OMG_DDS_REF_TYPE_PROTECTED_DC</a></div><div class="ttdeci">#define OMG_DDS_REF_TYPE_PROTECTED_DC(TYPE, BASE, DELEGATE)</div><div class="ttdef"><b>Definition:</b> <a href="a00083_source.html#l00164">refmacros.hpp:164</a></div></div>
-<div class="ttc" id="aa00264_html"><div class="ttname"><a href="a00264.html">dds</a></div><div class="ttdef"><b>Definition:</b> <a href="a00017_source.html#l00030">array.hpp:30</a></div></div>
-<div class="ttc" id="aa01082_html"><div class="ttname"><a href="a01082.html">dds::core::status::StatusMask</a></div><div class="ttdoc">StatusMask is a bitmap or bitset field.</div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00144">State.hpp:144</a></div></div>
-<div class="ttc" id="aa01070_html"><div class="ttname"><a href="a01070.html">dds::core::Reference</a></div><div class="ttdoc">Base class for reference-counted objects.</div><div class="ttdef"><b>Definition:</b> <a href="a00080_source.html#l00094">Reference.hpp:94</a></div></div>
-<div class="ttc" id="aa00866_html_afbb1832f08c711ec6bc3a17e31d1bb97"><div class="ttname"><a href="a00866.html#afbb1832f08c711ec6bc3a17e31d1bb97">dds::core::Entity::enable</a></div><div class="ttdeci">void enable()</div></div>
-<div class="ttc" id="aa00092_html"><div class="ttname"><a href="a00092.html">Status.hpp</a></div></div>
+<div class="ttc" id="aa00867_html_a4865e5ca4e41416965142eb0ddcd9e56"><div class="ttname"><a href="a00867.html#a4865e5ca4e41416965142eb0ddcd9e56">dds::core::EntityQos::operator&lt;&lt;</a></div><div class="ttdeci">EntityQos &amp; operator&lt;&lt;(const POLICY &amp;p)</div></div>
+<div class="ttc" id="aa00867_html"><div class="ttname"><a href="a00867.html">dds::core::EntityQos</a></div><div class="ttdoc">QoS Container.</div><div class="ttdef"><b>Definition:</b> <a href="a00044_source.html#l00045">EntityQos.hpp:45</a></div></div>
+<div class="ttc" id="aa00867_html_a727a00ea95745500f835ec4293851d54"><div class="ttname"><a href="a00867.html#a727a00ea95745500f835ec4293851d54">dds::core::EntityQos::EntityQos</a></div><div class="ttdeci">EntityQos()</div></div>
+<div class="ttc" id="aa00261_html"><div class="ttname"><a href="a00261.html">dds</a></div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00030">array.hpp:30</a></div></div>
+<div class="ttc" id="aa00867_html_a5da16b2b61c407ffc707564ba31fde4f"><div class="ttname"><a href="a00867.html#a5da16b2b61c407ffc707564ba31fde4f">dds::core::EntityQos::operator=</a></div><div class="ttdeci">EntityQos &amp; operator=(const EntityQos&lt; T &gt; &amp;other)</div></div>
+<div class="ttc" id="aa00098_html"><div class="ttname"><a href="a00098.html">Value.hpp</a></div></div>
+<div class="ttc" id="aa01135_html"><div class="ttname"><a href="a01135.html">dds::core::Value</a></div><div class="ttdoc">This class is the base for various value-type dds objects.</div><div class="ttdef"><b>Definition:</b> <a href="a00098_source.html#l00028">Value.hpp:28</a></div></div>
+<div class="ttc" id="aa00867_html_a4f1bf30cf56b5b53f9f69990a38c2548"><div class="ttname"><a href="a00867.html#a4f1bf30cf56b5b53f9f69990a38c2548">dds::core::EntityQos::policy</a></div><div class="ttdeci">const POLICY &amp; policy() const</div></div>
+<div class="ttc" id="aa00867_html_a950c50e71d1317572945499764fe3653"><div class="ttname"><a href="a00867.html#a950c50e71d1317572945499764fe3653">dds::core::EntityQos::operator&gt;&gt;</a></div><div class="ttdeci">const EntityQos &amp; operator&gt;&gt;(POLICY &amp;p) const</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_8e762eb435ebc1d0f3e9696791508c0a.html">core</a></li><li class="navelem"><a class="el" href="a00044.html">Entity.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_8e762eb435ebc1d0f3e9696791508c0a.html">core</a></li><li class="navelem"><a class="el" href="a00044.html">EntityQos.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

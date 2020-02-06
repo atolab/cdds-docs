@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vortex Lite ISO C++ API Reference Guide: dds/sub/DataReaderListener.hpp File Reference</title>
+<title>Cyclone ISO C++ API Reference Guide: dds/sub/ddssub.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="PROJECT_LOGO_Lite.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vortex Lite ISO C++ API Reference Guide
+   <div id="projectname">Cyclone ISO C++ API Reference Guide
    </div>
   </td>
  </tr>
@@ -87,44 +86,136 @@ $(document).ready(function(){initNavTree('a00179.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">DataReaderListener.hpp File Reference</div>  </div>
+<div class="title">ddssub.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="a00092_source.html">dds/core/status/Status.hpp</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;dds/core/detail/conformance.hpp&gt;</code><br />
+<code>#include &lt;<a class="el" href="a00173_source.html">dds/sub/DataReader.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="a00209_source.html">dds/sub/status/DataState.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="a00188_source.html">dds/sub/qos/DataReaderQos.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="a00191_source.html">dds/sub/qos/SubscriberQos.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="a00197_source.html">dds/sub/Rank.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="a00182_source.html">dds/sub/GenerationCount.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="a00161_source.html">dds/sub/AnyDataReaderListener.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="a00203_source.html">dds/sub/SampleInfo.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="a00185_source.html">dds/sub/LoanedSamples.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="a00206_source.html">dds/sub/SharedSamples.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="a00212_source.html">dds/sub/Subscriber.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="a00164_source.html">dds/sub/CoherentAccess.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="a00215_source.html">dds/sub/SubscriberListener.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="a00176_source.html">dds/sub/DataReaderListener.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="a00158_source.html">dds/sub/AnyDataReader.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="a00170_source.html">dds/sub/cond/ReadCondition.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="a00194_source.html">dds/sub/Query.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="a00167_source.html">dds/sub/cond/QueryCondition.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="a01546_source.html">dds/sub/find.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="a01534_source.html">dds/sub/discovery.hpp</a>&gt;</code><br />
+<code>#include &lt;dds/sub/detail/ddssub.hpp&gt;</code><br />
 </div>
 <p><a href="a00179_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01242.html">dds::sub::DataReaderListener&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a01238.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> events Listener.  <a href="a01242.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01242.html">dds::sub::DataReaderListener&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a01238.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> events Listener.  <a href="a01242.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01254.html">dds::sub::NoOpDataReaderListener&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a01238.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> events Listener.  <a href="a01254.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01254.html">dds::sub::NoOpDataReaderListener&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a01238.html" title="DataReader allows the applicatin to access published sample data.">DataReader</a> events Listener.  <a href="a01254.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:a00264"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00264.html">dds</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00271"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00271.html">dds::sub</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:af3431963d446f436e6398873f9c3e01e"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00179.html#af3431963d446f436e6398873f9c3e01e">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="a01275.html">dds::sub::Rank</a> &amp;r)</td></tr>
+<tr class="separator:af3431963d446f436e6398873f9c3e01e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b60bc88bdef92ce73336661d7c08cbb"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00179.html#a1b60bc88bdef92ce73336661d7c08cbb">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="a01283.html">dds::sub::SampleInfo</a> &amp;si)</td></tr>
+<tr class="separator:a1b60bc88bdef92ce73336661d7c08cbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75edfa52c671f8d3730fc573e6c377fb"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00179.html#a75edfa52c671f8d3730fc573e6c377fb">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="a01303.html">dds::sub::status::DataState</a> &amp;s)</td></tr>
+<tr class="separator:a75edfa52c671f8d3730fc573e6c377fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="af3431963d446f436e6398873f9c3e01e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3431963d446f436e6398873f9c3e01e">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a01275.html">dds::sub::Rank</a> &amp;&#160;</td>
+          <td class="paramname"><em>r</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1b60bc88bdef92ce73336661d7c08cbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b60bc88bdef92ce73336661d7c08cbb">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a01283.html">dds::sub::SampleInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>si</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a75edfa52c671f8d3730fc573e6c377fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75edfa52c671f8d3730fc573e6c377fb">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a01303.html">dds::sub::status::DataState</a> &amp;&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_4ed4fe74c0873b885d65b827f26fae2a.html">sub</a></li><li class="navelem"><a class="el" href="a00179.html">DataReaderListener.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_4ed4fe74c0873b885d65b827f26fae2a.html">sub</a></li><li class="navelem"><a class="el" href="a00179.html">ddssub.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>

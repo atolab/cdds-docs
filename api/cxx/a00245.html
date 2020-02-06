@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vortex Lite ISO C++ API Reference Guide: dds/topic/qos/TopicQos.hpp File Reference</title>
+<title>Cyclone ISO C++ API Reference Guide: dds/topic/Topic.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="PROJECT_LOGO_Lite.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vortex Lite ISO C++ API Reference Guide
+   <div id="projectname">Cyclone ISO C++ API Reference Guide
    </div>
   </td>
  </tr>
@@ -87,20 +86,39 @@ $(document).ready(function(){initNavTree('a00245.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
-<div class="title">TopicQos.hpp File Reference</div>  </div>
+<div class="title">Topic.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;dds/core/detail/TEntityQosImpl.hpp&gt;</code><br />
-<code>#include &lt;org/eclipse/cyclonedds/topic/qos/TopicQosDelegate.hpp&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="a00032_source.html">dds/core/conformance.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="a00095_source.html">dds/core/types.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="a00074_source.html">dds/core/ref_traits.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="a00113_source.html">dds/domain/DomainParticipant.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="a00242_source.html">dds/topic/qos/TopicQos.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="a00248_source.html">dds/topic/TopicDescription.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="a00218_source.html">dds/topic/AnyTopic.hpp</a>&gt;</code><br />
 </div>
 <p><a href="a00245_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01362.html">dds::topic::qos::TopicQos</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This struct provides the basic mechanism for an application to specify Quality of Service attributes for a <a class="el" href="a01366.html" title="Topic is the most basic description of the data to be published and subscribed.">Topic</a>.  <a href="a01362.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01363.html">dds::topic::Topic&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a01363.html" title="Topic is the most basic description of the data to be published and subscribed.">Topic</a> is the most basic description of the data to be published and subscribed.  <a href="a01363.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01363.html">dds::topic::Topic&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a01363.html" title="Topic is the most basic description of the data to be published and subscribed.">Topic</a> is the most basic description of the data to be published and subscribed.  <a href="a01363.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01367.html">dds::topic::TopicListener&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a01363.html" title="Topic is the most basic description of the data to be published and subscribed.">Topic</a> events Listener.  <a href="a01367.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:a00261"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00261.html">dds</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00271"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00271.html">dds::topic</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
@@ -108,7 +126,7 @@ Classes</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_f680b8f4508778ee53c71cb8dcb8d6eb.html">topic</a></li><li class="navelem"><a class="el" href="dir_3cebf9e31937ccd357d661f3f79cf58e.html">qos</a></li><li class="navelem"><a class="el" href="a00245.html">TopicQos.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_c08535e494afb464f05a5c865d93ebe6.html">dds</a></li><li class="navelem"><a class="el" href="dir_f680b8f4508778ee53c71cb8dcb8d6eb.html">topic</a></li><li class="navelem"><a class="el" href="a00245.html">Topic.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
